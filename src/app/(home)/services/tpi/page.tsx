@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 
 import { TpiPageView } from "@/components/sections/tpi/TpiPageView";
 import { createPageMetadata } from "@/lib/metadata";
-import { tpiPage } from "@/content/tpi";
+import { getTpiPage } from "@/content/tpi";
 
-export const metadata: Metadata = createPageMetadata(tpiPage.seo);
+export function generateMetadata(): Metadata {
+  return createPageMetadata(getTpiPage().seo);
+}
 
 export default function TpiPage() {
-  return <TpiPageView content={tpiPage} />;
+  return <TpiPageView content={getTpiPage()} />;
 }

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
-import { siteConfig } from "@/config/site";
+import { getSiteConfig } from "@/config/site";
 import type { SeoFields } from "@/types/content";
 
 export function createPageMetadata(input: SeoFields): Metadata {
+  const siteConfig = getSiteConfig();
   const absoluteUrl = new URL(input.path, siteConfig.siteUrl).toString();
 
   return {

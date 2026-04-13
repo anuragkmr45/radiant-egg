@@ -5,9 +5,10 @@ import { PageContainer } from "@/components/layout/PageContainer";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileNavDrawer } from "@/components/navigation/MobileNavDrawer";
 import { PrimaryButton } from "@/components/ui/ButtonLink";
-import { siteConfig } from "@/config/site";
+import { getSiteConfig } from "@/config/site";
 
 export function HomeHeader() {
+  const siteConfig = getSiteConfig();
   const homeChrome = siteConfig.homeChrome;
 
   return (

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cms:dev": "npm_config_cache=.npm-cache npx decap-server",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },

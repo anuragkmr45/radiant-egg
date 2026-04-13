@@ -7,7 +7,7 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 import { BadgePill } from "@/components/ui/BadgePill";
 import { CardShell } from "@/components/ui/CardShell";
 import { PrimaryButton } from "@/components/ui/ButtonLink";
-import { siteConfig } from "@/config/site";
+import { getSiteConfig } from "@/config/site";
 import type { MarketingPageContent } from "@/types/content";
 
 interface PlaceholderPageProps {
@@ -15,6 +15,7 @@ interface PlaceholderPageProps {
 }
 
 export function PlaceholderPage({ content }: PlaceholderPageProps) {
+  const siteConfig = getSiteConfig();
   const plannedSections = content.plannedSections ?? [];
   const notes = content.notes ?? [];
   const phase0Checks = content.phase0Checks ?? [];
@@ -80,7 +81,10 @@ export function PlaceholderPage({ content }: PlaceholderPageProps) {
           <CTASection
             description={siteConfig.defaultCta.description}
             eyebrow="Contact the team"
-            primaryAction={siteConfig.defaultCta}
+            primaryAction={{
+              href: "/contact",
+              label: siteConfig.defaultCta.label,
+            }}
             secondaryAction={{ href: "/services/consultancy", label: "Explore services" }}
             title="Talk to the team supporting consultancy, NDT, and third-party inspection scopes."
           />

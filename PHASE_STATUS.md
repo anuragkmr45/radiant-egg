@@ -11,5 +11,5 @@
 | 6 | NDT page | done |
 | 7 | TPI page | done |
 | 8 | Contact page | done |
-| 9 | CMS integration | pending |
+| 9 | CMS integration | done |
 | 10 | QA, pixel-fit pass, SEO, performance | pending |

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
-import { siteConfig } from "@/config/site";
+import { getSiteConfig } from "@/config/site";
 
 import "./globals.css";
 
@@ -17,29 +17,33 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.siteUrl),
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  applicationName: siteConfig.name,
-  keywords: [...siteConfig.defaultKeywords],
-  openGraph: {
-    type: "website",
-    siteName: siteConfig.name,
-    title: siteConfig.name,
+export function generateMetadata(): Metadata {
+  const siteConfig = getSiteConfig();
+
+  return {
+    metadataBase: new URL(siteConfig.siteUrl),
+    title: {
+      default: siteConfig.name,
+      template: `%s | ${siteConfig.name}`,
+    },
     description: siteConfig.description,
-    url: siteConfig.siteUrl,
-    locale: siteConfig.locale,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-  },
-};
+    applicationName: siteConfig.name,
+    keywords: [...siteConfig.defaultKeywords],
+    openGraph: {
+      type: "website",
+      siteName: siteConfig.name,
+      title: siteConfig.name,
+      description: siteConfig.description,
+      url: siteConfig.siteUrl,
+      locale: siteConfig.locale,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: siteConfig.name,
+      description: siteConfig.description,
+    },
+  };
+}
 
 export const viewport: Viewport = {
   colorScheme: "light",

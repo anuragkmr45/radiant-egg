@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 
-import { siteConfig } from "@/config/site";
+import { getSiteConfig } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const siteConfig = getSiteConfig();
   const lastModified = new Date();
 
   return siteConfig.routes.map((route) => ({

@@ -4,9 +4,10 @@ import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { BadgePill } from "@/components/ui/BadgePill";
 import { SecondaryButton } from "@/components/ui/ButtonLink";
-import { siteConfig } from "@/config/site";
+import { getSiteConfig } from "@/config/site";
 
 export function SiteFooter() {
+  const siteConfig = getSiteConfig();
   const footerLinks = siteConfig.footerGroups ?? [];
   const currentYear = new Date().getFullYear();
 

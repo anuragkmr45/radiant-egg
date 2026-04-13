@@ -49,7 +49,7 @@ interface HomeIconProps extends LucideProps {
 }
 
 export function HomeIcon({ name, ...props }: HomeIconProps) {
-  const Icon = iconMap[name];
+  const Icon = iconMap[name] ?? ShieldCheck;
 
   return <Icon aria-hidden="true" {...props} />;
 }

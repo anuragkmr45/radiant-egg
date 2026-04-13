@@ -1,0 +1,195 @@
+{
+  "seo": {
+    "title": "About",
+    "description": "Learn about Radiant Engineering Consultancy Pvt. Ltd., our engineering expertise, certified leadership team, and compliance-driven inspection approach.",
+    "path": "/about"
+  },
+  "hero": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About Us"
+      }
+    ],
+    "title": "About Radiant Engineering Consultancy Pvt. Ltd.",
+    "description": "Building Trust Through Technical Excellence"
+  },
+  "intro": {
+    "eyebrow": "Who We Are",
+    "title": "Who We Are",
+    "paragraphs": [
+      "Radiant Engineering Consultancy Pvt. Ltd. (RECPL) is a premier engineering consultancy and inspection organisation established with a vision to deliver world-class technical services to India's industrial and infrastructure sectors.",
+      "Our expertise spans Non-Destructive Testing, Third Party Inspection, Structural Audits, Material Testing, and Equipment Supply — making us a truly integrated engineering partner.",
+      "Led by a PhD-qualified chief consultant and backed by a team of ASNT-certified engineers, we bring academic rigour and field-proven experience to every engagement."
+    ],
+    "image": {
+      "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Ff71ec3985d999e3d7ace40c10db92b176b6b5ebe.jpg?generation=1776077481007949&alt=media",
+      "alt": "RECPL engineers inspecting an industrial steel structure at a manufacturing plant"
+    },
+    "credentials": [
+      {
+        "accent": "Competent Person",
+        "label": " under Factory Act 1948"
+      },
+      {
+        "accent": "ASNT Level II",
+        "label": " certified inspection expertise"
+      },
+      {
+        "accent": "ISO 18001",
+        "label": " compliance-focused delivery"
+      }
+    ]
+  },
+  "strengths": {
+    "eyebrow": "Our Strengths",
+    "title": "What Sets Us Apart",
+    "description": "",
+    "items": [
+      {
+        "title": "Integrated Solutions",
+        "description": "End-to-end consulting, testing, inspection, and equipment supply under one roof.",
+        "icon": "layers"
+      },
+      {
+        "title": "Certified Experts",
+        "description": "ASNT Level II & III certified professionals with decades of field experience.",
+        "icon": "badge"
+      },
+      {
+        "title": "Compliance Driven",
+        "description": "Every engagement aligned with Factory Act, IS, ASME, and ASTM standards.",
+        "icon": "scroll"
+      },
+      {
+        "title": "Advanced Testing Methods",
+        "description": "State-of-the-art NDT, metallurgical, and material testing capabilities.",
+        "icon": "flask"
+      },
+      {
+        "title": "One-Stop Engineering Partner",
+        "description": "From feasibility studies to final certification — a single trusted partner.",
+        "icon": "briefcase"
+      }
+    ]
+  },
+  "principles": {
+    "items": [
+      {
+        "title": "Our Mission",
+        "description": "To deliver technically superior, compliance-driven engineering services that safeguard industrial assets and public safety across India.",
+        "icon": "scroll"
+      },
+      {
+        "title": "Our Vision",
+        "description": "To become India's most trusted engineering consultancy — recognised for integrity, precision, and innovation in every project we undertake.",
+        "icon": "search"
+      },
+      {
+        "title": "Core Values",
+        "description": "The principles guiding our decisions and delivery standards.",
+        "icon": "shield",
+        "values": [
+          "Integrity",
+          "Precision",
+          "Safety First",
+          "Innovation",
+          "Client-Centricity"
+        ]
+      }
+    ]
+  },
+  "leadership": {
+    "eyebrow": "Leadership",
+    "title": "Meet the Experts Behind RECPL",
+    "description": "",
+    "members": [
+      {
+        "name": "Dr. Rajesh Kumar",
+        "role": "Project Head & Chief Consultant",
+        "description": "PhD in Structural Engineering with 36+ research publications and 480+ citations. Leads all technical operations.",
+        "icon": "graduation",
+        "badge": "Lead Expert",
+        "featured": true
+      },
+      {
+        "name": "Suresh Patil",
+        "role": "Director — Operations",
+        "description": "25+ years in industrial project management. Oversees pan-India field operations and client delivery.",
+        "icon": "briefcase"
+      },
+      {
+        "name": "Anita Sharma",
+        "role": "Head — NDT Division",
+        "description": "ASNT Level III certified. Specialises in ultrasonic and radiographic testing for critical infrastructure.",
+        "icon": "search"
+      },
+      {
+        "name": "Vikram Desai",
+        "role": "Head — TPI & Compliance",
+        "description": "Competent Person under Factory Act. Manages statutory inspections for pressure vessels and lifting equipment.",
+        "icon": "clipboard"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "PhD-Led",
+      "label": "Engineering Expertise"
+    },
+    {
+      "value": "36+",
+      "label": "Research Publications"
+    },
+    {
+      "value": "480+",
+      "label": "Academic Citations"
+    },
+    {
+      "value": "Pan-India",
+      "label": "Industrial Projects"
+    }
+  ],
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Our Work in Action",
+    "description": "",
+    "items": [
+      {
+        "label": "Site Inspections",
+        "icon": "search"
+      },
+      {
+        "label": "Lab Testing",
+        "icon": "flask"
+      },
+      {
+        "label": "Engineering Design",
+        "icon": "building"
+      },
+      {
+        "label": "Equipment",
+        "icon": "package"
+      },
+      {
+        "label": "Team Activities",
+        "icon": "hardhat"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Looking for reliable engineering consultancy or inspection services?",
+    "description": "Get in touch with our experts today and let us help you achieve compliance, safety, and quality.",
+    "primaryAction": {
+      "label": "Contact Us",
+      "href": "/contact"
+    },
+    "secondaryAction": {
+      "label": "Request Quote",
+      "href": "/contact"
+    }
+  }
+}

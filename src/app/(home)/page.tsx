@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 
 import { HomePageView } from "@/components/sections/home/HomePageView";
-import { homePage } from "@/content/home";
+import { getHomePage } from "@/content/home";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata(homePage.seo);
+export function generateMetadata(): Metadata {
+  return createPageMetadata(getHomePage().seo);
+}
 
 export default function HomePage() {
-  return <HomePageView content={homePage} />;
+  return <HomePageView content={getHomePage()} />;
 }

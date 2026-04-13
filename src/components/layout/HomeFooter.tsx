@@ -2,9 +2,10 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 import { PageContainer } from "@/components/layout/PageContainer";
 import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
-import { siteConfig } from "@/config/site";
+import { getSiteConfig } from "@/config/site";
 
 export function HomeFooter() {
+  const siteConfig = getSiteConfig();
   const homeChrome = siteConfig.homeChrome;
   const currentYear = new Date().getFullYear();
 

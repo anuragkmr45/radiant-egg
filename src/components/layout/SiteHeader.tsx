@@ -4,10 +4,12 @@ import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileNavDrawer } from "@/components/navigation/MobileNavDrawer";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { PrimaryButton } from "@/components/ui/ButtonLink";
-import { siteConfig } from "@/config/site";
+import { getSiteConfig } from "@/config/site";
 import { themeTokens } from "@/theme/tokens";
 
 export function SiteHeader() {
+  const siteConfig = getSiteConfig();
+
   return (
     <header
       className="site-header"

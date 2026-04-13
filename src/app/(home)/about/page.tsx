@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 
 import { AboutPageView } from "@/components/sections/about/AboutPageView";
-import { aboutPage } from "@/content/about";
+import { getAboutPage } from "@/content/about";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata(aboutPage.seo);
+export function generateMetadata(): Metadata {
+  return createPageMetadata(getAboutPage().seo);
+}
 
 export default function AboutPage() {
-  return <AboutPageView content={aboutPage} />;
+  return <AboutPageView content={getAboutPage()} />;
 }
