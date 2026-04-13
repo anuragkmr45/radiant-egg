@@ -1,6 +1,9 @@
 import Link from "next/link";
 
+import { DesktopNav } from "@/components/navigation/DesktopNav";
+import { MobileNavDrawer } from "@/components/navigation/MobileNavDrawer";
 import { PageContainer } from "@/components/layout/PageContainer";
+import { PrimaryButton } from "@/components/ui/ButtonLink";
 import { siteConfig } from "@/config/site";
 import { themeTokens } from "@/theme/tokens";
 
@@ -11,39 +14,32 @@ export function SiteHeader() {
       style={{ minHeight: themeTokens.sizes.headerHeight }}
     >
       <PageContainer className="site-header__inner">
-        <div className="site-brand">
-          <Link
-            aria-label={`${siteConfig.name} home`}
-            className="site-brand__mark"
-            href="/"
-          >
-            R
-          </Link>
-          <div className="site-brand__content">
-            <Link className="site-brand__name" href="/">
-              {siteConfig.name}
-            </Link>
-            <p className="site-brand__tagline">
-              Engineering, inspection, and quality systems placeholder shell
-            </p>
-          </div>
-        </div>
-
-        <nav aria-label="Primary">
-          <ul className="site-nav" role="list">
-            {siteConfig.nav.map((item) => (
-              <li key={item.href}>
-                <Link className="site-nav__link" href={item.href}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <Link className="button-link button-link--primary" href={siteConfig.defaultCta.href}>
-          {siteConfig.defaultCta.label}
+        <Link aria-label={`${siteConfig.name} home`} className="brand-lockup" href="/">
+          <span className="brand-lockup__mark">RE</span>
+          <span className="brand-lockup__text">
+            <span className="brand-lockup__name">{siteConfig.name}</span>
+            <span className="brand-lockup__tagline">{siteConfig.tagline}</span>
+          </span>
         </Link>
+
+        <div className="site-header__actions">
+          <DesktopNav
+            primaryItems={siteConfig.primaryNav}
+            serviceItems={siteConfig.serviceNav}
+          />
+
+          <PrimaryButton className="site-header__cta" href={siteConfig.defaultCta.href}>
+            {siteConfig.defaultCta.label}
+          </PrimaryButton>
+
+          <MobileNavDrawer
+            contact={siteConfig.contact}
+            cta={siteConfig.defaultCta}
+            primaryItems={siteConfig.primaryNav}
+            siteName={siteConfig.name}
+            serviceItems={siteConfig.serviceNav}
+          />
+        </div>
       </PageContainer>
     </header>
   );

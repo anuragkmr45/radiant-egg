@@ -3,10 +3,10 @@ import type { MarketingPageContent } from "@/types/content";
 
 export const tpiPage: MarketingPageContent = {
   path: "/services/tpi",
-  eyebrow: "Phase 7 Target Route",
-  title: "TPI service route is prepared for the final inspection workflow UI.",
+  eyebrow: "TPI Route",
+  title: "Third-party inspection with process visibility, reporting discipline, and compliance focus.",
   description:
-    "This placeholder keeps the route thin and type-safe while the shared services template and the TPI-specific sections are completed in later phases.",
+    "The route now shares the chrome and layout contracts that will support the service template in Phase 4 and the detailed TPI workflow build in Phase 7.",
   plannedSections: [
     "Service hero",
     "Inspection scope cards",
@@ -22,7 +22,7 @@ export const tpiPage: MarketingPageContent = {
   seo: {
     title: "TPI Services",
     description:
-      "Phase 0 scaffold for the Radiant Engineering TPI services page.",
+      "Radiant Engineering TPI shared-shell scaffold.",
     path: "/services/tpi",
   },
 };

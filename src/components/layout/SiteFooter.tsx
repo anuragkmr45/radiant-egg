@@ -2,23 +2,27 @@ import Link from "next/link";
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { BadgePill } from "@/components/ui/BadgePill";
+import { SecondaryButton } from "@/components/ui/ButtonLink";
 import { siteConfig } from "@/config/site";
 
 export function SiteFooter() {
   const footerLinks = siteConfig.footerGroups ?? [];
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="site-footer">
       <PageContainer className="site-footer__inner">
         <div className="site-footer__top">
           <div className="site-footer__summary">
-            <p className="eyebrow">Shared Footer Placeholder</p>
-            <h2 className="site-footer__title">Shared marketing chrome is now established.</h2>
+            <BadgePill tone="dark">{siteConfig.shortName}</BadgePill>
+            <h2 className="site-footer__title">{siteConfig.footerHeadline}</h2>
             <p className="site-footer__copy">
-              Every planned route is now rendered through the same footer and token
-              system, which keeps the Phase 1 design pass focused on visual fidelity
-              instead of layout repair.
+              {siteConfig.footerDescription}
             </p>
+            <SecondaryButton href={siteConfig.defaultCta.href}>
+              {siteConfig.defaultCta.label}
+            </SecondaryButton>
           </div>
 
           <div className="footer-grid">
@@ -64,8 +68,10 @@ export function SiteFooter() {
         </div>
 
         <div className="footer-bottom">
-          <span>{siteConfig.name} Phase 0 scaffold</span>
-          <span>Planned next phase: shared chrome refinement</span>
+          <span>
+            &copy; {currentYear} {siteConfig.name}. All rights reserved.
+          </span>
+          <span>{siteConfig.tagline}</span>
         </div>
       </PageContainer>
     </footer>

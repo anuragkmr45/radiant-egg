@@ -3,7 +3,7 @@
 | Phase | Name | Status |
 | --- | --- | --- |
 | 0 | Foundation and extraction baseline | done |
-| 1 | Design system + shared chrome | pending |
+| 1 | Design system + shared chrome | done |
 | 2 | Home page | pending |
 | 3 | About page | pending |
 | 4 | Shared services-page template | pending |

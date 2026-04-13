@@ -3,10 +3,10 @@ import type { MarketingPageContent } from "@/types/content";
 
 export const aboutPage: MarketingPageContent = {
   path: "/about",
-  eyebrow: "Phase 3 Target Route",
-  title: "About page scaffold is wired into the shared marketing system.",
+  eyebrow: "About Route",
+  title: "A focused team built around inspection discipline and field reliability.",
   description:
-    "The about route is prepared with placeholder content, metadata, and the final layout shell so Phase 3 can focus on visual fidelity instead of structure.",
+    "The about route now inherits the final shared chrome so the detailed story, strengths grid, team cards, and gallery sections can be built without shell changes in Phase 3.",
   plannedSections: [
     "Inner hero",
     "Who we are",
@@ -20,7 +20,7 @@ export const aboutPage: MarketingPageContent = {
   seo: {
     title: "About",
     description:
-      "Phase 0 scaffold for the Radiant Engineering about page.",
+      "Radiant Engineering shared-shell about page scaffold.",
     path: "/about",
   },
 };

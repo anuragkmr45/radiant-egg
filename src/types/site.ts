@@ -48,8 +48,12 @@ export interface SiteConfig {
   description: string;
   siteUrl: string;
   locale: string;
+  tagline: string;
+  footerHeadline: string;
+  footerDescription: string;
   defaultKeywords: readonly string[];
-  nav: readonly NavItem[];
+  primaryNav: readonly NavItem[];
+  serviceNav: readonly NavItem[];
   footerGroups: readonly FooterGroup[];
   contact: ContactDetails;
   defaultCta: SiteCta;

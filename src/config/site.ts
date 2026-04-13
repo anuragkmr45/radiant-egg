@@ -1,29 +1,44 @@
 import type { SiteConfig } from "@/types/site";
 
-const nav = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Consultancy", href: "/services/consultancy" },
-  { label: "NDT", href: "/services/ndt" },
-  { label: "TPI", href: "/services/tpi" },
-  { label: "Contact", href: "/contact" },
+const homeLink = { label: "Home", href: "/" } as const;
+const aboutLink = { label: "About", href: "/about" } as const;
+const contactLink = { label: "Contact", href: "/contact" } as const;
+
+const primaryNav = [
+  homeLink,
+  aboutLink,
+  contactLink,
+] as const;
+
+const serviceNav = [
+  {
+    label: "Consultancy",
+    href: "/services/consultancy",
+    description: "Engineering reviews, drawings, and structural audit support.",
+  },
+  {
+    label: "NDT",
+    href: "/services/ndt",
+    description: "Field-ready non-destructive testing programs for critical assets.",
+  },
+  {
+    label: "TPI",
+    href: "/services/tpi",
+    description: "Third-party inspection with process visibility and compliance control.",
+  },
 ] as const;
 
 const footerGroups = [
   {
     title: "Services",
-    links: [
-      nav[2],
-      nav[3],
-      nav[4],
-    ],
+    links: serviceNav,
   },
   {
     title: "Company",
     links: [
-      nav[0],
-      nav[1],
-      nav[5],
+      homeLink,
+      aboutLink,
+      contactLink,
     ],
   },
 ] as const;
@@ -32,9 +47,14 @@ export const siteConfig = {
   name: "Radiant Engineering",
   shortName: "Radiant",
   description:
-    "Industrial engineering, consultancy, third-party inspection, and NDT placeholder site rebuilt in Next.js App Router.",
+    "Independent engineering consultancy, third-party inspection, and non-destructive testing for demanding industrial programs.",
   siteUrl: "https://radiant-engineering.example",
   locale: "en_US",
+  tagline: "Consultancy, inspection, and NDT for industrial programs.",
+  footerHeadline:
+    "Independent engineering, inspection, and quality systems for demanding industrial work.",
+  footerDescription:
+    "Radiant Engineering supports consultancy, NDT, and third-party inspection scopes with disciplined execution, clear documentation, and reliable field coordination.",
   defaultKeywords: [
     "Radiant Engineering",
     "engineering consultancy",
@@ -42,10 +62,11 @@ export const siteConfig = {
     "NDT services",
     "industrial quality assurance",
   ],
-  nav,
+  primaryNav,
+  serviceNav,
   footerGroups,
   contact: {
-    email: "info@radiant-engineering.example",
+    email: "info@radiantengg.com",
     phone: "+91 98765 43210",
     address: "Industrial Corridor, Gujarat, India",
     hours: "Mon - Sat, 9:00 AM to 6:00 PM IST",
@@ -54,7 +75,7 @@ export const siteConfig = {
     label: "Contact the team",
     href: "/contact",
     description:
-      "The contact route is scaffolded now and will be upgraded with the final enquiry flow in Phase 8.",
+      "Speak with the team coordinating consultancy, inspection, and field quality scopes.",
   },
   routes: [
     { href: "/", changeFrequency: "weekly", priority: 1 },

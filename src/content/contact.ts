@@ -3,10 +3,10 @@ import type { MarketingPageContent } from "@/types/content";
 
 export const contactPage: MarketingPageContent = {
   path: "/contact",
-  eyebrow: "Phase 8 Target Route",
-  title: "Contact route is prepared for the final form and map implementation.",
+  eyebrow: "Contact Route",
+  title: "Talk to the team coordinating consultancy, NDT, and third-party inspection.",
   description:
-    "This placeholder route keeps contact metadata, shell spacing, and the shared CTA contracts in place until the final contact experience is built.",
+    "The route now shares the refined header, footer, CTA shell, and typography system so the detailed form and map work in Phase 8 can focus on function and fidelity.",
   plannedSections: [
     "Contact hero",
     "Contact info strip",
@@ -22,7 +22,7 @@ export const contactPage: MarketingPageContent = {
   seo: {
     title: "Contact",
     description:
-      "Phase 0 scaffold for the Radiant Engineering contact page.",
+      "Radiant Engineering shared-shell contact page scaffold.",
     path: "/contact",
   },
 };

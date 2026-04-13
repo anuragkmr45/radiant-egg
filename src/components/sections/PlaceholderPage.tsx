@@ -2,6 +2,11 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { CTASection } from "@/components/sections/CTASection";
+import { SectionHeader } from "@/components/sections/SectionHeader";
+import { BadgePill } from "@/components/ui/BadgePill";
+import { CardShell } from "@/components/ui/CardShell";
+import { PrimaryButton } from "@/components/ui/ButtonLink";
 import { siteConfig } from "@/config/site";
 import type { MarketingPageContent } from "@/types/content";
 
@@ -16,78 +21,77 @@ export function PlaceholderPage({ content }: PlaceholderPageProps) {
 
   return (
     <>
-      <section className="hero-shell">
-        <PageContainer className="hero-shell__inner">
-          <div className="surface-card surface-card--hero">
-            <p className="eyebrow">{content.eyebrow}</p>
-            <h1 className="display-title">{content.title}</h1>
-            <p className="lead">{content.description}</p>
-            <div className="meta-row">
-              <span className="status-pill">Phase 0 live</span>
+      <section className="page-hero">
+        <PageContainer className="page-hero__inner">
+          <div className="page-hero__copy">
+            <SectionHeader
+              description={content.description}
+              eyebrow={content.eyebrow}
+              title={content.title}
+            />
+            <div className="page-hero__meta">
+              <BadgePill tone="outline">Route preview</BadgePill>
               <span>{content.path}</span>
-              <span>App Router + src/ structure</span>
+              <span>Responsive shared system</span>
             </div>
           </div>
 
-          <aside className="surface-card">
-            <p className="surface-card__title">What this route has now</p>
-            <p className="surface-card__body">
-              Shared shell wiring, safe metadata, token-driven spacing, and placeholder
-              content modules are ready. Final visuals remain scoped to later phases.
-            </p>
+          <CardShell
+            description="This route already uses the shared header, footer, buttons, badges, card shell, and CTA treatment established for the marketing site."
+            title="Shared delivery baseline"
+          >
             <ul className="bullet-list">
               {phase0Checks.map((check) => (
                 <li key={check}>{check}</li>
               ))}
             </ul>
-          </aside>
+          </CardShell>
         </PageContainer>
       </section>
 
       <section className="page-section">
-        <PageContainer className="surface-grid">
-          <article className="surface-card">
-            <h2 className="surface-card__title">Planned sections</h2>
-            <p className="surface-card__body">
-              These route-specific sections are defined now so later phases can focus
-              on matching the uploaded references.
-            </p>
-            <ul className="bullet-list">
+        <PageContainer className="page-grid">
+          <CardShell
+            description="The route-specific build will replace this lightweight body while preserving the shared chrome and design tokens."
+            title="Planned sections"
+          >
+            <ol className="number-list">
               {plannedSections.map((section) => (
                 <li key={section}>{section}</li>
               ))}
-            </ul>
-          </article>
+            </ol>
+          </CardShell>
 
-          <article className="surface-card">
-            <h2 className="surface-card__title">Phase notes</h2>
-            <p className="surface-card__body">
-              The current build intentionally favors structural correctness over final
-              visual completion.
-            </p>
+          <CardShell
+            description="These constraints are carried forward from the uploaded references and the phase plan."
+            title="Implementation notes"
+          >
             <ul className="bullet-list">
               {notes.map((note) => (
                 <li key={note}>{note}</li>
               ))}
             </ul>
-          </article>
+          </CardShell>
         </PageContainer>
       </section>
 
       <section className="page-section page-section--compact">
         <PageContainer>
-          <article className="cta-shell">
-            <p className="eyebrow">Default CTA Contract</p>
-            <h2>Shared CTA wiring is now stable across the planned route set.</h2>
-            <p>
-              Later phases can swap in the final copy and layout without rebuilding the
-              shell, navigation, footer, or metadata contracts.
-            </p>
-            <Link className="button-link button-link--primary" href={siteConfig.defaultCta.href}>
-              {siteConfig.defaultCta.label}
-              <ArrowRight aria-hidden="true" size={16} />
+          <CTASection
+            description={siteConfig.defaultCta.description}
+            eyebrow="Contact the team"
+            primaryAction={siteConfig.defaultCta}
+            secondaryAction={{ href: "/services/consultancy", label: "Explore services" }}
+            title="Talk to the team supporting consultancy, NDT, and third-party inspection scopes."
+          />
+          <div className="page-section__link-row">
+            <PrimaryButton href={siteConfig.defaultCta.href} iconEnd={<ArrowRight size={16} />}>
+              Open contact route
+            </PrimaryButton>
+            <Link className="text-link" href="/about">
+              View company profile
             </Link>
-          </article>
+          </div>
         </PageContainer>
       </section>
     </>

@@ -3,10 +3,10 @@ import type { MarketingPageContent } from "@/types/content";
 
 export const consultancyPage: MarketingPageContent = {
   path: "/services/consultancy",
-  eyebrow: "Phase 5 Target Route",
-  title: "Consultancy service route is scaffolded on the shared services path.",
+  eyebrow: "Consultancy Route",
+  title: "Consultancy services for assessments, engineering reviews, and design support.",
   description:
-    "Phase 0 establishes the route, metadata, and shell so the later consultancy build can focus on extracting the final service-specific content blocks.",
+    "This service route now uses the shared chrome, navigation patterns, and CTA treatment that the later shared service template will inherit and extend.",
   plannedSections: [
     "Service hero",
     "Solutions section",
@@ -23,7 +23,7 @@ export const consultancyPage: MarketingPageContent = {
   seo: {
     title: "Consultancy Services",
     description:
-      "Phase 0 scaffold for the Radiant Engineering consultancy services page.",
+      "Radiant Engineering consultancy shared-shell scaffold.",
     path: "/services/consultancy",
   },
 };
