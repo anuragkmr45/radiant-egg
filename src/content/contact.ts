@@ -1,28 +1,75 @@
-import { sharedPhaseZeroChecks, sharedPhaseZeroNotes } from "@/content/shared";
-import type { MarketingPageContent } from "@/types/content";
+import type { ContactPageContent } from "@/types/content";
 
-export const contactPage: MarketingPageContent = {
-  path: "/contact",
-  eyebrow: "Contact Route",
-  title: "Talk to the team coordinating consultancy, NDT, and third-party inspection.",
-  description:
-    "The route now shares the refined header, footer, CTA shell, and typography system so the detailed form and map work in Phase 8 can focus on function and fidelity.",
-  plannedSections: [
-    "Contact hero",
-    "Contact info strip",
-    "Enquiry form",
-    "Direct contact cards",
-    "Lightweight map card",
-  ],
-  notes: [
-    ...sharedPhaseZeroNotes,
-    "The heavy exported map markup will be replaced with an accessible, lightweight solution in Phase 8.",
-  ],
-  phase0Checks: sharedPhaseZeroChecks,
+export const contactPage: ContactPageContent = {
   seo: {
     title: "Contact",
     description:
-      "Radiant Engineering shared-shell contact page scaffold.",
+      "Get in touch with Radiant Engineering for consultancy, non-destructive testing, and statutory inspection support.",
     path: "/contact",
+  },
+  hero: {
+    eyebrow: "Contact Us",
+    title: "Get in Touch",
+    description:
+      "Have a project requirement or need a technical consultation? Reach out to our engineering team — we respond within 24 hours.",
+  },
+  infoStrip: [
+    {
+      kind: "address",
+      label: "Office Address",
+      value: "Plot No. 12, GIDC Industrial Estate,\nVadodara, Gujarat 390010, India",
+    },
+    {
+      kind: "phone",
+      label: "Phone",
+      value: "+91 98765 43210",
+      href: "tel:+919876543210",
+    },
+    {
+      kind: "email",
+      label: "Email",
+      value: "info@recpl.com",
+      href: "mailto:info@recpl.com",
+    },
+  ],
+  form: {
+    title: "Send an Enquiry",
+    description: "Fill in the details below and our team will get back to you.",
+    serviceLabel: "Service Required *",
+    servicePlaceholder: "Select a service",
+    serviceOptions: [
+      { label: "Consultancy Services", value: "consultancy" },
+      { label: "Non-Destructive Testing (NDT)", value: "ndt" },
+      { label: "Third Party Inspection (TPI)", value: "tpi" },
+      { label: "Industrial Supply", value: "supply" },
+    ],
+    submitLabel: "Submit Enquiry",
+    successMessage: "Enquiry captured. Our engineering team will respond within 24 hours.",
+  },
+  location: {
+    title: "Our Location",
+    description: "Visit our office or reach us via the details above.",
+    address: "Plot No. 12, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
+    mapQuery: "Plot No. 12, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
+    openInMapsHref:
+      "https://www.google.com/maps/search/?api=1&query=Plot%20No.%2012%2C%20GIDC%20Industrial%20Estate%2C%20Vadodara%2C%20Gujarat%20390010%2C%20India",
+  },
+  directContacts: {
+    title: "Direct Contacts",
+    description: "For urgent requirements, reach out directly to our leadership team.",
+    people: [
+      {
+        name: "Dr. R. K. Sharma",
+        role: "Director & Chief Consultant",
+        phone: "+91 98765 43210",
+        email: "director@recpl.com",
+      },
+      {
+        name: "Er. A. Patel",
+        role: "Project Head — NDT & TPI",
+        phone: "+91 98765 43211",
+        email: "projects@recpl.com",
+      },
+    ],
   },
 };

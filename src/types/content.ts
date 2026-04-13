@@ -367,3 +367,63 @@ export interface NdtPageContent {
   applications: NdtApplicationsContent;
   cta: ServiceCtaContent;
 }
+
+export type ContactInfoKind = "address" | "phone" | "email";
+
+export interface ContactHeroContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+}
+
+export interface ContactInfoItem {
+  kind: ContactInfoKind;
+  label: string;
+  value: string;
+  href?: string;
+}
+
+export interface ContactFormOption {
+  label: string;
+  value: string;
+}
+
+export interface ContactFormContent {
+  title: string;
+  description: string;
+  serviceLabel: string;
+  servicePlaceholder: string;
+  serviceOptions: readonly ContactFormOption[];
+  submitLabel: string;
+  successMessage: string;
+}
+
+export interface ContactLocationContent {
+  title: string;
+  description: string;
+  address: string;
+  mapQuery: string;
+  openInMapsHref: string;
+}
+
+export interface ContactPerson {
+  name: string;
+  role: string;
+  phone: string;
+  email: string;
+}
+
+export interface ContactDirectContactsContent {
+  title: string;
+  description: string;
+  people: readonly ContactPerson[];
+}
+
+export interface ContactPageContent {
+  seo: SeoFields;
+  hero: ContactHeroContent;
+  infoStrip: readonly ContactInfoItem[];
+  form: ContactFormContent;
+  location: ContactLocationContent;
+  directContacts: ContactDirectContactsContent;
+}
