@@ -343,3 +343,27 @@ export interface ConsultancyPageContent {
   expertiseStrip: readonly ConsultancyExpertiseItem[];
   cta: ServiceCtaContent;
 }
+
+export interface NdtApplicationItem {
+  label: string;
+  icon: HomeIconKey;
+}
+
+export interface NdtApplicationsContent {
+  anchorId?: string;
+  eyebrow: string;
+  title: string;
+  industriesTitle: string;
+  industries: readonly NdtApplicationItem[];
+  equipmentTitle: string;
+  equipment: readonly string[];
+}
+
+export interface NdtPageContent {
+  seo: SeoFields;
+  hero: ServiceHeroContent;
+  intro: ServiceIntroContent;
+  methods: ServiceFeatureGridContent;
+  applications: NdtApplicationsContent;
+  cta: ServiceCtaContent;
+}

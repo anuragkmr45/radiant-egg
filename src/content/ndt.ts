@@ -1,6 +1,6 @@
-import type { ServicePageContent } from "@/types/content";
+import type { NdtPageContent } from "@/types/content";
 
-export const ndtPage: ServicePageContent = {
+export const ndtPage: NdtPageContent = {
   seo: {
     title: "NDT Services",
     description:
@@ -19,7 +19,7 @@ export const ndtPage: ServicePageContent = {
     description:
       "Non-Destructive Testing (NDT) allows critical industrial components to be inspected for defects, degradation, and material anomalies — all without causing damage. RECPL's ASNT-certified technicians deploy a comprehensive suite of NDT methods across petrochemical, power, steel, and infrastructure sectors, delivering reliable data that drives informed maintenance and compliance decisions.",
   },
-  featureGrid: {
+  methods: {
     eyebrow: "Our Capabilities",
     title: "NDT Methods",
     description:
@@ -28,76 +28,88 @@ export const ndtPage: ServicePageContent = {
       {
         title: "Ultrasonic Testing (UT)",
         description:
-          "High-frequency sound waves detect internal flaws, measure wall thickness, and assess weld integrity in pressure equipment and structures.",
+          "High-frequency sound waves detect internal flaws, measure wall thickness, and assess weld integrity — ideal for pressure vessels, pipelines, and structural members.",
         icon: "search",
       },
       {
         title: "Magnetic Particle Inspection (MPI)",
         description:
-          "Surface and near-surface defects in ferromagnetic materials are revealed using magnetic fields and fine iron particles.",
+          "Surface and near-surface defects in ferromagnetic materials are revealed using magnetic fields and fine iron particles — widely used on welds, castings, and forgings.",
         icon: "award",
       },
       {
         title: "Dye Penetrant Testing (DPT)",
         description:
-          "A cost-effective method for detecting surface-breaking cracks and porosity on non-porous materials.",
+          "A cost-effective method for detecting surface-breaking cracks and porosity on non-porous materials including stainless steel, aluminium, and ceramics.",
         icon: "droplets",
       },
       {
         title: "Eddy Current Testing (ECT)",
         description:
-          "Electromagnetic induction identifies surface and sub-surface flaws in conductive materials including exchanger tubes.",
+          "Electromagnetic induction identifies surface and sub-surface flaws in conductive materials — particularly effective for heat exchanger tubes and aircraft components.",
         icon: "bolt",
       },
       {
         title: "Hardness Testing",
         description:
-          "On-site hardness measurements verify material properties, heat-treatment quality, and service degradation of critical components.",
+          "On-site hardness measurements (Brinell, Rockwell, Vickers, Leeb) verify material properties, heat-treatment quality, and service degradation of critical components.",
         icon: "shield",
       },
       {
         title: "Universal Testing Machine (UTM)",
         description:
-          "Tensile, compression, and bend tests determine mechanical properties for material qualification and failure analysis.",
+          "Tensile, compression, and bend tests determine mechanical properties of metals, polymers, and composites — essential for material qualification and failure analysis.",
         icon: "flask",
       },
     ],
   },
-  listGrid: {
+  applications: {
     anchorId: "industries",
     eyebrow: "Where We Work",
     title: "Applications and Industries",
-    items: [
+    industriesTitle: "Industries Served",
+    industries: [
       {
-        title: "Industries Served",
         icon: "factory",
-        items: [
-          "Petrochemical and refineries",
-          "Power and energy plants",
-          "Steel and cement industries",
-          "Shipbuilding and marine",
-          "Railways and infrastructure",
-          "Pressure vessels and boilers",
-        ],
+        label: "Petrochemical & Refineries",
       },
       {
-        title: "Equipment and Components",
-        icon: "package",
-        items: [
-          "Pressure vessels and storage tanks",
-          "Pipelines and piping systems",
-          "Crane girders and structural steelwork",
-          "Heat exchangers and condensers",
-          "Boiler drums and headers",
-          "Weld joints and fabricated assemblies",
-        ],
+        icon: "bolt",
+        label: "Power & Energy Plants",
       },
+      {
+        icon: "building",
+        label: "Steel & Cement Industries",
+      },
+      {
+        icon: "fuel",
+        label: "Shipbuilding & Marine",
+      },
+      {
+        icon: "train",
+        label: "Railways & Infrastructure",
+      },
+      {
+        icon: "flask",
+        label: "Pressure Vessels & Boilers",
+      },
+    ],
+    equipmentTitle: "Equipment & Components",
+    equipment: [
+      "Pressure vessels & storage tanks",
+      "Pipelines & piping systems",
+      "Crane girders & structural steelwork",
+      "Heat exchangers & condensers",
+      "Boiler drums & headers",
+      "Weld joints (butt, fillet, socket)",
+      "Castings, forgings & rolled products",
+      "Bridge components & foundations",
     ],
   },
   cta: {
     title: "Need NDT inspection?",
     description:
-      "Schedule calibrated non-destructive testing support for critical components, welds, and industrial assets.",
+      "From ultrasonic testing to hardness surveys — our certified team is ready to inspect your critical assets.",
     primaryAction: {
       label: "Book Inspection",
       href: "/contact",

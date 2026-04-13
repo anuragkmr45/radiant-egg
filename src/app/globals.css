@@ -2638,6 +2638,74 @@
     font-weight: 500;
     line-height: 1.375rem;
   }
+
+  .ndt-applications__grid {
+    display: grid;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .ndt-applications__column-title {
+    margin-bottom: 1.5rem;
+    color: var(--color-brand-navy-deep);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .ndt-applications__chips {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ndt-applications__chip {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 0.5rem;
+    background: white;
+    color: var(--color-text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+  }
+
+  .ndt-applications__chip-icon {
+    color: var(--color-brand-gold);
+    flex-shrink: 0;
+  }
+
+  .ndt-applications__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ndt-applications__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: var(--color-text-primary);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .ndt-applications__list-item + .ndt-applications__list-item {
+    margin-top: 0.75rem;
+  }
+
+  .ndt-applications__list-bullet {
+    width: 0.3125rem;
+    height: 0.3125rem;
+    margin-top: 0.5rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-brand-gold);
+    flex-shrink: 0;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -2708,7 +2776,12 @@
   }
 
   .consultancy-detail__capabilities,
-  .consultancy-expertise__grid {
+  .consultancy-expertise__grid,
+  .ndt-applications__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ndt-applications__chips {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2917,6 +2990,11 @@
   .consultancy-project-card {
     min-width: 0;
     max-width: none;
+  }
+
+  .ndt-applications__chips,
+  .ndt-applications__grid {
+    grid-template-columns: 1fr;
   }
 
   .about-hero {
