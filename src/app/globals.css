@@ -889,6 +889,8 @@
 
   .site-header--home {
     position: fixed;
+    inset-inline: 0;
+    width: 100%;
     border-bottom-color: rgba(255, 255, 255, 0.1);
     background: color-mix(in srgb, var(--color-brand-navy-deep) 92%, transparent);
   }

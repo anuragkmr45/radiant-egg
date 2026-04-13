@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 
 import { getSiteConfig } from "@/config/site";
+import { resolveSiteOrigin } from "@/lib/site-url";
 
-export default function robots(): MetadataRoute.Robots {
+export default async function robots(): Promise<MetadataRoute.Robots> {
   const siteConfig = getSiteConfig();
-  const siteHost = new URL(siteConfig.siteUrl).host;
+  const siteOrigin = await resolveSiteOrigin(siteConfig);
 
   return {
     rules: [
@@ -14,7 +15,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin", "/admin/*"],
       },
     ],
-    sitemap: `${siteConfig.siteUrl}/sitemap.xml`,
-    host: siteHost,
+    sitemap: `${siteOrigin}/sitemap.xml`,
+    host: new URL(siteOrigin).host,
   };
 }

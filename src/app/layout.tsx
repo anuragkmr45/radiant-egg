@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 import { StructuredData } from "@/components/seo/StructuredData";
 import { getSiteConfig } from "@/config/site";
+import { resolveSiteOrigin } from "@/lib/site-url";
 import { createSiteStructuredData } from "@/lib/structured-data";
 
 import "./globals.css";
@@ -19,11 +20,12 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
   const siteConfig = getSiteConfig();
+  const siteOrigin = await resolveSiteOrigin(siteConfig);
 
   return {
-    metadataBase: new URL(siteConfig.siteUrl),
+    metadataBase: new URL(siteOrigin),
     title: {
       default: siteConfig.name,
       template: `%s | ${siteConfig.name}`,
@@ -36,7 +38,7 @@ export function generateMetadata(): Metadata {
       siteName: siteConfig.name,
       title: siteConfig.name,
       description: siteConfig.description,
-      url: siteConfig.siteUrl,
+      url: "/",
       locale: siteConfig.locale,
     },
     twitter: {

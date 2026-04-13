@@ -75,12 +75,12 @@ const homeFooterGroups = [
 
 export const siteConfig = {
   name: "Radiant Engineering",
-  shortName: "Radiant",
+  shortName: "RECPL",
   description:
     "Independent engineering consultancy, third-party inspection, and non-destructive testing for demanding industrial programs.",
   siteUrl: "https://radiant-engineering.example",
   locale: "en_US",
-  tagline: "Consultancy, inspection, and NDT for industrial programs.",
+  tagline: "Consultancy Pvt. Ltd.",
   footerHeadline:
     "Independent engineering, inspection, and quality systems for demanding industrial work.",
   footerDescription:
@@ -96,9 +96,9 @@ export const siteConfig = {
   serviceNav,
   footerGroups,
   contact: {
-    email: "info@radiantengg.com",
+    email: "info@recpl.com",
     phone: "+91 98765 43210",
-    address: "Industrial Corridor, Gujarat, India",
+    address: "Plot No. 12, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
     hours: "Mon - Sat, 9:00 AM to 6:00 PM IST",
   },
   defaultCta: {
@@ -112,7 +112,7 @@ export const siteConfig = {
     legalName: "Radiant Engineering Consultancy Pvt. Ltd.",
     shortName: "RECPL",
     tagline: "Consultancy Pvt. Ltd.",
-    phoneLabel: "+91 99999 99999",
+    phoneLabel: "+91 98765 43210",
     nav: homeNav,
     quoteCta: {
       label: "Get a Quote",
@@ -124,9 +124,9 @@ export const siteConfig = {
       "Radiant Engineering Consultancy Pvt. Ltd. — India's trusted partner for NDT, inspection and consultancy since 2000.",
     footerGroups: homeFooterGroups,
     contact: {
-      email: "info@recpl.in",
-      phone: "+91 99999 99999",
-      address: "Mumbai, Maharashtra, India",
+      email: "info@recpl.com",
+      phone: "+91 98765 43210",
+      address: "Plot No. 12, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
       hours: "Mon - Sat, 9:00 AM to 6:00 PM IST",
     },
   },

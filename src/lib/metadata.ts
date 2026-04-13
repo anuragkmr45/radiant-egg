@@ -5,8 +5,6 @@ import type { SeoFields } from "@/types/content";
 
 export function createPageMetadata(input: SeoFields): Metadata {
   const siteConfig = getSiteConfig();
-  const absoluteUrl = new URL(input.path, siteConfig.siteUrl).toString();
-  const socialImage = new URL("/opengraph-image", siteConfig.siteUrl).toString();
 
   return {
     title: input.title,
@@ -17,18 +15,18 @@ export function createPageMetadata(input: SeoFields): Metadata {
       follow: true,
     },
     alternates: {
-      canonical: absoluteUrl,
+      canonical: input.path,
     },
     openGraph: {
       type: "website",
       title: `${input.title} | ${siteConfig.name}`,
       description: input.description,
-      url: absoluteUrl,
+      url: input.path,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       images: [
         {
-          url: socialImage,
+          url: "/opengraph-image",
           width: 1200,
           height: 630,
           alt: `${siteConfig.name} social preview`,
@@ -39,7 +37,7 @@ export function createPageMetadata(input: SeoFields): Metadata {
       card: "summary_large_image",
       title: `${input.title} | ${siteConfig.name}`,
       description: input.description,
-      images: [socialImage],
+      images: ["/twitter-image"],
     },
   };
 }

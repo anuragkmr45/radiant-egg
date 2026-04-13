@@ -60,7 +60,6 @@ export function ServicesDropdown({
           }
         });
       }}
-      onFocusCapture={() => setOpen(true)}
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       ref={rootRef}
@@ -74,7 +73,18 @@ export function ServicesDropdown({
             ? "desktop-nav__link desktop-nav__link--button desktop-nav__link--inverse"
             : "desktop-nav__link desktop-nav__link--button"
         }
-        onClick={() => setOpen((value) => !value)}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowDown" || event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            setOpen(true);
+            return;
+          }
+
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        }}
+        onClick={() => setOpen(true)}
         type="button"
         {...(active ? { "aria-current": "page" as const } : {})}
       >

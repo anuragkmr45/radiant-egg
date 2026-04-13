@@ -1,3 +1,4 @@
+import { getPublicSiteUrl } from "@/config/site";
 import type {
   ContactPageContent,
   SeoFields,
@@ -13,14 +14,20 @@ interface BreadcrumbItem {
 }
 
 function toAbsoluteUrl(siteConfig: SiteConfig, routePath: string) {
-  return new URL(routePath, siteConfig.siteUrl).toString();
+  const publicSiteUrl = getPublicSiteUrl(siteConfig);
+
+  return publicSiteUrl ? new URL(routePath, publicSiteUrl).toString() : routePath;
 }
 
 function createThingReference(siteConfig: SiteConfig, hash: string) {
-  return `${siteConfig.siteUrl}${hash}`;
+  const publicSiteUrl = getPublicSiteUrl(siteConfig);
+
+  return publicSiteUrl ? `${publicSiteUrl}${hash}` : hash;
 }
 
 export function createSiteStructuredData(siteConfig: SiteConfig): JsonLd[] {
+  const publicSiteUrl = getPublicSiteUrl(siteConfig);
+
   return [
     {
       "@context": "https://schema.org",
@@ -28,7 +35,7 @@ export function createSiteStructuredData(siteConfig: SiteConfig): JsonLd[] {
       "@id": createThingReference(siteConfig, "#organization"),
       name: siteConfig.name,
       description: siteConfig.description,
-      url: siteConfig.siteUrl,
+      url: publicSiteUrl ?? "/",
       telephone: siteConfig.contact.phone,
       email: siteConfig.contact.email,
       address: {
@@ -50,7 +57,7 @@ export function createSiteStructuredData(siteConfig: SiteConfig): JsonLd[] {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "@id": createThingReference(siteConfig, "#website"),
-      url: siteConfig.siteUrl,
+      url: publicSiteUrl ?? "/",
       name: siteConfig.name,
       description: siteConfig.description,
       publisher: {
@@ -124,11 +131,13 @@ export function createContactStructuredData(
   siteConfig: SiteConfig,
   content: ContactPageContent,
 ): JsonLd {
+  const publicSiteUrl = getPublicSiteUrl(siteConfig);
+
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": createThingReference(siteConfig, "#organization"),
-    url: siteConfig.siteUrl,
+    url: publicSiteUrl ?? "/",
     name: siteConfig.name,
     contactPoint: content.directContacts.people.map((person) => ({
       "@type": "ContactPoint",
