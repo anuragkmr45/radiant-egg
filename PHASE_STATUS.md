@@ -9,7 +9,7 @@
 | 4 | Shared services-page template | done |
 | 5 | Consultancy page | done |
 | 6 | NDT page | done |
-| 7 | TPI page | pending |
+| 7 | TPI page | done |
 | 8 | Contact page | pending |
 | 9 | CMS integration | pending |
 | 10 | QA, pixel-fit pass, SEO, performance | pending |

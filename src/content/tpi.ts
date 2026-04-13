@@ -28,11 +28,11 @@ export const tpiPage: ServicePageContent = {
         title: "Lifting Equipment",
         icon: "hardhat",
         items: [
-          "EOT and HOT cranes",
+          "EOT & HOT Cranes",
           "Chain pulley blocks and hoists",
           "Wire ropes and slings",
           "Lifting tackles and accessories",
-          "Goods and passenger lifts",
+          "Goods & passenger lifts",
         ],
       },
       {
@@ -47,7 +47,7 @@ export const tpiPage: ServicePageContent = {
         ],
       },
       {
-        title: "Boilers and Fired Equipment",
+        title: "Boilers & Fired Equipment",
         icon: "flask",
         items: [
           "Steam boilers (IBR)",
@@ -81,36 +81,36 @@ export const tpiPage: ServicePageContent = {
         stepLabel: "Step 3",
         title: "Testing and Evaluation",
         description:
-          "NDT, proof tests, load tests, and safety device verification are performed as applicable.",
+          "NDT, hydraulic/pneumatic proof tests, load tests, and safety device verification as applicable.",
         icon: "clipboard",
       },
       {
         stepLabel: "Step 4",
         title: "Certification and Reporting",
         description:
-          "Issue statutory certificates and inspection reports with clear compliance observations and recommendations.",
+          "Issue statutory certificates (Form 13, Form 29) and detailed inspection reports with recommendations.",
         icon: "scroll",
       },
     ],
   },
   standards: {
     eyebrow: "Compliance Framework",
-    title: "Codes and Standards",
+    title: "Codes & Standards",
     description:
       "Every inspection is conducted in accordance with applicable Indian and international codes.",
     items: [
-      { code: "IS 3177", description: "Lifting appliances", icon: "scroll" },
-      { code: "IS 2825", description: "Pressure vessels", icon: "scroll" },
-      { code: "ASME Sec VIII", description: "Boiler and PV code", icon: "scroll", featured: true },
+      { code: "IS 3177", description: "Lifting Appliances", icon: "scroll" },
+      { code: "IS 2825", description: "Pressure Vessels", icon: "scroll" },
+      { code: "ASME Sec VIII", description: "Boiler & PV Code", icon: "scroll", featured: true },
       { code: "IBR 1950", description: "Indian Boiler Regulations", icon: "scroll" },
-      { code: "Factories Act", description: "Sections 28, 29, 31", icon: "scroll" },
-      { code: "IS 807", description: "Crane design code", icon: "scroll" },
-      { code: "OSHA", description: "Safety standards", icon: "scroll" },
-      { code: "NBIC", description: "Inspection code", icon: "scroll" },
+      { code: "Factories Act", description: "Sec 28, 29, 31", icon: "scroll" },
+      { code: "IS 807", description: "Crane Design Code", icon: "scroll" },
+      { code: "OSHA", description: "Safety Standards", icon: "scroll" },
+      { code: "NBIC", description: "Inspection Code", icon: "scroll" },
     ],
   },
   cta: {
-    title: "Need statutory inspection?",
+    title: "Need Statutory Inspection?",
     description:
       "From crane load tests to boiler certifications — our Competent Persons ensure full compliance with the Factories Act.",
     primaryAction: {
