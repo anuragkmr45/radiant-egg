@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
-import { ServicePageView } from "@/components/sections/services/ServicePageView";
+import { ConsultancyPageView } from "@/components/sections/consultancy/ConsultancyPageView";
 import { consultancyPage } from "@/content/consultancy";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(consultancyPage.seo);
 
 export default function ConsultancyPage() {
-  return <ServicePageView content={consultancyPage} />;
+  return <ConsultancyPageView content={consultancyPage} />;
 }

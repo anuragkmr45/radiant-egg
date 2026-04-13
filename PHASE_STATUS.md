@@ -7,7 +7,7 @@
 | 2 | Home page | done |
 | 3 | About page | done |
 | 4 | Shared services-page template | done |
-| 5 | Consultancy page | pending |
+| 5 | Consultancy page | done |
 | 6 | NDT page | pending |
 | 7 | TPI page | pending |
 | 8 | Contact page | pending |

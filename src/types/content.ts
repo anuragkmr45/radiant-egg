@@ -302,3 +302,44 @@ export interface ServicePageContent {
   standards?: ServiceStandardsContent;
   cta: ServiceCtaContent;
 }
+
+export interface ConsultancyCapabilityItem {
+  label: string;
+  icon: HomeIconKey;
+}
+
+export interface ConsultancyProject {
+  title: string;
+  client: string;
+  description: string;
+  icon: HomeIconKey;
+}
+
+export interface ConsultancyDetailSection {
+  anchorId?: string;
+  title: string;
+  icon: HomeIconKey;
+  image: HomeImageAsset;
+  imageSide: "left" | "right";
+  stickyImage?: boolean;
+  tone?: "default" | "muted";
+  paragraphs: readonly string[];
+  scopeLabel: string;
+  capabilities: readonly ConsultancyCapabilityItem[];
+  projectsTitle: string;
+  projects: readonly ConsultancyProject[];
+}
+
+export interface ConsultancyExpertiseItem {
+  label: string;
+  icon: HomeIconKey;
+}
+
+export interface ConsultancyPageContent {
+  seo: SeoFields;
+  hero: ServiceHeroContent;
+  intro: ServiceIntroContent;
+  detailSections: readonly ConsultancyDetailSection[];
+  expertiseStrip: readonly ConsultancyExpertiseItem[];
+  cta: ServiceCtaContent;
+}

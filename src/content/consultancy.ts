@@ -1,6 +1,6 @@
-import type { ServicePageContent } from "@/types/content";
+import type { ConsultancyPageContent } from "@/types/content";
 
-export const consultancyPage: ServicePageContent = {
+export const consultancyPage: ConsultancyPageContent = {
   seo: {
     title: "Consultancy Services",
     description:
@@ -54,37 +54,150 @@ export const consultancyPage: ServicePageContent = {
       },
     ],
   },
-  featureGrid: {
-    anchorId: "industries",
-    eyebrow: "Core Delivery",
-    title: "Shared Consultancy Framework",
-    description:
-      "The service template establishes the recurring consultancy patterns before the route-specific design-drawing, audit, and project sections are layered in during Phase 5.",
-    items: [
-      {
-        title: "Design and Drawing Support",
-        description:
-          "Concept development, load path review, and code-aligned engineering drawings for steel, RCC, and heavy industrial systems.",
-        icon: "building",
+  detailSections: [
+    {
+      anchorId: "industries",
+      title: "Structure Design & Engineering Drawings",
+      icon: "building",
+      image: {
+        src: "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F40278119f316b292a7df24a060158228d46bbf66.jpg?generation=1776077631075758&alt=media",
+        alt: "CAD structural design software",
       },
-      {
-        title: "Structural Audit and Residual Life Review",
-        description:
-          "Condition assessment, safety evaluation, and performance validation for ageing or modified structures operating in demanding environments.",
-        icon: "shield",
+      imageSide: "left",
+      tone: "muted",
+      paragraphs: [
+        "We provide end-to-end structural design support — from concept development and load path optimisation to detailed engineering drawings ready for fabrication and construction. Our designs account for real-world site conditions, constructability constraints, and serviceability requirements.",
+        "Every design undergoes rigorous strength and stability checks in accordance with applicable Indian Standards and international codes, ensuring structural integrity, safety, and long-term performance.",
+      ],
+      scopeLabel:
+        "Scope of design support across industrial, infrastructure, and heavy engineering applications",
+      capabilities: [
+        { label: "Structural design for steel & RCC", icon: "building" },
+        { label: "Detailed engineering drawings", icon: "clipboard" },
+        { label: "Design validation & review", icon: "shield" },
+        { label: "Conveyor structure design", icon: "train" },
+        { label: "Solar mounting structure design", icon: "bolt" },
+        { label: "Crane structure design", icon: "hardhat" },
+        { label: "Steel derrick design", icon: "layers" },
+        { label: "Foundation design & analysis", icon: "package" },
+        { label: "Finite Element Analysis (FEA)", icon: "search" },
+        { label: "Code-compliant design (IS, ASME, ASTM)", icon: "scroll" },
+      ],
+      projectsTitle: "Past Projects",
+      projects: [
+        {
+          title: "Conveyor Structure Design",
+          client: "AM/NS India",
+          description:
+            "Strength assessment for additional solar panel load on existing conveyor system.",
+          icon: "train",
+        },
+        {
+          title: "Solar Grid Structure Design",
+          client: "MGM Green Energy",
+          description:
+            "Design and analysis of steel support systems for solar installation.",
+          icon: "bolt",
+        },
+        {
+          title: "Steel Derrick Structure",
+          client: "Hindalco",
+          description:
+            "Engineered steel support solution for silencer erection requirements.",
+          icon: "building",
+        },
+        {
+          title: "Crane Railing Design",
+          client: "Hindalco",
+          description:
+            "Structural safety and load-based design validation for overhead railing system.",
+          icon: "hardhat",
+        },
+        {
+          title: "Edge Protection Railing",
+          client: "Balajee Infratech",
+          description: "Design validation for operational safety and code alignment.",
+          icon: "shield",
+        },
+        {
+          title: "Unloading Mechanism Link & Joint Design",
+          client: "Balajee Infratech",
+          description:
+            "Component-level engineering support for one-way unloading tipper mechanism.",
+          icon: "layers",
+        },
+      ],
+    },
+    {
+      title: "Structural Stability Audit & Residual Life Assessment",
+      icon: "shield",
+      image: {
+        src: "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F2b27c016cd46d321777cd8b4ef3b9311048ae905.jpg?generation=1776077632257271&alt=media",
+        alt: "Engineers inspecting industrial structure",
       },
-      {
-        title: "Retrofit and Compliance Recommendations",
-        description:
-          "Decision-ready engineering guidance covering strengthening options, codal checks, and long-term operational reliability.",
-        icon: "scroll",
-      },
-    ],
-  },
+      imageSide: "right",
+      stickyImage: true,
+      paragraphs: [
+        "Industrial structures age, corrode, and undergo loading conditions that differ from original design assumptions. Our structural audit services provide a systematic evaluation of ageing, distressed, or modified structures — assessing their current condition, load-bearing performance, and remaining service life.",
+        "We combine visual inspection with advanced non-destructive testing, material evaluation, and analytical modelling to identify distress mechanisms including cracking, deflection, corrosion, and degradation. Our assessments go beyond surface-level observation — we evaluate durability indicators, reinforcement condition, concrete quality, and structural adequacy against current codal provisions.",
+        "Each audit concludes with actionable recommendations — whether it's continued service with monitoring, targeted repair, structural strengthening, or full retrofit — enabling clients to make informed decisions about asset life extension, safety compliance, and capital planning.",
+      ],
+      scopeLabel:
+        "Comprehensive assessment tools for safety, durability, serviceability, and remedial planning",
+      capabilities: [
+        { label: "Structural audits for industrial buildings", icon: "building" },
+        { label: "Residual life assessment", icon: "award" },
+        { label: "Boiler & equipment foundation audits", icon: "flask" },
+        { label: "Wagon tippler structural assessment", icon: "train" },
+        { label: "Fire & corrosion damage evaluation", icon: "droplets" },
+        { label: "Load testing & performance review", icon: "badge" },
+        { label: "Concrete testing (UPV, rebound hammer)", icon: "search" },
+        { label: "Reinforcement mapping & cover survey", icon: "layers" },
+        { label: "Crack pattern analysis & diagnosis", icon: "shield" },
+        { label: "Retrofit & repair recommendations", icon: "briefcase" },
+        { label: "Code compliance & safety reports", icon: "scroll" },
+      ],
+      projectsTitle: "Past Projects",
+      projects: [
+        {
+          title: "RCC Foundation Residual Life Assessment",
+          client: "TSM with Mantra Udyog",
+          description:
+            "Structural audit and continued-service evaluation of wagon tippler foundation system.",
+          icon: "award",
+        },
+        {
+          title: "Structural Stability Audit of RCC & Steel Structures",
+          client: "RHI Magnesita with Mantra Udyog",
+          description:
+            "Condition assessment of industrial structural assets for safety and performance review.",
+          icon: "shield",
+        },
+      ],
+    },
+  ],
+  expertiseStrip: [
+    {
+      label: "PhD-led engineering expertise",
+      icon: "graduation",
+    },
+    {
+      label: "Advanced FEA & structural analysis",
+      icon: "bolt",
+    },
+    {
+      label: "Compliance with IS, ASME, ASTM standards",
+      icon: "scroll",
+    },
+    {
+      label: "Pan-India industrial project delivery",
+      icon: "train",
+    },
+  ],
   cta: {
     title: "Need expert structural design or audit services?",
     description:
-      "Connect with RECPL for engineering consultancy that balances site practicality, code compliance, and long-term asset reliability.",
+      "From structural design to stability audits — let our certified experts partner with you.",
     primaryAction: {
       label: "Contact Us",
       href: "/contact",
