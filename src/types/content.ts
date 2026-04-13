@@ -1,4 +1,4 @@
-import type { SitePath } from "@/types/site";
+import type { SiteHref, SitePath } from "@/types/site";
 
 export interface SeoFields {
   title: string;
@@ -49,7 +49,7 @@ export interface HomeStat {
 
 export interface HomeAction {
   label: string;
-  href: string;
+  href: SiteHref;
 }
 
 export interface HomeHeroContent {
@@ -123,4 +123,77 @@ export interface HomePageContent {
     items: readonly HomeLogoItem[];
   };
   cta: HomeCtaContent;
+}
+
+export interface AboutBreadcrumbItem {
+  label: string;
+  href?: SitePath;
+}
+
+export interface AboutHeroContent {
+  breadcrumbs: readonly AboutBreadcrumbItem[];
+  title: string;
+  description: string;
+}
+
+export interface AboutCredentialItem {
+  accent: string;
+  label: string;
+}
+
+export interface AboutIntroContent {
+  eyebrow: string;
+  title: string;
+  paragraphs: readonly string[];
+  image: HomeImageAsset;
+  credentials: readonly AboutCredentialItem[];
+}
+
+export interface AboutFeatureCard {
+  title: string;
+  description: string;
+  icon: HomeIconKey;
+}
+
+export interface AboutValueCard extends AboutFeatureCard {
+  values?: readonly string[];
+}
+
+export interface AboutTeamMember {
+  name: string;
+  role: string;
+  description: string;
+  icon: HomeIconKey;
+  badge?: string;
+  featured?: boolean;
+}
+
+export interface AboutPortfolioTile {
+  label: string;
+  icon: HomeIconKey;
+}
+
+export interface AboutPageContent {
+  seo: SeoFields;
+  hero: AboutHeroContent;
+  intro: AboutIntroContent;
+  strengths: HomeSectionIntro & {
+    items: readonly AboutFeatureCard[];
+  };
+  principles: {
+    items: readonly AboutValueCard[];
+  };
+  leadership: HomeSectionIntro & {
+    members: readonly AboutTeamMember[];
+  };
+  stats: readonly HomeStat[];
+  portfolio: HomeSectionIntro & {
+    items: readonly AboutPortfolioTile[];
+  };
+  cta: {
+    title: string;
+    description: string;
+    primaryAction: HomeAction;
+    secondaryAction: HomeAction;
+  };
 }

@@ -5,7 +5,7 @@
 | 0 | Foundation and extraction baseline | done |
 | 1 | Design system + shared chrome | done |
 | 2 | Home page | done |
-| 3 | About page | pending |
+| 3 | About page | done |
 | 4 | Shared services-page template | pending |
 | 5 | Consultancy page | pending |
 | 6 | NDT page | pending |
