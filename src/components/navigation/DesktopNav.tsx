@@ -1,8 +1,7 @@
 "use client";
-
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
 import { ServicesDropdown } from "@/components/navigation/ServicesDropdown";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types/site";
@@ -30,8 +29,8 @@ export function DesktopNav({
       <ul className="desktop-nav__list" role="list">
         {primaryItems.map((item) => (
           <li key={item.href}>
-            <Link
-              aria-current={currentPath === item.href ? "page" : undefined}
+            <ContextualNavLink
+              ariaCurrent={currentPath === item.href ? "page" : undefined}
               className={cn(
                 "desktop-nav__link",
                 inverse ? "desktop-nav__link--inverse" : null,
@@ -39,7 +38,7 @@ export function DesktopNav({
               href={item.href}
             >
               {item.label}
-            </Link>
+            </ContextualNavLink>
           </li>
         ))}
         <li>

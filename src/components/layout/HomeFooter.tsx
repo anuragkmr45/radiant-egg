@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
 import { siteConfig } from "@/config/site";
 
 export function HomeFooter() {
@@ -26,9 +26,9 @@ export function HomeFooter() {
               <ul className="home-footer__links" role="list">
                 {group.links.map((item) => (
                   <li key={`${group.title}-${item.href}`}>
-                    <Link className="home-footer__link" href={item.href}>
+                    <ContextualNavLink className="home-footer__link" href={item.href}>
                       {item.label}
-                    </Link>
+                    </ContextualNavLink>
                   </li>
                 ))}
               </ul>

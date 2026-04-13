@@ -197,3 +197,108 @@ export interface AboutPageContent {
     secondaryAction: HomeAction;
   };
 }
+
+export interface ServiceHeroContent {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  description?: string;
+  backgroundImage?: HomeImageAsset;
+  glowPosition?: "left" | "right";
+  primaryAction?: HomeAction;
+}
+
+export interface ServiceSplitHighlight {
+  label: string;
+  icon: HomeIconKey;
+}
+
+export interface ServiceIntroCenteredContent {
+  variant: "centered";
+  description: string;
+}
+
+export interface ServiceIntroSplitContent {
+  variant: "split";
+  eyebrow: string;
+  title: string;
+  paragraphs: readonly string[];
+  image: HomeImageAsset;
+  highlights?: readonly ServiceSplitHighlight[];
+}
+
+export type ServiceIntroContent = ServiceIntroCenteredContent | ServiceIntroSplitContent;
+
+export interface ServiceFeatureCard {
+  title: string;
+  description: string;
+  icon: HomeIconKey;
+}
+
+export interface ServiceFeatureGridContent {
+  anchorId?: string;
+  eyebrow: string;
+  title: string;
+  description?: string;
+  items: readonly ServiceFeatureCard[];
+}
+
+export interface ServiceListCard {
+  title: string;
+  icon: HomeIconKey;
+  items: readonly string[];
+}
+
+export interface ServiceListGridContent {
+  anchorId?: string;
+  eyebrow: string;
+  title: string;
+  description?: string;
+  items: readonly ServiceListCard[];
+}
+
+export interface ServiceProcessStep {
+  stepLabel: string;
+  title: string;
+  description: string;
+  icon: HomeIconKey;
+}
+
+export interface ServiceProcessContent {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  steps: readonly ServiceProcessStep[];
+}
+
+export interface ServiceStandardItem {
+  code: string;
+  description: string;
+  icon: HomeIconKey;
+  featured?: boolean;
+}
+
+export interface ServiceStandardsContent {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  items: readonly ServiceStandardItem[];
+}
+
+export interface ServiceCtaContent {
+  title: string;
+  description: string;
+  primaryAction: HomeAction;
+  secondaryAction?: HomeAction;
+}
+
+export interface ServicePageContent {
+  seo: SeoFields;
+  hero: ServiceHeroContent;
+  intro: ServiceIntroContent;
+  featureGrid?: ServiceFeatureGridContent;
+  listGrid?: ServiceListGridContent;
+  process?: ServiceProcessContent;
+  standards?: ServiceStandardsContent;
+  cta: ServiceCtaContent;
+}

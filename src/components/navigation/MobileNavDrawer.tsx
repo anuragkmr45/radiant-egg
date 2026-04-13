@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
+import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
 import { PrimaryButton } from "@/components/ui/ButtonLink";
 import type { ContactDetails, NavItem, SiteCta } from "@/types/site";
 
@@ -125,14 +126,14 @@ export function MobileNavDrawer({
             <ul className="mobile-drawer__list" role="list">
               {primaryItems.map((item) => (
                 <li key={item.href}>
-                  <Link
-                    aria-current={pathname === item.href ? "page" : undefined}
+                  <ContextualNavLink
+                    ariaCurrent={pathname === item.href ? "page" : undefined}
                     className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
                     href={item.href}
                     onClick={() => setOpen(false)}
                   >
                     {item.label}
-                  </Link>
+                  </ContextualNavLink>
                 </li>
               ))}
             </ul>

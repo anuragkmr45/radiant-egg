@@ -1,0 +1,40 @@
+import { PageContainer } from "@/components/layout/PageContainer";
+import { HomeIcon } from "@/components/sections/home/HomeIcon";
+import type { ServiceFeatureGridContent } from "@/types/content";
+
+interface ServiceFeatureGridSectionProps {
+  content: ServiceFeatureGridContent;
+  muted?: boolean;
+}
+
+export function ServiceFeatureGridSection({
+  content,
+  muted = false,
+}: ServiceFeatureGridSectionProps) {
+  return (
+    <section
+      className={muted ? "service-section service-section--muted" : "service-section service-section--page"}
+      id={content.anchorId}
+    >
+      <PageContainer>
+        <div className="service-section__header service-section__header--center">
+          <span className="service-section__eyebrow">{content.eyebrow}</span>
+          <h2 className="service-section__title">{content.title}</h2>
+          {content.description ? <p className="service-section__description">{content.description}</p> : null}
+        </div>
+
+        <div className="service-feature-grid">
+          {content.items.map((item) => (
+            <article className="service-feature-card" key={item.title}>
+              <span className="service-feature-card__icon">
+                <HomeIcon name={item.icon} size={24} />
+              </span>
+              <h3 className="service-feature-card__title">{item.title}</h3>
+              <p className="service-feature-card__description">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </PageContainer>
+    </section>
+  );
+}
