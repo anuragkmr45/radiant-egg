@@ -12,4 +12,4 @@
 | 7 | TPI page | done |
 | 8 | Contact page | done |
 | 9 | CMS integration | done |
-| 10 | QA, pixel-fit pass, SEO, performance | pending |
+| 10 | QA, pixel-fit pass, SEO, performance | done |

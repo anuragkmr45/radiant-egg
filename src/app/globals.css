@@ -3590,3 +3590,46 @@
     align-items: flex-start;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .action-button:hover,
+  .services-dropdown__item:hover,
+  .contact-form__submit:hover {
+    transform: none;
+  }
+
+  .services-dropdown__panel,
+  .services-dropdown__panel--open {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .mobile-drawer__panel,
+  .mobile-drawer__panel--open {
+    transform: translateX(0);
+  }
+
+  .about-dual-card {
+    perspective: none;
+  }
+
+  .about-dual-card__face {
+    position: static;
+    transform: none !important;
+  }
+
+  .about-dual-card__face--back {
+    display: none;
+  }
+}

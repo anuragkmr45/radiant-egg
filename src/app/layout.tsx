@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
+import { StructuredData } from "@/components/seo/StructuredData";
 import { getSiteConfig } from "@/config/site";
+import { createSiteStructuredData } from "@/lib/structured-data";
 
 import "./globals.css";
 
@@ -55,13 +57,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteConfig = getSiteConfig();
+
   return (
     <html
       className={`${inter.variable} ${plusJakartaSans.variable}`}
       lang="en"
       suppressHydrationWarning
     >
-      <body className="site-body">{children}</body>
+      <body className="site-body">
+        <StructuredData data={createSiteStructuredData(siteConfig)} />
+        {children}
+      </body>
     </html>
   );
 }

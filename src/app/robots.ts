@@ -7,10 +7,13 @@ export default function robots(): MetadataRoute.Robots {
   const siteHost = new URL(siteConfig.siteUrl).host;
 
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/admin", "/admin/*"],
+      },
+    ],
     sitemap: `${siteConfig.siteUrl}/sitemap.xml`,
     host: siteHost,
   };
