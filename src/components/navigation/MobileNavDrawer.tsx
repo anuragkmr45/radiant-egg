@@ -14,6 +14,7 @@ interface MobileNavDrawerProps {
   serviceItems: readonly NavItem[];
   cta: SiteCta;
   contact: ContactDetails;
+  tone?: "default" | "inverse";
 }
 
 export function MobileNavDrawer({
@@ -22,6 +23,7 @@ export function MobileNavDrawer({
   serviceItems,
   cta,
   contact,
+  tone = "default",
 }: MobileNavDrawerProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -30,6 +32,7 @@ export function MobileNavDrawer({
   const toggleRef = useRef<HTMLButtonElement | null>(null);
   const closeRef = useRef<HTMLButtonElement | null>(null);
   const wasOpenRef = useRef(false);
+  const inverse = tone === "inverse";
 
   useEffect(() => {
     if (!open) {
@@ -64,13 +67,13 @@ export function MobileNavDrawer({
   }, [open]);
 
   return (
-    <div className="mobile-drawer">
+    <div className={inverse ? "mobile-drawer mobile-drawer--inverse" : "mobile-drawer"}>
       <button
         aria-controls={panelId}
         aria-expanded={open}
         aria-haspopup="dialog"
         aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-        className="mobile-drawer__toggle"
+        className={inverse ? "mobile-drawer__toggle mobile-drawer__toggle--inverse" : "mobile-drawer__toggle"}
         onClick={() => setOpen((value) => !value)}
         ref={toggleRef}
         type="button"
@@ -88,7 +91,15 @@ export function MobileNavDrawer({
         <aside
           aria-labelledby={titleId}
           aria-modal="true"
-          className={open ? "mobile-drawer__panel mobile-drawer__panel--open" : "mobile-drawer__panel"}
+          className={
+            open
+              ? inverse
+                ? "mobile-drawer__panel mobile-drawer__panel--inverse mobile-drawer__panel--open"
+                : "mobile-drawer__panel mobile-drawer__panel--open"
+              : inverse
+                ? "mobile-drawer__panel mobile-drawer__panel--inverse"
+                : "mobile-drawer__panel"
+          }
           id={panelId}
           role="dialog"
         >
@@ -101,7 +112,7 @@ export function MobileNavDrawer({
             </div>
             <button
               aria-label="Close navigation menu"
-              className="mobile-drawer__close"
+              className={inverse ? "mobile-drawer__close mobile-drawer__close--inverse" : "mobile-drawer__close"}
               onClick={() => setOpen(false)}
               ref={closeRef}
               type="button"
@@ -116,7 +127,7 @@ export function MobileNavDrawer({
                 <li key={item.href}>
                   <Link
                     aria-current={pathname === item.href ? "page" : undefined}
-                    className="mobile-drawer__link"
+                    className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
                     href={item.href}
                     onClick={() => setOpen(false)}
                   >
@@ -134,7 +145,7 @@ export function MobileNavDrawer({
                 <li key={item.href}>
                   <Link
                     aria-current={pathname === item.href ? "page" : undefined}
-                    className="mobile-drawer__link"
+                    className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
                     href={item.href}
                     onClick={() => setOpen(false)}
                   >

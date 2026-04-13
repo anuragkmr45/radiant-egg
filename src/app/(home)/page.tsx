@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
-import { PlaceholderPage } from "@/components/sections/PlaceholderPage";
+import { HomePageView } from "@/components/sections/home/HomePageView";
 import { homePage } from "@/content/home";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(homePage.seo);
 
 export default function HomePage() {
-  return <PlaceholderPage content={homePage} />;
+  return <HomePageView content={homePage} />;
 }

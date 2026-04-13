@@ -8,13 +8,16 @@ export type SitePath =
   | "/services/ndt"
   | "/services/tpi";
 
+export type SiteSectionHref = `/#${string}`;
+export type SiteHref = SitePath | SiteSectionHref;
+
 export type SitemapChangeFrequency = NonNullable<
   MetadataRoute.Sitemap[number]["changeFrequency"]
 >;
 
 export interface NavItem {
   label: string;
-  href: SitePath;
+  href: SiteHref;
   description?: string;
 }
 
@@ -32,7 +35,7 @@ export interface ContactDetails {
 
 export interface SiteCta {
   label: string;
-  href: SitePath;
+  href: SiteHref;
   description: string;
 }
 
@@ -40,6 +43,19 @@ export interface SiteRoute {
   href: SitePath;
   changeFrequency: SitemapChangeFrequency;
   priority: number;
+}
+
+export interface HomeChromeConfig {
+  brandName: string;
+  legalName: string;
+  shortName: string;
+  tagline: string;
+  phoneLabel: string;
+  nav: readonly NavItem[];
+  quoteCta: SiteCta;
+  footerDescription: string;
+  footerGroups: readonly FooterGroup[];
+  contact: ContactDetails;
 }
 
 export interface SiteConfig {
@@ -57,5 +73,6 @@ export interface SiteConfig {
   footerGroups: readonly FooterGroup[];
   contact: ContactDetails;
   defaultCta: SiteCta;
+  homeChrome: HomeChromeConfig;
   routes: readonly SiteRoute[];
 }

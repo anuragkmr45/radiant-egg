@@ -3,6 +3,8 @@ import type { SiteConfig } from "@/types/site";
 const homeLink = { label: "Home", href: "/" } as const;
 const aboutLink = { label: "About", href: "/about" } as const;
 const contactLink = { label: "Contact", href: "/contact" } as const;
+const aboutSectionLink = { label: "About Us", href: "/#about" } as const;
+const industriesSectionLink = { label: "Industries", href: "/#industries" } as const;
 
 const primaryNav = [
   homeLink,
@@ -43,6 +45,34 @@ const footerGroups = [
   },
 ] as const;
 
+const homeNav = [
+  homeLink,
+  aboutLink,
+  industriesSectionLink,
+  contactLink,
+] as const;
+
+const homeFooterGroups = [
+  {
+    title: "Services",
+    links: [
+      { label: "Consultancy", href: "/services/consultancy" },
+      { label: "Non-Destructive Testing", href: "/services/ndt" },
+      { label: "Third Party Inspection", href: "/services/tpi" },
+      { label: "Industrial Supply", href: "/contact" },
+    ],
+  },
+  {
+    title: "Quick Links",
+    links: [
+      homeLink,
+      aboutSectionLink,
+      industriesSectionLink,
+      contactLink,
+    ],
+  },
+] as const;
+
 export const siteConfig = {
   name: "Radiant Engineering",
   shortName: "Radiant",
@@ -76,6 +106,29 @@ export const siteConfig = {
     href: "/contact",
     description:
       "Speak with the team coordinating consultancy, inspection, and field quality scopes.",
+  },
+  homeChrome: {
+    brandName: "Radiant Engineering",
+    legalName: "Radiant Engineering Consultancy Pvt. Ltd.",
+    shortName: "RECPL",
+    tagline: "Consultancy Pvt. Ltd.",
+    phoneLabel: "+91 99999 99999",
+    nav: homeNav,
+    quoteCta: {
+      label: "Get a Quote",
+      href: "/contact",
+      description:
+        "Request a quote for inspection, structural audit, or engineering consultancy support.",
+    },
+    footerDescription:
+      "Radiant Engineering Consultancy Pvt. Ltd. — India's trusted partner for NDT, inspection and consultancy since 2000.",
+    footerGroups: homeFooterGroups,
+    contact: {
+      email: "info@recpl.in",
+      phone: "+91 99999 99999",
+      address: "Mumbai, Maharashtra, India",
+      hours: "Mon - Sat, 9:00 AM to 6:00 PM IST",
+    },
   },
   routes: [
     { href: "/", changeFrequency: "weekly", priority: 1 },

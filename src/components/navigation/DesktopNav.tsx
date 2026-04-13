@@ -4,25 +4,38 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { ServicesDropdown } from "@/components/navigation/ServicesDropdown";
+import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types/site";
 
 interface DesktopNavProps {
   primaryItems: readonly NavItem[];
   serviceItems: readonly NavItem[];
+  tone?: "default" | "inverse";
 }
 
-export function DesktopNav({ primaryItems, serviceItems }: DesktopNavProps) {
+export function DesktopNav({
+  primaryItems,
+  serviceItems,
+  tone = "default",
+}: DesktopNavProps) {
   const pathname = usePathname();
   const currentPath = pathname ?? "";
+  const inverse = tone === "inverse";
 
   return (
-    <nav aria-label="Primary" className="desktop-nav">
+    <nav
+      aria-label="Primary"
+      className={cn("desktop-nav", inverse ? "desktop-nav--inverse" : null)}
+    >
       <ul className="desktop-nav__list" role="list">
         {primaryItems.map((item) => (
           <li key={item.href}>
             <Link
               aria-current={currentPath === item.href ? "page" : undefined}
-              className="desktop-nav__link"
+              className={cn(
+                "desktop-nav__link",
+                inverse ? "desktop-nav__link--inverse" : null,
+              )}
               href={item.href}
             >
               {item.label}
@@ -34,6 +47,7 @@ export function DesktopNav({ primaryItems, serviceItems }: DesktopNavProps) {
             active={currentPath.startsWith("/services/")}
             currentPath={currentPath}
             items={serviceItems}
+            tone={tone}
           />
         </li>
       </ul>

@@ -10,16 +10,19 @@ interface ServicesDropdownProps {
   items: readonly NavItem[];
   currentPath?: string;
   active?: boolean;
+  tone?: "default" | "inverse";
 }
 
 export function ServicesDropdown({
   items,
   currentPath = "",
   active = false,
+  tone = "default",
 }: ServicesDropdownProps) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
   const panelId = useId();
+  const inverse = tone === "inverse";
 
   useEffect(() => {
     if (!open) {
@@ -66,7 +69,11 @@ export function ServicesDropdown({
         aria-controls={panelId}
         aria-expanded={open}
         aria-haspopup="true"
-        className="desktop-nav__link desktop-nav__link--button"
+        className={
+          inverse
+            ? "desktop-nav__link desktop-nav__link--button desktop-nav__link--inverse"
+            : "desktop-nav__link desktop-nav__link--button"
+        }
         onClick={() => setOpen((value) => !value)}
         type="button"
         {...(active ? { "aria-current": "page" as const } : {})}
@@ -80,7 +87,15 @@ export function ServicesDropdown({
       </button>
 
       <div
-        className={open ? "services-dropdown__panel services-dropdown__panel--open" : "services-dropdown__panel"}
+        className={
+          open
+            ? inverse
+              ? "services-dropdown__panel services-dropdown__panel--inverse services-dropdown__panel--open"
+              : "services-dropdown__panel services-dropdown__panel--open"
+            : inverse
+              ? "services-dropdown__panel services-dropdown__panel--inverse"
+              : "services-dropdown__panel"
+        }
         id={panelId}
         role="group"
       >
