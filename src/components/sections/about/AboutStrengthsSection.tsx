@@ -11,7 +11,7 @@ export function AboutStrengthsSection({ content }: AboutStrengthsSectionProps) {
   return (
     <section className="about-section about-section--muted">
       <PageContainer>
-        <div className="about-section__header about-section__header--center" data-marketing-reveal="">
+        <div className="about-section__header about-section__header--center motion-sequence" data-marketing-reveal="">
           <span className="about-section__eyebrow">{content.eyebrow}</span>
           <h2 className="about-section__title">{content.title}</h2>
         </div>

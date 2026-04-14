@@ -12,7 +12,7 @@ export function AboutIntroSection({ content }: AboutIntroSectionProps) {
   return (
     <section className="about-section about-section--intro">
       <PageContainer className="about-intro">
-        <div className="about-intro__copy" data-marketing-reveal="">
+        <div className="about-intro__copy motion-sequence" data-marketing-reveal="">
           <span className="about-section__eyebrow">{content.eyebrow}</span>
           <h2 className="about-section__title about-section__title--rule">{content.title}</h2>
           <div className="about-intro__body">

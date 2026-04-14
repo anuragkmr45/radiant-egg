@@ -15,7 +15,7 @@ export function HomeIndustriesSection({ content }: HomeIndustriesSectionProps) {
     <section className="home-industries home-section" id="industries">
       <PageContainer>
         <div
-          className="home-section__intro home-section__intro--center home-section__intro--on-dark"
+          className="home-section__intro home-section__intro--center home-section__intro--on-dark motion-sequence"
           data-home-reveal=""
         >
           <p className="home-section__eyebrow">{content.eyebrow}</p>

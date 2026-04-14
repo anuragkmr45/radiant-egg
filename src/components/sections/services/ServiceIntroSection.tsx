@@ -14,7 +14,7 @@ export function ServiceIntroSection({ content }: ServiceIntroSectionProps) {
     return (
       <section className="service-section service-section--page">
         <PageContainer
-          className="service-intro service-intro--centered"
+          className="service-intro service-intro--centered motion-sequence"
           data-marketing-reveal=""
         >
           <p className="service-intro__description service-intro__description--centered">{content.description}</p>
@@ -26,7 +26,7 @@ export function ServiceIntroSection({ content }: ServiceIntroSectionProps) {
   return (
     <section className="service-section service-section--page">
       <PageContainer className="service-intro service-intro--split">
-        <div className="service-intro__copy" data-marketing-reveal="">
+        <div className="service-intro__copy motion-sequence" data-marketing-reveal="">
           <span className="service-section__eyebrow">{content.eyebrow}</span>
           <h2 className="service-section__title">{content.title}</h2>
           <div className="service-intro__body">

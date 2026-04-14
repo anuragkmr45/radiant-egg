@@ -5,6 +5,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
 import { BadgePill } from "@/components/ui/BadgePill";
 import { SecondaryButton } from "@/components/ui/ButtonLink";
 import { getSiteConfig } from "@/config/site";
+import { revealStyle } from "@/lib/motion";
 
 export function SiteFooter() {
   const siteConfig = getSiteConfig();
@@ -15,7 +16,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <PageContainer className="site-footer__inner">
         <div className="site-footer__top">
-          <div className="site-footer__summary">
+          <div className="site-footer__summary motion-sequence" data-marketing-reveal="">
             <BadgePill tone="dark">{siteConfig.shortName}</BadgePill>
             <h2 className="site-footer__title">{siteConfig.footerHeadline}</h2>
             <p className="site-footer__copy">
@@ -27,13 +28,18 @@ export function SiteFooter() {
           </div>
 
           <div className="footer-grid">
-            {footerLinks.map((group) => (
-              <section className="footer-group" key={group.title}>
+            {footerLinks.map((group, index) => (
+              <section
+                className="footer-group motion-sequence"
+                data-marketing-reveal=""
+                key={group.title}
+                style={revealStyle(70 + index * 60)}
+              >
                 <h3 className="footer-group__title">{group.title}</h3>
                 <ul className="footer-links" role="list">
                   {group.links?.map((item) => (
                     <li key={item.href}>
-                      <Link className="footer-link" href={item.href}>
+                      <Link className="footer-link motion-link motion-link--footer" href={item.href}>
                         {item.label}
                       </Link>
                     </li>
@@ -42,7 +48,11 @@ export function SiteFooter() {
               </section>
             ))}
 
-            <section className="footer-group">
+            <section
+              className="footer-group motion-sequence"
+              data-marketing-reveal=""
+              style={revealStyle(230)}
+            >
               <h3 className="footer-group__title">Contact</h3>
               <ul className="footer-contact-list" role="list">
                 <li className="footer-contact">
@@ -68,7 +78,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="footer-bottom">
+        <div className="footer-bottom" data-marketing-reveal="" style={revealStyle(300)}>
           <span>
             &copy; {currentYear} {siteConfig.name}. All rights reserved.
           </span>

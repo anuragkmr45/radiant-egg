@@ -22,14 +22,14 @@ export function ContactPageView({ content }: ContactPageViewProps) {
       <section className="contact-body">
         <PageContainer>
           <div className="contact-body__grid">
-            <div className="contact-body__column" data-marketing-reveal="">
+            <div className="contact-body__column motion-sequence" data-marketing-reveal="">
               <h2 className="contact-body__title">{content.form.title}</h2>
               <p className="contact-body__description">{content.form.description}</p>
               <ContactForm content={content.form} />
             </div>
 
             <div
-              className="contact-body__column contact-body__column--map"
+              className="contact-body__column contact-body__column--map motion-sequence"
               data-marketing-reveal=""
               style={marketingRevealStyle(90)}
             >

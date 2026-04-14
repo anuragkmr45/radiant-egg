@@ -12,7 +12,7 @@ export function HomeClientsSection({ content }: HomeClientsSectionProps) {
   return (
     <section className="home-clients home-section">
       <PageContainer>
-        <div className="home-section__intro home-section__intro--center home-clients__intro" data-home-reveal="">
+        <div className="home-section__intro home-section__intro--center home-clients__intro motion-sequence" data-home-reveal="">
           <p className="home-section__eyebrow">{content.eyebrow}</p>
           <h2 className="home-clients__title">{content.title}</h2>
         </div>

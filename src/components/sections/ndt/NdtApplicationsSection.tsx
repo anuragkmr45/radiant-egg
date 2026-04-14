@@ -11,7 +11,7 @@ export function NdtApplicationsSection({ content }: NdtApplicationsSectionProps)
   return (
     <section className="service-section service-section--page ndt-applications" id={content.anchorId}>
       <PageContainer>
-        <div className="service-section__header service-section__header--center" data-marketing-reveal="">
+        <div className="service-section__header service-section__header--center motion-sequence" data-marketing-reveal="">
           <span className="service-section__eyebrow">{content.eyebrow}</span>
           <h2 className="service-section__title">{content.title}</h2>
         </div>

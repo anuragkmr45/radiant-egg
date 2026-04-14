@@ -11,7 +11,7 @@ export function ServiceStandardsSection({ content }: ServiceStandardsSectionProp
   return (
     <section className="service-section service-section--muted">
       <PageContainer>
-        <div className="service-section__header service-section__header--center" data-marketing-reveal="">
+        <div className="service-section__header service-section__header--center motion-sequence" data-marketing-reveal="">
           <span className="service-section__eyebrow">{content.eyebrow}</span>
           <h2 className="service-section__title">{content.title}</h2>
           {content.description ? <p className="service-section__description">{content.description}</p> : null}

@@ -11,7 +11,7 @@ export function HomeCtaBanner({ content }: HomeCtaBannerProps) {
     <section className="home-cta">
       <div className="home-cta__shape home-cta__shape--top" />
       <div className="home-cta__shape home-cta__shape--bottom" />
-      <PageContainer className="home-cta__inner" data-home-reveal="">
+      <PageContainer className="home-cta__inner motion-sequence" data-home-reveal="">
         <h2 className="home-cta__title">
           <span>{content.titleLead}</span>
           <span className="home-cta__title-accent">{content.titleAccent}</span>

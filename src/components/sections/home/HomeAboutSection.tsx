@@ -28,7 +28,7 @@ export function HomeAboutSection({ content }: HomeAboutSectionProps) {
         </div>
 
         <div
-          className="home-about__copy"
+          className="home-about__copy motion-sequence"
           data-home-reveal=""
           style={{ "--reveal-delay": "80ms" } as CSSProperties}
         >

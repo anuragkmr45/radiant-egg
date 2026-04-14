@@ -49,6 +49,7 @@ export function ConsultancyDetailSection({
           <div
             className={cn(
               "consultancy-detail__copy",
+              "motion-sequence",
               imageFirst
                 ? "consultancy-detail__copy--last"
                 : "consultancy-detail__copy--first",

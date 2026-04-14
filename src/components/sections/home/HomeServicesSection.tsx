@@ -16,7 +16,7 @@ export function HomeServicesSection({ content }: HomeServicesSectionProps) {
   return (
     <section className="home-services home-section" id="services">
       <PageContainer>
-        <div className="home-section__intro home-section__intro--center" data-home-reveal="">
+        <div className="home-section__intro home-section__intro--center motion-sequence" data-home-reveal="">
           <p className="home-section__eyebrow">{content.eyebrow}</p>
           <h2 className="home-section__title">{content.title}</h2>
           <p className="home-section__body home-section__body--lead">{content.description}</p>

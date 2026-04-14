@@ -9,7 +9,7 @@ interface ServiceCtaSectionProps {
 export function ServiceCtaSection({ content }: ServiceCtaSectionProps) {
   return (
     <section className="service-cta">
-      <PageContainer className="service-cta__inner" data-marketing-reveal="">
+      <PageContainer className="service-cta__inner motion-sequence" data-marketing-reveal="">
         <h2 className="service-cta__title">{content.title}</h2>
         <p className="service-cta__description">{content.description}</p>
         <div className="service-cta__actions">

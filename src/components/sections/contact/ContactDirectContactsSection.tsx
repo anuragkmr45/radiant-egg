@@ -14,7 +14,7 @@ export function ContactDirectContactsSection({
   return (
     <section className="contact-direct">
       <PageContainer>
-        <div className="contact-direct__header" data-marketing-reveal="">
+        <div className="contact-direct__header motion-sequence" data-marketing-reveal="">
           <h2 className="contact-direct__title">{content.title}</h2>
           <p className="contact-direct__description">{content.description}</p>
         </div>

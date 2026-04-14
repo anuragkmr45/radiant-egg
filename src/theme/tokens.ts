@@ -30,4 +30,12 @@ export const themeTokens = {
     focus: "var(--shadow-focus)",
     panel: "var(--shadow-panel)",
   },
+  motion: {
+    durationFast: "var(--motion-duration-fast)",
+    durationStandard: "var(--motion-duration-standard)",
+    durationSlow: "var(--motion-duration-slow)",
+    durationReveal: "var(--motion-duration-reveal)",
+    easeInteraction: "var(--motion-ease-interaction)",
+    easeReveal: "var(--motion-ease-reveal)",
+  },
 } as const;

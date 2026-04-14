@@ -9,7 +9,7 @@ interface AboutCtaSectionProps {
 export function AboutCtaSection({ content }: AboutCtaSectionProps) {
   return (
     <section className="about-cta">
-      <PageContainer className="about-cta__inner" data-marketing-reveal="">
+      <PageContainer className="about-cta__inner motion-sequence" data-marketing-reveal="">
         <h2 className="about-cta__title">{content.title}</h2>
         <p className="about-cta__description">{content.description}</p>
         <div className="about-cta__actions">

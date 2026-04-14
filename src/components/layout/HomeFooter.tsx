@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
 import { getSiteConfig } from "@/config/site";
+import { revealStyle } from "@/lib/motion";
 
 export function HomeFooter() {
   const siteConfig = getSiteConfig();
@@ -13,7 +14,7 @@ export function HomeFooter() {
     <footer className="site-footer site-footer--home">
       <PageContainer className="home-footer__inner">
         <div className="home-footer__grid">
-          <div className="home-footer__brand">
+          <div className="home-footer__brand motion-sequence" data-home-reveal="">
             <div className="home-footer__lockup">
               <span className="home-footer__mark">RE</span>
               <span className="home-footer__short">{homeChrome.shortName}</span>
@@ -21,13 +22,18 @@ export function HomeFooter() {
             <p className="home-footer__description">{homeChrome.footerDescription}</p>
           </div>
 
-          {homeChrome.footerGroups.map((group) => (
-            <section className="home-footer__column" key={group.title}>
+          {homeChrome.footerGroups.map((group, index) => (
+            <section
+              className="home-footer__column motion-sequence"
+              data-home-reveal=""
+              key={group.title}
+              style={revealStyle(70 + index * 60)}
+            >
               <h2 className="home-footer__heading">{group.title}</h2>
               <ul className="home-footer__links" role="list">
                 {group.links.map((item) => (
                   <li key={`${group.title}-${item.href}`}>
-                    <ContextualNavLink className="home-footer__link" href={item.href}>
+                    <ContextualNavLink className="home-footer__link motion-link motion-link--footer" href={item.href}>
                       {item.label}
                     </ContextualNavLink>
                   </li>
@@ -36,7 +42,11 @@ export function HomeFooter() {
             </section>
           ))}
 
-          <section className="home-footer__column">
+          <section
+            className="home-footer__column motion-sequence"
+            data-home-reveal=""
+            style={revealStyle(210)}
+          >
             <h2 className="home-footer__heading">Contact Us</h2>
             <ul className="home-footer__contact-list" role="list">
               <li className="home-footer__contact-item">
@@ -57,7 +67,7 @@ export function HomeFooter() {
           </section>
         </div>
 
-        <div className="home-footer__bottom">
+        <div className="home-footer__bottom" data-home-reveal="" style={revealStyle(280)}>
           <p>&copy; {currentYear} {homeChrome.legalName}. All rights reserved.</p>
         </div>
       </PageContainer>
