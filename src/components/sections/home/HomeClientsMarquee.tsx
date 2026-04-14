@@ -35,16 +35,48 @@ export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
     let loopWidth = 0;
     let offset = 0;
     let boost = 0;
+    let boostTarget = 0;
     let lastTimestamp = 0;
     let lastScrollY = window.scrollY;
     let lastScrollTime = performance.now();
+    let settleTimeoutId = 0;
+    let measureFrameId = 0;
+    let measureCommitFrameId = 0;
 
     function updateLoopWidth() {
-      loopWidth = groupElement.scrollWidth;
+      loopWidth = Math.max(groupElement.scrollWidth, groupElement.getBoundingClientRect().width);
+
+      if (loopWidth > 0) {
+        offset %= loopWidth;
+      }
     }
 
     function getBaseSpeed() {
-      return window.innerWidth <= 767 ? 28 : 34;
+      if (window.innerWidth <= 767) {
+        return 42;
+      }
+
+      if (window.innerWidth <= 1023) {
+        return 38;
+      }
+
+      return 34;
+    }
+
+    function getMaxBoost() {
+      return window.innerWidth <= 767 ? 164 : 132;
+    }
+
+    function scheduleLoopWidthUpdate() {
+      window.cancelAnimationFrame(measureFrameId);
+      window.cancelAnimationFrame(measureCommitFrameId);
+      window.clearTimeout(settleTimeoutId);
+
+      updateLoopWidth();
+      measureFrameId = window.requestAnimationFrame(() => {
+        measureCommitFrameId = window.requestAnimationFrame(updateLoopWidth);
+      });
+      settleTimeoutId = window.setTimeout(updateLoopWidth, 180);
     }
 
     function handleScroll() {
@@ -53,7 +85,7 @@ export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
       const deltaY = Math.abs(window.scrollY - lastScrollY);
       const scrollVelocity = (deltaY / deltaTime) * 1000;
 
-      boost = Math.min(200, boost + scrollVelocity * 0.025);
+      boostTarget = Math.min(getMaxBoost(), scrollVelocity * 0.09);
       lastScrollY = window.scrollY;
       lastScrollTime = currentTime;
     }
@@ -68,26 +100,41 @@ export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
         return;
       }
 
-      const deltaSeconds = lastTimestamp ? (timestamp - lastTimestamp) / 1000 : 1 / 60;
+      const deltaSeconds = lastTimestamp ? Math.min((timestamp - lastTimestamp) / 1000, 0.08) : 1 / 60;
       lastTimestamp = timestamp;
+      const boostLerp = 1 - Math.exp(-deltaSeconds * 7.5);
+
+      boost += (boostTarget - boost) * boostLerp;
+      boostTarget *= Math.exp(-deltaSeconds * 3.6);
       const speed = getBaseSpeed() + boost;
 
       offset = (offset + speed * deltaSeconds) % loopWidth;
       trackElement.style.transform = `translate3d(${-offset}px, 0, 0)`;
-      boost *= Math.exp(-deltaSeconds * 3.4);
       frameId = window.requestAnimationFrame(animate);
     }
 
-    updateLoopWidth();
-    resizeObserver = new ResizeObserver(updateLoopWidth);
+    scheduleLoopWidthUpdate();
+    resizeObserver = new ResizeObserver(scheduleLoopWidthUpdate);
     resizeObserver.observe(groupElement);
-    window.addEventListener("resize", updateLoopWidth);
+    window.addEventListener("resize", scheduleLoopWidthUpdate);
+    window.addEventListener("orientationchange", scheduleLoopWidthUpdate);
     window.addEventListener("scroll", handleScroll, { passive: true });
+
+    const fontReady = document.fonts?.ready;
+
+    void fontReady?.then(() => {
+      scheduleLoopWidthUpdate();
+    });
+
     frameId = window.requestAnimationFrame(animate);
 
     return () => {
       window.cancelAnimationFrame(frameId);
-      window.removeEventListener("resize", updateLoopWidth);
+      window.cancelAnimationFrame(measureFrameId);
+      window.cancelAnimationFrame(measureCommitFrameId);
+      window.clearTimeout(settleTimeoutId);
+      window.removeEventListener("resize", scheduleLoopWidthUpdate);
+      window.removeEventListener("orientationchange", scheduleLoopWidthUpdate);
       window.removeEventListener("scroll", handleScroll);
       resizeObserver?.disconnect();
       trackElement.style.removeProperty("transform");

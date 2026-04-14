@@ -17,13 +17,21 @@ export function HomeMotionController() {
       return undefined;
     }
 
-    nodes.forEach((node) => {
-      if (node.getBoundingClientRect().top <= window.innerHeight * 0.92) {
-        node.classList.add("is-visible");
-      }
-    });
-
     document.body.dataset.homeMotion = "ready";
+    const initiallyVisibleNodes = nodes.filter((node) => {
+      return node.getBoundingClientRect().top <= window.innerHeight * 0.92;
+    });
+    let revealFrameId = 0;
+    let revealCommitFrameId = 0;
+
+    revealFrameId = window.requestAnimationFrame(() => {
+      revealCommitFrameId = window.requestAnimationFrame(() => {
+        initiallyVisibleNodes.forEach((node, index) => {
+          node.style.setProperty("--reveal-initial-delay", `${Math.min(index, 4) * 55}ms`);
+          node.classList.add("is-visible");
+        });
+      });
+    });
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -41,15 +49,20 @@ export function HomeMotionController() {
     );
 
     nodes.forEach((node) => {
-      if (!node.classList.contains("is-visible")) {
+      if (!initiallyVisibleNodes.includes(node)) {
         observer.observe(node);
       }
     });
 
     return () => {
+      window.cancelAnimationFrame(revealFrameId);
+      window.cancelAnimationFrame(revealCommitFrameId);
       observer.disconnect();
       delete document.body.dataset.homeMotion;
-      nodes.forEach((node) => node.classList.remove("is-visible"));
+      nodes.forEach((node) => {
+        node.classList.remove("is-visible");
+        node.style.removeProperty("--reveal-initial-delay");
+      });
     };
   }, []);
 

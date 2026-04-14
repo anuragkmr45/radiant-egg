@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -30,13 +30,17 @@ export function MobileNavDrawer({
   tone = "default",
 }: MobileNavDrawerProps) {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
   const panelId = useId();
   const titleId = useId();
+  const servicesButtonId = useId();
+  const servicesPanelId = useId();
   const toggleRef = useRef<HTMLButtonElement | null>(null);
   const closeRef = useRef<HTMLButtonElement | null>(null);
   const wasOpenRef = useRef(false);
   const inverse = tone === "inverse";
+  const servicesActive = pathname?.startsWith("/services/") ?? false;
   const { itemsBeforeServices, itemsAfterServices } = splitNavItemsForServices(
     primaryItems,
     serviceInsertBeforeHref,
@@ -65,6 +69,17 @@ export function MobileNavDrawer({
   }, [open]);
 
   useEffect(() => {
+    const frameId = window.requestAnimationFrame(() => {
+      setOpen(false);
+      setServicesOpen(false);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
     if (open) {
       closeRef.current?.focus();
     } else if (wasOpenRef.current) {
@@ -82,7 +97,10 @@ export function MobileNavDrawer({
         aria-haspopup="dialog"
         aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         className={inverse ? "mobile-drawer__toggle mobile-drawer__toggle--inverse" : "mobile-drawer__toggle"}
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => {
+          setOpen((value) => !value);
+          setServicesOpen(false);
+        }}
         ref={toggleRef}
         type="button"
       >
@@ -148,22 +166,66 @@ export function MobileNavDrawer({
             ) : null}
 
             <div className="mobile-drawer__section">
-              <p className="mobile-drawer__section-title">Services</p>
-              <ul className="mobile-drawer__list" role="list">
-                {serviceItems.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      aria-current={pathname === item.href ? "page" : undefined}
-                      className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                    >
-                      <span>{item.label}</span>
-                      <small>{item.description ?? "View the service scope."}</small>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <button
+                aria-controls={servicesPanelId}
+                aria-expanded={servicesOpen}
+                className={
+                  inverse
+                    ? servicesActive
+                      ? "mobile-drawer__section-toggle mobile-drawer__section-toggle--inverse mobile-drawer__section-toggle--active"
+                      : "mobile-drawer__section-toggle mobile-drawer__section-toggle--inverse"
+                    : servicesActive
+                      ? "mobile-drawer__section-toggle mobile-drawer__section-toggle--active"
+                      : "mobile-drawer__section-toggle"
+                }
+                id={servicesButtonId}
+                onClick={() => setServicesOpen((value) => !value)}
+                type="button"
+              >
+                <span className="mobile-drawer__section-title">Services</span>
+                <ChevronDown
+                  aria-hidden="true"
+                  className={
+                    servicesOpen
+                      ? "mobile-drawer__section-chevron mobile-drawer__section-chevron--open"
+                      : "mobile-drawer__section-chevron"
+                  }
+                  size={18}
+                />
+              </button>
+
+              <div
+                aria-hidden={!servicesOpen}
+                aria-labelledby={servicesButtonId}
+                className={
+                  servicesOpen
+                    ? "mobile-drawer__section-panel mobile-drawer__section-panel--open"
+                    : "mobile-drawer__section-panel"
+                }
+                id={servicesPanelId}
+                role="region"
+              >
+                <div className="mobile-drawer__section-body">
+                  <ul className="mobile-drawer__list mobile-drawer__list--nested" role="list">
+                    {serviceItems.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          aria-current={pathname === item.href ? "page" : undefined}
+                          className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
+                          href={item.href}
+                          onClick={() => {
+                            setServicesOpen(false);
+                            setOpen(false);
+                          }}
+                        >
+                          <span>{item.label}</span>
+                          <small>{item.description ?? "View the service scope."}</small>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
 
             {itemsAfterServices.length > 0 ? (
