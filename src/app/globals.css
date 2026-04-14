@@ -486,6 +486,21 @@
     position: relative;
   }
 
+  .services-dropdown__bridge {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: min(28rem, 80vw);
+    height: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+
+  .services-dropdown__bridge--open {
+    pointer-events: auto;
+  }
+
   .services-dropdown__icon {
     transition: transform var(--motion-duration-standard) var(--motion-ease-interaction);
   }
@@ -496,11 +511,11 @@
 
   .services-dropdown__panel {
     position: absolute;
-    top: calc(100% + 0.85rem);
+    top: 100%;
     left: 50%;
     z-index: 75;
     width: min(28rem, 80vw);
-    padding: 0.9rem;
+    padding: 1.7rem 0.9rem 0.9rem;
     border: 1px solid rgba(216, 222, 228, 0.94);
     border-radius: 28px;
     background: rgba(255, 255, 255, 0.98);
@@ -618,11 +633,13 @@
     position: fixed;
     inset: 0;
     z-index: 85;
+    visibility: hidden;
     overflow: hidden;
     pointer-events: none;
   }
 
   .mobile-drawer__overlay--open {
+    visibility: visible;
     pointer-events: auto;
   }
 
@@ -648,11 +665,14 @@
     display: grid;
     gap: var(--space-6);
     width: min(22rem, calc(100vw - 1rem));
-    height: 100%;
-    padding: 1rem;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom)) 1rem;
     border-left: 1px solid rgba(216, 222, 228, 0.9);
     background: rgba(246, 247, 249, 0.98);
     box-shadow: var(--shadow-panel);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     transform: translateX(100%);
     transition: transform var(--motion-duration-standard) var(--motion-ease-interaction);
   }

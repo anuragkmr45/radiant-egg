@@ -91,8 +91,19 @@
   const iconField = (overrides = {}) =>
     selectField("Icon", "icon", iconValues, overrides);
 
+  const imageField = (label, name, overrides = {}) => ({
+    label,
+    name,
+    widget: "image",
+    choose_url: false,
+    media_library: {
+      allow_multiple: false,
+    },
+    ...overrides,
+  });
+
   const imageFields = () => [
-    stringField("Source", "src", {
+    imageField("Source", "src", {
       hint: "Use /uploads/... for locally managed media or a full https:// URL.",
     }),
     stringField("Alt text", "alt"),
@@ -154,7 +165,12 @@
     return fields;
   };
 
-  const serviceHeroFields = ({ includeBackground, includeGlow, includeAction }) => {
+  const serviceHeroFields = ({
+    includeBackground,
+    backgroundRequired = true,
+    includeGlow,
+    includeAction,
+  }) => {
     const fields = [
       stringField("Eyebrow", "eyebrow"),
       stringField("Title", "title"),
@@ -171,7 +187,11 @@
     }
 
     if (includeBackground) {
-      fields.push(objectField("Background Image", "backgroundImage", imageFields()));
+      fields.push(
+        objectField("Background Image", "backgroundImage", imageFields(), {
+          required: backgroundRequired,
+        }),
+      );
     }
 
     if (includeAction) {
@@ -486,7 +506,8 @@
             fields: [
               objectField("SEO", "seo", seoFields()),
               objectField("Hero", "hero", serviceHeroFields({
-                includeBackground: false,
+                includeBackground: true,
+                backgroundRequired: false,
                 includeGlow: true,
                 includeAction: false,
               })),
@@ -524,7 +545,8 @@
             fields: [
               objectField("SEO", "seo", seoFields()),
               objectField("Hero", "hero", serviceHeroFields({
-                includeBackground: false,
+                includeBackground: true,
+                backgroundRequired: false,
                 includeGlow: true,
                 includeAction: false,
               })),

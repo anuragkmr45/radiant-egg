@@ -21,47 +21,78 @@ export function ServicesDropdown({
 }: ServicesDropdownProps) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
+  const closeTimeoutRef = useRef<number | null>(null);
   const panelId = useId();
   const inverse = tone === "inverse";
+
+  function cancelClose() {
+    if (closeTimeoutRef.current !== null) {
+      window.clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  }
+
+  function scheduleClose() {
+    cancelClose();
+    closeTimeoutRef.current = window.setTimeout(() => {
+      if (!rootRef.current?.contains(document.activeElement)) {
+        setOpen(false);
+      }
+      closeTimeoutRef.current = null;
+    }, 140);
+  }
 
   useEffect(() => {
     if (!open) {
       return undefined;
     }
 
-    function handlePointerDown(event: MouseEvent) {
+    function handlePointerDown(event: PointerEvent) {
       if (!rootRef.current?.contains(event.target as Node)) {
+        cancelClose();
         setOpen(false);
       }
     }
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
+        cancelClose();
         setOpen(false);
       }
     }
 
-    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("pointerdown", handlePointerDown);
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("pointerdown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [open]);
+
+  useEffect(() => () => cancelClose(), []);
 
   return (
     <div
       className="services-dropdown"
       onBlur={() => {
-        requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
           if (!rootRef.current?.contains(document.activeElement)) {
-            setOpen(false);
+            scheduleClose();
           }
         });
       }}
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onFocusCapture={() => {
+        cancelClose();
+        setOpen(true);
+      }}
+      onPointerEnter={() => {
+        cancelClose();
+        setOpen(true);
+      }}
+      onPointerLeave={() => {
+        scheduleClose();
+      }}
       ref={rootRef}
     >
       <button
@@ -76,15 +107,20 @@ export function ServicesDropdown({
         onKeyDown={(event) => {
           if (event.key === "ArrowDown" || event.key === "Enter" || event.key === " ") {
             event.preventDefault();
+            cancelClose();
             setOpen(true);
             return;
           }
 
           if (event.key === "Escape") {
+            cancelClose();
             setOpen(false);
           }
         }}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          cancelClose();
+          setOpen(true);
+        }}
         type="button"
         {...(active ? { "aria-current": "page" as const } : {})}
       >
@@ -95,6 +131,11 @@ export function ServicesDropdown({
           size={16}
         />
       </button>
+
+      <div
+        aria-hidden="true"
+        className={open ? "services-dropdown__bridge services-dropdown__bridge--open" : "services-dropdown__bridge"}
+      />
 
       <div
         className={
@@ -116,7 +157,10 @@ export function ServicesDropdown({
               className="services-dropdown__item"
               href={item.href}
               key={item.href}
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                cancelClose();
+                setOpen(false);
+              }}
             >
               <span className="services-dropdown__title">{item.label}</span>
               <span className="services-dropdown__description">
