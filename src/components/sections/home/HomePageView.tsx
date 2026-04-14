@@ -4,6 +4,7 @@ import { HomeCredentialsStrip } from "@/components/sections/home/HomeCredentials
 import { HomeCtaBanner } from "@/components/sections/home/HomeCtaBanner";
 import { HomeHero } from "@/components/sections/home/HomeHero";
 import { HomeIndustriesSection } from "@/components/sections/home/HomeIndustriesSection";
+import { HomeMotionController } from "@/components/sections/home/HomeMotionController";
 import { HomeReasonsSection } from "@/components/sections/home/HomeReasonsSection";
 import { HomeServicesSection } from "@/components/sections/home/HomeServicesSection";
 import type { HomePageContent } from "@/types/content";
@@ -15,6 +16,7 @@ interface HomePageViewProps {
 export function HomePageView({ content }: HomePageViewProps) {
   return (
     <>
+      <HomeMotionController />
       <HomeHero content={content.hero} />
       <HomeCredentialsStrip items={content.credentials} />
       <HomeAboutSection content={content.about} />

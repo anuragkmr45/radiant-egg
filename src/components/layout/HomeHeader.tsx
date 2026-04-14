@@ -22,13 +22,16 @@ export function HomeHeader() {
           </span>
         </Link>
 
-        <div className="home-header__actions">
+        <div className="home-header__nav-slot">
           <DesktopNav
             primaryItems={homeChrome.nav}
+            serviceInsertBeforeHref="/#industries"
             serviceItems={siteConfig.serviceNav}
             tone="inverse"
           />
+        </div>
 
+        <div className="home-header__actions">
           <a className="home-header__phone" href={`tel:${homeChrome.phoneLabel.replace(/\s+/g, "")}`}>
             <Phone aria-hidden="true" size={16} />
             <span>{homeChrome.phoneLabel}</span>
@@ -42,6 +45,7 @@ export function HomeHeader() {
             contact={homeChrome.contact}
             cta={homeChrome.quoteCta}
             primaryItems={homeChrome.nav}
+            serviceInsertBeforeHref="/#industries"
             serviceItems={siteConfig.serviceNav}
             siteName={homeChrome.brandName}
             tone="inverse"

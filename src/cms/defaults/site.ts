@@ -5,6 +5,7 @@ const aboutLink = { label: "About", href: "/about" } as const;
 const contactLink = { label: "Contact", href: "/contact" } as const;
 const aboutSectionLink = { label: "About Us", href: "/#about" } as const;
 const industriesSectionLink = { label: "Industries", href: "/#industries" } as const;
+const industrySectionNavLink = { label: "Industry", href: "/#industries" } as const;
 
 const primaryNav = [
   homeLink,
@@ -48,7 +49,7 @@ const footerGroups = [
 const homeNav = [
   homeLink,
   aboutLink,
-  industriesSectionLink,
+  industrySectionNavLink,
   contactLink,
 ] as const;
 

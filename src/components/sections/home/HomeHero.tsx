@@ -25,7 +25,7 @@ export function HomeHero({ content }: HomeHeroProps) {
       </div>
 
       <PageContainer className="home-hero__inner">
-        <div className="home-hero__content">
+        <div className="home-hero__content" data-home-reveal="">
           <h1 className="home-hero__title">
             <span>{content.titleLead}</span>
             <span className="home-hero__title-accent">{content.titleAccent}</span>

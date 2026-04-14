@@ -70,8 +70,8 @@ export function ServicesDropdown({
         aria-haspopup="true"
         className={
           inverse
-            ? "desktop-nav__link desktop-nav__link--button desktop-nav__link--inverse"
-            : "desktop-nav__link desktop-nav__link--button"
+            ? "desktop-nav__link desktop-nav__link--button desktop-nav__link--inverse desktop-nav__link--service"
+            : "desktop-nav__link desktop-nav__link--button desktop-nav__link--service"
         }
         onKeyDown={(event) => {
           if (event.key === "ArrowDown" || event.key === "Enter" || event.key === " ") {
@@ -88,7 +88,7 @@ export function ServicesDropdown({
         type="button"
         {...(active ? { "aria-current": "page" as const } : {})}
       >
-        <span>Services</span>
+        <span className="desktop-nav__trigger-label">Services</span>
         <ChevronDown
           aria-hidden="true"
           className={open ? "services-dropdown__icon services-dropdown__icon--open" : "services-dropdown__icon"}

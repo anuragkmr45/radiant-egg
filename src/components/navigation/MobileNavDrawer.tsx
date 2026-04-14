@@ -6,13 +6,15 @@ import { useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
+import { splitNavItemsForServices } from "@/lib/navigation";
 import { PrimaryButton } from "@/components/ui/ButtonLink";
-import type { ContactDetails, NavItem, SiteCta } from "@/types/site";
+import type { ContactDetails, NavItem, SiteCta, SiteHref } from "@/types/site";
 
 interface MobileNavDrawerProps {
   siteName: string;
   primaryItems: readonly NavItem[];
   serviceItems: readonly NavItem[];
+  serviceInsertBeforeHref?: SiteHref;
   cta: SiteCta;
   contact: ContactDetails;
   tone?: "default" | "inverse";
@@ -22,6 +24,7 @@ export function MobileNavDrawer({
   siteName,
   primaryItems,
   serviceItems,
+  serviceInsertBeforeHref,
   cta,
   contact,
   tone = "default",
@@ -34,6 +37,10 @@ export function MobileNavDrawer({
   const closeRef = useRef<HTMLButtonElement | null>(null);
   const wasOpenRef = useRef(false);
   const inverse = tone === "inverse";
+  const { itemsBeforeServices, itemsAfterServices } = splitNavItemsForServices(
+    primaryItems,
+    serviceInsertBeforeHref,
+  );
 
   useEffect(() => {
     if (!open) {
@@ -123,40 +130,59 @@ export function MobileNavDrawer({
           </div>
 
           <nav aria-label="Primary mobile">
-            <ul className="mobile-drawer__list" role="list">
-              {primaryItems.map((item) => (
-                <li key={item.href}>
-                  <ContextualNavLink
-                    ariaCurrent={pathname === item.href ? "page" : undefined}
-                    className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                  >
-                    {item.label}
-                  </ContextualNavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
+            {itemsBeforeServices.length > 0 ? (
+              <ul className="mobile-drawer__list" role="list">
+                {itemsBeforeServices.map((item) => (
+                  <li key={item.href}>
+                    <ContextualNavLink
+                      ariaCurrent={pathname === item.href ? "page" : undefined}
+                      className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </ContextualNavLink>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
 
-          <div className="mobile-drawer__section">
-            <p className="mobile-drawer__section-title">Services</p>
-            <ul className="mobile-drawer__list" role="list">
-              {serviceItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    aria-current={pathname === item.href ? "page" : undefined}
-                    className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                  >
-                    <span>{item.label}</span>
-                    <small>{item.description ?? "View the service scope."}</small>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div className="mobile-drawer__section">
+              <p className="mobile-drawer__section-title">Services</p>
+              <ul className="mobile-drawer__list" role="list">
+                {serviceItems.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      aria-current={pathname === item.href ? "page" : undefined}
+                      className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                    >
+                      <span>{item.label}</span>
+                      <small>{item.description ?? "View the service scope."}</small>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {itemsAfterServices.length > 0 ? (
+              <ul className="mobile-drawer__list" role="list">
+                {itemsAfterServices.map((item) => (
+                  <li key={item.href}>
+                    <ContextualNavLink
+                      ariaCurrent={pathname === item.href ? "page" : undefined}
+                      className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </ContextualNavLink>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </nav>
 
           <div className="mobile-drawer__footer">
             <PrimaryButton href={cta.href} onClick={() => setOpen(false)}>

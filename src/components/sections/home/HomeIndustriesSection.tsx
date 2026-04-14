@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
 import type { HomePageContent } from "@/types/content";
@@ -12,7 +14,10 @@ export function HomeIndustriesSection({ content }: HomeIndustriesSectionProps) {
   return (
     <section className="home-industries home-section" id="industries">
       <PageContainer>
-        <div className="home-section__intro home-section__intro--center home-section__intro--on-dark">
+        <div
+          className="home-section__intro home-section__intro--center home-section__intro--on-dark"
+          data-home-reveal=""
+        >
           <p className="home-section__eyebrow">{content.eyebrow}</p>
           <h2 className="home-section__title home-section__title--on-dark">{content.title}</h2>
           <p className="home-section__body home-section__body--lead home-section__body--on-dark">
@@ -21,8 +26,13 @@ export function HomeIndustriesSection({ content }: HomeIndustriesSectionProps) {
         </div>
 
         <div className="home-industries__grid">
-          {items.map((item) => (
-            <article className="home-industry-card" key={item.title}>
+          {items.map((item, index) => (
+            <article
+              className="home-industry-card"
+              data-home-reveal=""
+              key={item.title}
+              style={{ "--reveal-delay": `${index * 55}ms` } as CSSProperties}
+            >
               <span className="home-industry-card__icon">
                 <HomeIcon name={item.icon} size={30} />
               </span>
