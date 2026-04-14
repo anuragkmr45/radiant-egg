@@ -1,5 +1,6 @@
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
+import { marketingRevealStyle } from "@/lib/motion";
 import type { AboutPageContent } from "@/types/content";
 
 interface AboutPrinciplesSectionProps {
@@ -11,8 +12,14 @@ export function AboutPrinciplesSection({ content }: AboutPrinciplesSectionProps)
     <section className="about-section">
       <PageContainer>
         <div className="about-principles__grid">
-          {content.items.map((item) => (
-            <article className="about-dual-card about-dual-card--principle" key={item.title} tabIndex={0}>
+          {content.items.map((item, index) => (
+            <article
+              className="about-dual-card about-dual-card--principle"
+              data-marketing-reveal=""
+              key={item.title}
+              style={marketingRevealStyle(index * 70)}
+              tabIndex={0}
+            >
               <div className="about-dual-card__face about-dual-card__face--front">
                 <span className="about-dual-card__icon">
                   <HomeIcon name={item.icon} size={32} />

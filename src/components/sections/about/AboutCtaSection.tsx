@@ -9,7 +9,7 @@ interface AboutCtaSectionProps {
 export function AboutCtaSection({ content }: AboutCtaSectionProps) {
   return (
     <section className="about-cta">
-      <PageContainer className="about-cta__inner">
+      <PageContainer className="about-cta__inner" data-marketing-reveal="">
         <h2 className="about-cta__title">{content.title}</h2>
         <p className="about-cta__description">{content.description}</p>
         <div className="about-cta__actions">
@@ -17,7 +17,7 @@ export function AboutCtaSection({ content }: AboutCtaSectionProps) {
             {content.primaryAction.label}
           </PrimaryButton>
           <ButtonLink
-            className="about-cta__button about-cta__button--light"
+            className="about-cta__button about-cta__button--light motion-link motion-link--button"
             href={content.secondaryAction.href}
             size="lg"
             variant="ghost"

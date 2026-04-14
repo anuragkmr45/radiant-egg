@@ -9,7 +9,7 @@ export function ContactHero({ content }: ContactHeroProps) {
   return (
     <section className="contact-hero">
       <PageContainer>
-        <div className="contact-hero__copy">
+        <div className="contact-hero__copy" data-marketing-reveal="">
           <p className="contact-hero__eyebrow">{content.eyebrow}</p>
           <h1 className="contact-hero__title">{content.title}</h1>
           <p className="contact-hero__description">{content.description}</p>

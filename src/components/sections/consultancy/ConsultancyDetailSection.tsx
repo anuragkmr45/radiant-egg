@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
 import { ConsultancyProjectRail } from "@/components/sections/consultancy/ConsultancyProjectRail";
+import { marketingRevealStyle } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import type { ConsultancyDetailSection as ConsultancyDetailSectionContent } from "@/types/content";
 
@@ -33,6 +34,7 @@ export function ConsultancyDetailSection({
                 : "consultancy-detail__media--last",
               content.stickyImage ? "consultancy-detail__media--sticky" : null,
             )}
+            data-marketing-reveal=""
           >
             <Image
               alt={content.image.alt}
@@ -51,6 +53,8 @@ export function ConsultancyDetailSection({
                 ? "consultancy-detail__copy--last"
                 : "consultancy-detail__copy--first",
             )}
+            data-marketing-reveal=""
+            style={marketingRevealStyle(90)}
           >
             <div className="consultancy-detail__title-row">
               <span className="consultancy-detail__title-icon">
@@ -67,8 +71,13 @@ export function ConsultancyDetailSection({
 
             <p className="consultancy-detail__scope">{content.scopeLabel}</p>
             <ul className="consultancy-detail__capabilities" role="list">
-              {content.capabilities.map((item) => (
-                <li className="consultancy-detail__capability" key={item.label}>
+              {content.capabilities.map((item, index) => (
+                <li
+                  className="consultancy-detail__capability"
+                  data-marketing-reveal=""
+                  key={item.label}
+                  style={marketingRevealStyle(140 + index * 55)}
+                >
                   <span className="consultancy-detail__capability-icon">
                     <HomeIcon name={item.icon} size={20} />
                   </span>

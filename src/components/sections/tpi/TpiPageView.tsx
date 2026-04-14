@@ -1,3 +1,4 @@
+import { MarketingMotionController } from "@/components/motion/MarketingMotionController";
 import { ServiceCtaSection } from "@/components/sections/services/ServiceCtaSection";
 import { ServiceHero } from "@/components/sections/services/ServiceHero";
 import { ServiceIntroSection } from "@/components/sections/services/ServiceIntroSection";
@@ -13,6 +14,7 @@ interface TpiPageViewProps {
 export function TpiPageView({ content }: TpiPageViewProps) {
   return (
     <>
+      <MarketingMotionController />
       <ServiceHero content={content.hero} />
       <ServiceIntroSection content={content.intro} />
       {content.listGrid ? <ServiceListGridSection content={content.listGrid} /> : null}

@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { marketingRevealStyle } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import type { ContactInfoItem } from "@/types/content";
 
@@ -39,7 +40,9 @@ export function ContactInfoStrip({ items }: ContactInfoStripProps) {
                   "contact-strip__item",
                   index > 0 ? "contact-strip__item--bordered" : null,
                 )}
+                data-marketing-reveal=""
                 key={`${item.kind}-${item.label}`}
+                style={marketingRevealStyle(index * 75)}
               >
                 <span className="contact-strip__icon">
                   <ContactInfoIcon kind={item.kind} />

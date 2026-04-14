@@ -11,7 +11,7 @@ interface AboutHeroProps {
 export function AboutHero({ content }: AboutHeroProps) {
   return (
     <section className="about-hero">
-      <PageContainer className="about-hero__inner">
+      <PageContainer className="about-hero__inner" data-marketing-reveal="">
         <nav aria-label="Breadcrumb" className="about-hero__breadcrumbs">
           <ol className="about-hero__breadcrumb-list" role="list">
             {content.breadcrumbs.map((item, index) => {

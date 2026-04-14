@@ -9,7 +9,7 @@ interface ServiceCtaSectionProps {
 export function ServiceCtaSection({ content }: ServiceCtaSectionProps) {
   return (
     <section className="service-cta">
-      <PageContainer className="service-cta__inner">
+      <PageContainer className="service-cta__inner" data-marketing-reveal="">
         <h2 className="service-cta__title">{content.title}</h2>
         <p className="service-cta__description">{content.description}</p>
         <div className="service-cta__actions">
@@ -18,7 +18,7 @@ export function ServiceCtaSection({ content }: ServiceCtaSectionProps) {
           </PrimaryButton>
           {content.secondaryAction ? (
             <ButtonLink
-              className="service-cta__button service-cta__button--light"
+              className="service-cta__button service-cta__button--light motion-link motion-link--button"
               href={content.secondaryAction.href}
               size="lg"
               variant="ghost"

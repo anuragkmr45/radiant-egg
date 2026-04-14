@@ -1,3 +1,4 @@
+import { MarketingMotionController } from "@/components/motion/MarketingMotionController";
 import { AboutCtaSection } from "@/components/sections/about/AboutCtaSection";
 import { AboutHero } from "@/components/sections/about/AboutHero";
 import { AboutIntroSection } from "@/components/sections/about/AboutIntroSection";
@@ -15,6 +16,7 @@ interface AboutPageViewProps {
 export function AboutPageView({ content }: AboutPageViewProps) {
   return (
     <>
+      <MarketingMotionController />
       <AboutHero content={content.hero} />
       <AboutIntroSection content={content.intro} />
       <AboutStrengthsSection content={content.strengths} />

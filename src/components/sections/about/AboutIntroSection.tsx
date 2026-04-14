@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { marketingRevealStyle } from "@/lib/motion";
 import type { AboutIntroContent } from "@/types/content";
 
 interface AboutIntroSectionProps {
@@ -11,7 +12,7 @@ export function AboutIntroSection({ content }: AboutIntroSectionProps) {
   return (
     <section className="about-section about-section--intro">
       <PageContainer className="about-intro">
-        <div className="about-intro__copy">
+        <div className="about-intro__copy" data-marketing-reveal="">
           <span className="about-section__eyebrow">{content.eyebrow}</span>
           <h2 className="about-section__title about-section__title--rule">{content.title}</h2>
           <div className="about-intro__body">
@@ -21,7 +22,11 @@ export function AboutIntroSection({ content }: AboutIntroSectionProps) {
           </div>
         </div>
 
-        <div className="about-intro__media">
+        <div
+          className="about-intro__media"
+          data-marketing-reveal=""
+          style={marketingRevealStyle(80)}
+        >
           <div className="about-intro__image-frame">
             <Image
               alt={content.image.alt}

@@ -1,5 +1,6 @@
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
+import { marketingRevealStyle } from "@/lib/motion";
 import type { AboutPageContent } from "@/types/content";
 
 interface AboutStrengthsSectionProps {
@@ -10,14 +11,20 @@ export function AboutStrengthsSection({ content }: AboutStrengthsSectionProps) {
   return (
     <section className="about-section about-section--muted">
       <PageContainer>
-        <div className="about-section__header about-section__header--center">
+        <div className="about-section__header about-section__header--center" data-marketing-reveal="">
           <span className="about-section__eyebrow">{content.eyebrow}</span>
           <h2 className="about-section__title">{content.title}</h2>
         </div>
 
         <div className="about-strengths__grid">
-          {content.items.map((item) => (
-            <article className="about-dual-card" key={item.title} tabIndex={0}>
+          {content.items.map((item, index) => (
+            <article
+              className="about-dual-card"
+              data-marketing-reveal=""
+              key={item.title}
+              style={marketingRevealStyle(index * 70)}
+              tabIndex={0}
+            >
               <div className="about-dual-card__face about-dual-card__face--front">
                 <span className="about-dual-card__icon">
                   <HomeIcon name={item.icon} size={32} />

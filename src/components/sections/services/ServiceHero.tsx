@@ -33,7 +33,7 @@ export function ServiceHero({ content }: ServiceHeroProps) {
         <div className="service-hero__overlay service-hero__overlay--glow" />
       )}
 
-      <PageContainer className="service-hero__inner">
+      <PageContainer className="service-hero__inner" data-marketing-reveal="">
         <span className="service-hero__eyebrow">{content.eyebrow}</span>
         <h1 className="service-hero__title">{content.title}</h1>
         <p className="service-hero__summary">{content.summary}</p>

@@ -1,6 +1,7 @@
 import { Mail, Phone, UserRound } from "lucide-react";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { marketingRevealStyle } from "@/lib/motion";
 import type { ContactDirectContactsContent } from "@/types/content";
 
 interface ContactDirectContactsSectionProps {
@@ -13,14 +14,19 @@ export function ContactDirectContactsSection({
   return (
     <section className="contact-direct">
       <PageContainer>
-        <div className="contact-direct__header">
+        <div className="contact-direct__header" data-marketing-reveal="">
           <h2 className="contact-direct__title">{content.title}</h2>
           <p className="contact-direct__description">{content.description}</p>
         </div>
 
         <div className="contact-direct__grid">
-          {content.people.map((person) => (
-            <article className="contact-direct__card" key={person.email}>
+          {content.people.map((person, index) => (
+            <article
+              className="contact-direct__card"
+              data-marketing-reveal=""
+              key={person.email}
+              style={marketingRevealStyle(index * 80)}
+            >
               <div className="contact-direct__person">
                 <span className="contact-direct__person-icon">
                   <UserRound aria-hidden="true" size={20} />

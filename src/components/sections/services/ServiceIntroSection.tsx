@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
+import { marketingRevealStyle } from "@/lib/motion";
 import type { ServiceIntroContent } from "@/types/content";
 
 interface ServiceIntroSectionProps {
@@ -12,7 +13,10 @@ export function ServiceIntroSection({ content }: ServiceIntroSectionProps) {
   if (content.variant === "centered") {
     return (
       <section className="service-section service-section--page">
-        <PageContainer className="service-intro service-intro--centered">
+        <PageContainer
+          className="service-intro service-intro--centered"
+          data-marketing-reveal=""
+        >
           <p className="service-intro__description service-intro__description--centered">{content.description}</p>
         </PageContainer>
       </section>
@@ -22,7 +26,7 @@ export function ServiceIntroSection({ content }: ServiceIntroSectionProps) {
   return (
     <section className="service-section service-section--page">
       <PageContainer className="service-intro service-intro--split">
-        <div className="service-intro__copy">
+        <div className="service-intro__copy" data-marketing-reveal="">
           <span className="service-section__eyebrow">{content.eyebrow}</span>
           <h2 className="service-section__title">{content.title}</h2>
           <div className="service-intro__body">
@@ -43,7 +47,11 @@ export function ServiceIntroSection({ content }: ServiceIntroSectionProps) {
           ) : null}
         </div>
 
-        <div className="service-intro__media">
+        <div
+          className="service-intro__media"
+          data-marketing-reveal=""
+          style={marketingRevealStyle(90)}
+        >
           <Image
             alt={content.image.alt}
             className="service-intro__image"

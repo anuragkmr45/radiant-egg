@@ -1,4 +1,5 @@
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
+import { marketingRevealStyle } from "@/lib/motion";
 import type { ConsultancyProject } from "@/types/content";
 
 interface ConsultancyProjectRailProps {
@@ -14,8 +15,13 @@ export function ConsultancyProjectRail({
     <section className="consultancy-projects">
       <h3 className="consultancy-projects__title">{title}</h3>
       <ul className="consultancy-projects__rail" role="list">
-        {projects.map((project) => (
-          <li className="consultancy-project-card" key={`${project.client}-${project.title}`}>
+        {projects.map((project, index) => (
+          <li
+            className="consultancy-project-card"
+            data-marketing-reveal=""
+            key={`${project.client}-${project.title}`}
+            style={marketingRevealStyle(index * 70)}
+          >
             <div className="consultancy-project-card__head">
               <span className="consultancy-project-card__icon">
                 <HomeIcon name={project.icon} size={20} />

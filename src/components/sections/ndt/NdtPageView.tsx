@@ -1,3 +1,4 @@
+import { MarketingMotionController } from "@/components/motion/MarketingMotionController";
 import { NdtApplicationsSection } from "@/components/sections/ndt/NdtApplicationsSection";
 import { ServiceCtaSection } from "@/components/sections/services/ServiceCtaSection";
 import { ServiceFeatureGridSection } from "@/components/sections/services/ServiceFeatureGridSection";
@@ -12,6 +13,7 @@ interface NdtPageViewProps {
 export function NdtPageView({ content }: NdtPageViewProps) {
   return (
     <>
+      <MarketingMotionController />
       <ServiceHero content={content.hero} />
       <ServiceIntroSection content={content.intro} />
       <ServiceFeatureGridSection content={content.methods} muted />

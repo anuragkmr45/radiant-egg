@@ -393,6 +393,11 @@
     height: 0.42rem;
   }
 
+  .motion-link--button::after {
+    width: 0.46rem;
+    height: 0.46rem;
+  }
+
   .desktop-nav__link:hover,
   .desktop-nav__link[aria-current="page"],
   .desktop-nav__link--button:hover {
@@ -1589,6 +1594,20 @@
     transform: translate3d(0, 0, 0);
   }
 
+  .site-body[data-marketing-motion="ready"] [data-marketing-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 1rem, 0);
+    transition:
+      opacity 0.72s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.72s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--marketing-reveal-delay, 0ms);
+  }
+
+  .site-body[data-marketing-motion="ready"] [data-marketing-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
   .home-cta {
     position: relative;
     overflow: hidden;
@@ -1935,6 +1954,10 @@
     border: 1px solid var(--color-border-subtle);
     border-radius: 0.75rem;
     background: white;
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      border-color 0.28s ease;
   }
 
   .about-team-card--featured {
@@ -2048,6 +2071,11 @@
     border-radius: 0.75rem;
     background: rgba(125, 138, 146, 0.06);
     text-align: center;
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      border-color 0.28s ease,
+      background-color 0.28s ease;
   }
 
   .about-portfolio__icon {
@@ -2320,6 +2348,10 @@
     border: 1px solid var(--color-border-subtle);
     border-radius: 0.5rem;
     background: white;
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      border-color 0.28s ease;
   }
 
   .service-feature-card {
@@ -2660,6 +2692,10 @@
     border-radius: 0.5rem;
     background: white;
     scroll-snap-align: start;
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      border-color 0.28s ease;
   }
 
   .consultancy-project-card__head {
@@ -2715,6 +2751,11 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
     text-align: center;
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      border-color 0.28s ease,
+      background-color 0.28s ease;
   }
 
   .consultancy-expertise__icon {
@@ -2763,6 +2804,10 @@
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.25rem;
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      border-color 0.28s ease;
   }
 
   .ndt-applications__chip-icon {
@@ -3102,6 +3147,10 @@
     font-size: 0.875rem;
     font-weight: 500;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    transition:
+      transform 0.22s ease,
+      box-shadow 0.22s ease,
+      background-color 0.22s ease;
   }
 
   .contact-map__iframe {
@@ -3165,6 +3214,10 @@
     border: 1px solid var(--color-border-subtle);
     border-radius: 0.5rem;
     background: white;
+    transition:
+      transform 0.28s ease,
+      box-shadow 0.28s ease,
+      border-color 0.28s ease;
   }
 
   .contact-direct__person {
@@ -3230,7 +3283,7 @@
     position: absolute;
     inset: 0;
     backface-visibility: hidden;
-    transition: transform 0.45s ease;
+    transition: transform 0.58s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .about-dual-card__face--front {
@@ -3249,6 +3302,69 @@
   .about-dual-card:hover .about-dual-card__face--back,
   .about-dual-card:focus-visible .about-dual-card__face--back {
     transform: rotateY(360deg);
+  }
+
+  .about-team-card:hover,
+  .about-team-card:focus-within,
+  .about-portfolio__tile:hover,
+  .about-portfolio__tile:focus-within,
+  .service-feature-card:hover,
+  .service-feature-card:focus-within,
+  .service-list-card:hover,
+  .service-list-card:focus-within,
+  .service-standard-card:hover,
+  .service-standard-card:focus-within,
+  .consultancy-project-card:hover,
+  .consultancy-project-card:focus-within,
+  .consultancy-expertise__card:hover,
+  .consultancy-expertise__card:focus-within,
+  .ndt-applications__chip:hover,
+  .ndt-applications__chip:focus-within,
+  .contact-direct__card:hover,
+  .contact-direct__card:focus-within {
+    transform: translateY(-0.24rem);
+  }
+
+  .about-team-card:hover,
+  .about-team-card:focus-within,
+  .about-portfolio__tile:hover,
+  .about-portfolio__tile:focus-within,
+  .service-feature-card:hover,
+  .service-feature-card:focus-within,
+  .service-list-card:hover,
+  .service-list-card:focus-within,
+  .service-standard-card:hover,
+  .service-standard-card:focus-within,
+  .consultancy-project-card:hover,
+  .consultancy-project-card:focus-within,
+  .contact-direct__card:hover,
+  .contact-direct__card:focus-within {
+    border-color: rgba(251, 158, 19, 0.22);
+    box-shadow: 0 18px 32px rgba(9, 29, 52, 0.1);
+  }
+
+  .about-portfolio__tile:hover,
+  .about-portfolio__tile:focus-within {
+    background: rgba(125, 138, 146, 0.1);
+  }
+
+  .consultancy-expertise__card:hover,
+  .consultancy-expertise__card:focus-within {
+    border-color: rgba(251, 158, 19, 0.26);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 14px 28px rgba(3, 11, 21, 0.24);
+  }
+
+  .ndt-applications__chip:hover,
+  .ndt-applications__chip:focus-within {
+    border-color: rgba(251, 158, 19, 0.22);
+    box-shadow: 0 14px 24px rgba(9, 29, 52, 0.08);
+  }
+
+  .contact-map__link:hover,
+  .contact-map__link:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
   }
 }
 
@@ -3741,6 +3857,29 @@
     transform: none !important;
   }
 
+  .about-team-card:hover,
+  .about-team-card:focus-within,
+  .about-portfolio__tile:hover,
+  .about-portfolio__tile:focus-within,
+  .service-feature-card:hover,
+  .service-feature-card:focus-within,
+  .service-list-card:hover,
+  .service-list-card:focus-within,
+  .service-standard-card:hover,
+  .service-standard-card:focus-within,
+  .consultancy-project-card:hover,
+  .consultancy-project-card:focus-within,
+  .consultancy-expertise__card:hover,
+  .consultancy-expertise__card:focus-within,
+  .ndt-applications__chip:hover,
+  .ndt-applications__chip:focus-within,
+  .contact-direct__card:hover,
+  .contact-direct__card:focus-within,
+  .contact-map__link:hover,
+  .contact-map__link:focus-visible {
+    transform: none !important;
+  }
+
   .services-dropdown__panel,
   .services-dropdown__panel--open {
     transform: translateX(-50%) translateY(0);
@@ -3766,6 +3905,12 @@
 
   .site-body[data-home-motion="ready"] [data-home-reveal],
   .site-body[data-home-motion="ready"] [data-home-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .site-body[data-marketing-motion="ready"] [data-marketing-reveal],
+  .site-body[data-marketing-motion="ready"] [data-marketing-reveal].is-visible {
     opacity: 1;
     transform: none;
   }
