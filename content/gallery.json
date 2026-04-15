@@ -16,5 +16,60 @@
     "Equipment & Instruments",
     "Team Activities"
   ],
-  "items": []
+  "items": [
+    {
+      "image": {
+        "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fa07ebf93aea5b7be07d3e0293378213b11b5e22a.jpg?generation=1776077012445006&alt=media"
+      },
+      "title": "Field Inspection Readiness",
+      "alt": "RECPL engineers reviewing an industrial inspection assignment on site",
+      "category": "Site Inspections",
+      "caption": "On-site coordination for inspection, audit planning, and engineering review before formal testing begins."
+    },
+    {
+      "image": {
+        "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F214fc4d9c6d3e6d4b128b22124c6e661e57ce8b1.jpg?generation=1776077012460906&alt=media"
+      },
+      "title": "Laboratory and Reporting Support",
+      "alt": "RECPL technical team supporting laboratory review and project documentation",
+      "category": "Laboratory Work",
+      "caption": "Laboratory support, calibration coordination, and disciplined reporting for traceable technical decisions."
+    },
+    {
+      "image": {
+        "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F40278119f316b292a7df24a060158228d46bbf66.jpg?generation=1776077631075758&alt=media"
+      },
+      "title": "Structural Review and Design Input",
+      "alt": "Engineering professionals discussing structural drawings and design development",
+      "category": "Design & Engineering",
+      "caption": "Design support covering structural drawings, stability review, and engineering coordination for industrial assets."
+    },
+    {
+      "image": {
+        "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F2b27c016cd46d321777cd8b4ef3b9311048ae905.jpg?generation=1776077632257271&alt=media"
+      },
+      "title": "Inspection Equipment in Use",
+      "alt": "Industrial inspection equipment and field instruments prepared for engineering work",
+      "category": "Equipment & Instruments",
+      "caption": "Field-ready instruments and testing equipment used for consultancy, inspection, and technical verification."
+    },
+    {
+      "image": {
+        "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Ff71ec3985d999e3d7ace40c10db92b176b6b5ebe.jpg?generation=1776077481007949&alt=media"
+      },
+      "title": "Engineering Team in Action",
+      "alt": "RECPL engineers working together on a site engineering and inspection activity",
+      "category": "Team Activities",
+      "caption": "RECPL’s team combines site presence, engineering review, and inspection discipline across every assignment."
+    },
+    {
+      "image": {
+        "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fb4b2d07d8778381446006944baa264296d4904d3.jpg?generation=1776077631084955&alt=media"
+      },
+      "title": "Consultancy and Inspection Coordination",
+      "alt": "RECPL professionals coordinating consultancy and inspection services at an industrial site",
+      "category": "Site Inspections",
+      "caption": "Integrated consultancy and inspection support for industrial compliance, safety review, and asset reliability."
+    }
+  ]
 }

@@ -42,6 +42,13 @@ export interface SiteCta {
   description: string;
 }
 
+export interface WhatsAppConfig {
+  enabled: boolean;
+  phone: string;
+  message: string;
+  ariaLabel: string;
+}
+
 export interface SiteRoute {
   href: SitePath;
   changeFrequency: SitemapChangeFrequency;
@@ -75,6 +82,7 @@ export interface SiteConfig {
   serviceNav: readonly NavItem[];
   footerGroups: readonly FooterGroup[];
   contact: ContactDetails;
+  whatsApp: WhatsAppConfig;
   defaultCta: SiteCta;
   homeChrome: HomeChromeConfig;
   routes: readonly SiteRoute[];

@@ -9,17 +9,25 @@ interface AboutStrengthsSectionProps {
 
 export function AboutStrengthsSection({ content }: AboutStrengthsSectionProps) {
   return (
-    <section className="about-section about-section--muted">
+    <section className="about-section about-section--muted about-strengths">
       <PageContainer>
-        <div className="about-section__header about-section__header--center motion-sequence" data-marketing-reveal="">
+        <div
+          className="about-section__header about-section__header--center about-strengths__header motion-sequence"
+          data-marketing-reveal=""
+        >
           <span className="about-section__eyebrow">{content.eyebrow}</span>
           <h2 className="about-section__title">{content.title}</h2>
+          {content.description ? (
+            <p className="about-section__description about-strengths__description">
+              {content.description}
+            </p>
+          ) : null}
         </div>
 
         <div className="about-strengths__grid">
           {content.items.map((item, index) => (
             <article
-              className="about-dual-card"
+              className="about-dual-card about-dual-card--strength"
               data-marketing-reveal=""
               key={item.title}
               style={marketingRevealStyle(index * 70)}

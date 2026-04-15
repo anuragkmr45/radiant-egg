@@ -100,6 +100,12 @@
     "address": "Plot No. 829/2444, Mrutyunjaya Vihar, Lingipur, Bhubaneswar, Odisha 751002, India",
     "hours": "Mon - Sat, 9:00 AM to 6:00 PM IST"
   },
+  "whatsApp": {
+    "enabled": true,
+    "phone": "+91 8260773310",
+    "message": "Hello RECPL, I would like to discuss my project requirements.",
+    "ariaLabel": "Chat with RECPL on WhatsApp"
+  },
   "defaultCta": {
     "label": "Request a Quote",
     "href": "/contact",

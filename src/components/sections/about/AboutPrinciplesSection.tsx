@@ -14,7 +14,7 @@ export function AboutPrinciplesSection({ content }: AboutPrinciplesSectionProps)
         <div className="about-principles__grid">
           {content.items.map((item, index) => (
             <article
-              className="about-dual-card about-dual-card--principle"
+              className="about-dual-card about-dual-card--principle about-dual-card--principle-polished"
               data-marketing-reveal=""
               key={item.title}
               style={marketingRevealStyle(index * 70)}

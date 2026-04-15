@@ -5,16 +5,25 @@ import type { ConsultancyProject } from "@/types/content";
 interface ConsultancyProjectRailProps {
   title: string;
   projects: readonly ConsultancyProject[];
+  variant?: "rail" | "grid";
 }
 
 export function ConsultancyProjectRail({
   title,
   projects,
+  variant = "rail",
 }: ConsultancyProjectRailProps) {
   return (
     <section className="consultancy-projects">
       <h3 className="consultancy-projects__title">{title}</h3>
-      <ul className="consultancy-projects__rail" role="list">
+      <ul
+        className={
+          variant === "grid"
+            ? "consultancy-projects__rail consultancy-projects__rail--grid"
+            : "consultancy-projects__rail"
+        }
+        role="list"
+      >
         {projects.map((project, index) => (
           <li
             className="consultancy-project-card"

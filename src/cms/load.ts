@@ -30,6 +30,7 @@ const stringEnums = {
   icon: iconKeys,
   imageSide: new Set(["left", "right"]),
   kind: new Set(["address", "phone", "email"]),
+  layout: new Set(["split", "splitWithFullWidthCapabilities"]),
   tone: new Set(["default", "muted"]),
   variant: new Set(["centered", "split"]),
 } as const;
@@ -78,7 +79,12 @@ function mergeCmsValue<T>(defaultValue: T, rawValue: unknown, key?: string): T {
     if (isPlainObject(sample)) {
       return rawValue
         .filter(isPlainObject)
-        .map((item) => mergeCmsValue(sample, item)) as T;
+        .map((item, index) => {
+          const indexedDefault = defaultValue[index];
+          const objectDefault = isPlainObject(indexedDefault) ? indexedDefault : sample;
+
+          return mergeCmsValue(objectDefault, item);
+        }) as T;
     }
 
     return structuredClone(defaultValue) as T;

@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "storage.googleapis.com",
+        pathname: "/msgsndr/**",
+      },
+      {
+        protocol: "https",
+        hostname: "storage.googleapis.com",
         pathname: "/download/storage/v1/b/prd-storytodesign.appspot.com/o/**",
       },
     ],

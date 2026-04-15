@@ -9,6 +9,7 @@ import {
   listContactSubmissions,
   type ContactSubmissionRecord,
 } from "@/lib/contact-submissions";
+import { requireAdminAuth } from "@/lib/require-admin-auth";
 
 export const dynamic = "force-dynamic";
 
@@ -21,6 +22,8 @@ export const metadata: Metadata = {
 };
 
 export default async function AdminSubmissionsPage() {
+  await requireAdminAuth("/admin/submissions");
+
   const contactPage = getContactPage();
   let submissionCount: number | null = null;
   let submissionsError: string | null = null;
@@ -42,9 +45,16 @@ export default async function AdminSubmissionsPage() {
       <PageContainer className="admin-submissions-page__inner">
         <div className="admin-submissions-page__topbar">
           <p className="admin-submissions-page__eyebrow">Admin</p>
-          <a className="admin-panel__link" href="/admin/index.html">
-            Back to CMS
-          </a>
+          <div className="admin-submissions-page__actions">
+            <a className="admin-panel__link" href="/admin">
+              Back to dashboard
+            </a>
+            <form action="/api/admin/logout" method="post">
+              <button className="admin-panel__link admin-panel__link--button" type="submit">
+                Logout
+              </button>
+            </form>
+          </div>
         </div>
 
         <AdminSubmissionsPanel

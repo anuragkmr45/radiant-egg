@@ -5,11 +5,13 @@ import type { ServiceFeatureGridContent } from "@/types/content";
 
 interface ServiceFeatureGridSectionProps {
   content: ServiceFeatureGridContent;
+  gridClassName?: string;
   muted?: boolean;
 }
 
 export function ServiceFeatureGridSection({
   content,
+  gridClassName,
   muted = false,
 }: ServiceFeatureGridSectionProps) {
   return (
@@ -24,7 +26,7 @@ export function ServiceFeatureGridSection({
           {content.description ? <p className="service-section__description">{content.description}</p> : null}
         </div>
 
-        <div className="service-feature-grid">
+        <div className={gridClassName ? `service-feature-grid ${gridClassName}` : "service-feature-grid"}>
           {content.items.map((item, index) => (
             <article
               className="service-feature-card"

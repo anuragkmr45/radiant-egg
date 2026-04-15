@@ -15,6 +15,31 @@ export function ConsultancyDetailSection({
   content,
 }: ConsultancyDetailSectionProps) {
   const imageFirst = content.imageSide === "left";
+  const usesFullWidthCapabilities = content.layout === "splitWithFullWidthCapabilities";
+  const mediaClassName = cn(
+    "consultancy-detail__media",
+    imageFirst
+      ? "consultancy-detail__media--first"
+      : "consultancy-detail__media--last",
+    content.stickyImage && !usesFullWidthCapabilities
+      ? "consultancy-detail__media--sticky"
+      : null,
+    usesFullWidthCapabilities ? "consultancy-detail__media--tall" : null,
+  );
+  const copyClassName = cn(
+    "consultancy-detail__copy",
+    "motion-sequence",
+    imageFirst
+      ? "consultancy-detail__copy--last"
+      : "consultancy-detail__copy--first",
+    usesFullWidthCapabilities ? "consultancy-detail__copy--top" : null,
+  );
+  const capabilityGridClassName = cn(
+    "consultancy-detail__capabilities",
+    usesFullWidthCapabilities
+      ? "consultancy-detail__capabilities--full"
+      : null,
+  );
 
   return (
     <section
@@ -25,15 +50,16 @@ export function ConsultancyDetailSection({
       id={content.anchorId}
     >
       <PageContainer>
-        <div className="consultancy-detail__grid">
+        <div
+          className={cn(
+            "consultancy-detail__grid",
+            usesFullWidthCapabilities
+              ? "consultancy-detail__grid--staged"
+              : null,
+          )}
+        >
           <div
-            className={cn(
-              "consultancy-detail__media",
-              imageFirst
-                ? "consultancy-detail__media--first"
-                : "consultancy-detail__media--last",
-              content.stickyImage ? "consultancy-detail__media--sticky" : null,
-            )}
+            className={mediaClassName}
             data-marketing-reveal=""
           >
             <Image
@@ -47,13 +73,7 @@ export function ConsultancyDetailSection({
           </div>
 
           <div
-            className={cn(
-              "consultancy-detail__copy",
-              "motion-sequence",
-              imageFirst
-                ? "consultancy-detail__copy--last"
-                : "consultancy-detail__copy--first",
-            )}
+            className={copyClassName}
             data-marketing-reveal=""
             style={marketingRevealStyle(90)}
           >
@@ -70,28 +90,73 @@ export function ConsultancyDetailSection({
               ))}
             </div>
 
-            <p className="consultancy-detail__scope">{content.scopeLabel}</p>
-            <ul className="consultancy-detail__capabilities" role="list">
-              {content.capabilities.map((item, index) => (
-                <li
-                  className="consultancy-detail__capability"
-                  data-marketing-reveal=""
-                  key={item.label}
-                  style={marketingRevealStyle(140 + index * 55)}
-                >
-                  <span className="consultancy-detail__capability-icon">
-                    <HomeIcon name={item.icon} size={20} />
-                  </span>
-                  <span>{item.label}</span>
-                </li>
-              ))}
-            </ul>
+            {!usesFullWidthCapabilities ? (
+              <>
+                <p className="consultancy-detail__scope">{content.scopeLabel}</p>
+                <ul className={capabilityGridClassName} role="list">
+                  {content.capabilities.map((item, index) => (
+                    <li
+                      className="consultancy-detail__capability"
+                      data-marketing-reveal=""
+                      key={item.label}
+                      style={marketingRevealStyle(140 + index * 55)}
+                    >
+                      <span className="consultancy-detail__capability-icon">
+                        <HomeIcon name={item.icon} size={20} />
+                      </span>
+                      <span>{item.label}</span>
+                    </li>
+                  ))}
+                </ul>
 
-            <ConsultancyProjectRail
-              projects={content.projects}
-              title={content.projectsTitle}
-            />
+                <ConsultancyProjectRail
+                  projects={content.projects}
+                  title={content.projectsTitle}
+                />
+              </>
+            ) : null}
           </div>
+
+          {usesFullWidthCapabilities ? (
+            <div
+              className="consultancy-detail__full-span motion-sequence"
+              data-marketing-reveal=""
+              style={marketingRevealStyle(130)}
+            >
+              <p className="consultancy-detail__scope consultancy-detail__scope--full">
+                {content.scopeLabel}
+              </p>
+              <ul className={capabilityGridClassName} role="list">
+                {content.capabilities.map((item, index) => (
+                  <li
+                    className="consultancy-detail__capability consultancy-detail__capability--compact"
+                    data-marketing-reveal=""
+                    key={item.label}
+                    style={marketingRevealStyle(170 + index * 45)}
+                  >
+                    <span className="consultancy-detail__capability-icon">
+                      <HomeIcon name={item.icon} size={20} />
+                    </span>
+                    <span>{item.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {usesFullWidthCapabilities ? (
+            <div
+              className="consultancy-detail__full-span consultancy-detail__full-span--projects motion-sequence"
+              data-marketing-reveal=""
+              style={marketingRevealStyle(180)}
+            >
+              <ConsultancyProjectRail
+                projects={content.projects}
+                title={content.projectsTitle}
+                variant="grid"
+              />
+            </div>
+          ) : null}
         </div>
       </PageContainer>
     </section>

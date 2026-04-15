@@ -267,6 +267,12 @@
                 textField("Address", "address"),
                 stringField("Hours", "hours"),
               ]),
+              objectField("WhatsApp", "whatsApp", [
+                booleanField("Enabled", "enabled", { required: false, default: true }),
+                stringField("Phone", "phone"),
+                textField("Prefilled Message", "message", { required: false }),
+                stringField("Aria Label", "ariaLabel"),
+              ]),
               objectField("Default CTA", "defaultCta", actionFields(true)),
               objectField("Home Chrome", "homeChrome", [
                 stringField("Brand Name", "brandName"),
@@ -486,6 +492,9 @@
               ]),
               objectListField("Detail Sections", "detailSections", [
                 stringField("Anchor ID", "anchorId", { required: false }),
+                selectField("Layout", "layout", ["split", "splitWithFullWidthCapabilities"], {
+                  required: false,
+                }),
                 stringField("Title", "title"),
                 iconField(),
                 objectField("Image", "image", imageFields()),

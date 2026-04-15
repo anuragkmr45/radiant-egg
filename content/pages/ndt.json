@@ -9,7 +9,11 @@
     "title": "NDT of Civil and Mechanical Structures & Equipment",
     "summary": "Reliable non-destructive inspection for safety, integrity, and compliance without damaging the asset under test.",
     "description": "RECPL offers a full range of non-destructive testing services for civil structures, pressure equipment, fabricated components, and critical industrial machinery items.",
-    "glowPosition": "right"
+    "glowPosition": "right",
+    "backgroundImage": {
+      "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F2b27c016cd46d321777cd8b4ef3b9311048ae905.jpg?generation=1776077632257271&alt=media",
+      "alt": "RECPL engineers performing non-destructive inspection and structural integrity assessment on industrial infrastructure"
+    }
   },
   "intro": {
     "variant": "centered",

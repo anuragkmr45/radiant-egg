@@ -53,6 +53,7 @@
   "detailSections": [
     {
       "anchorId": "structure-design-drawing",
+      "layout": "splitWithFullWidthCapabilities",
       "title": "Structure Design & Engineering Drawings",
       "icon": "building",
       "image": {
@@ -151,6 +152,7 @@
     },
     {
       "anchorId": "structure-stability-audit",
+      "layout": "splitWithFullWidthCapabilities",
       "title": "Structural Stability Audit & Residual Life Assessment",
       "icon": "shield",
       "image": {

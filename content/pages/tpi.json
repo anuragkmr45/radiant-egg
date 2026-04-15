@@ -9,7 +9,11 @@
     "title": "TPI of Lifting Tools, Tackles & Pressure Vessels",
     "summary": "Statutory inspection, testing, and certification by a Competent Person under the Factory Act 1948.",
     "description": "RECPL inspects, tests, and certifies industrial equipment for statutory compliance, operational safety, and acceptance by State Factory Inspectorates and Boiler Inspectorates across India.",
-    "glowPosition": "left"
+    "glowPosition": "left",
+    "backgroundImage": {
+      "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fa07ebf93aea5b7be07d3e0293378213b11b5e22a.jpg?generation=1776077012445006&alt=media",
+      "alt": "Industrial third party inspection activity at a plant site with RECPL engineers reviewing critical equipment"
+    }
   },
   "intro": {
     "variant": "centered",

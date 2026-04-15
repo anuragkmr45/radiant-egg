@@ -16,7 +16,11 @@ export function NdtPageView({ content }: NdtPageViewProps) {
       <MarketingMotionController />
       <ServiceHero content={content.hero} />
       <ServiceIntroSection content={content.intro} />
-      <ServiceFeatureGridSection content={content.methods} muted />
+      <ServiceFeatureGridSection
+        content={content.methods}
+        gridClassName="service-feature-grid--ndt"
+        muted
+      />
       <NdtApplicationsSection content={content.applications} />
       <ServiceCtaSection content={content.cta} />
     </>

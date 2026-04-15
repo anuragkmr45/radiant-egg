@@ -338,6 +338,7 @@ export interface ConsultancyProject {
 
 export interface ConsultancyDetailSection {
   anchorId?: string;
+  layout?: "split" | "splitWithFullWidthCapabilities";
   title: string;
   icon: HomeIconKey;
   image: HomeImageAsset;
