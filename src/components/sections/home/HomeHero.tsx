@@ -1,16 +1,20 @@
 import Image from "next/image";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { HomeHeroParallaxController } from "@/components/sections/home/HomeHeroParallaxController";
+import { HomeHeroTrustRail } from "@/components/sections/home/HomeHeroTrustRail";
 import { PrimaryButton, SecondaryButton } from "@/components/ui/ButtonLink";
-import type { HomeHeroContent } from "@/types/content";
+import type { HomeCredentialItem, HomeHeroContent, HomeStat } from "@/types/content";
 
 interface HomeHeroProps {
   content: HomeHeroContent;
+  credentials: readonly HomeCredentialItem[];
+  stat: HomeStat;
 }
 
-export function HomeHero({ content }: HomeHeroProps) {
+export function HomeHero({ content, credentials, stat }: HomeHeroProps) {
   return (
-    <section className="home-hero" id="home">
+    <section className="home-hero" data-home-hero="" id="home">
       <div className="home-hero__media">
         <Image
           alt={content.backgroundImage.alt}
@@ -25,25 +29,29 @@ export function HomeHero({ content }: HomeHeroProps) {
       </div>
 
       <PageContainer className="home-hero__inner">
-        <div className="home-hero__content motion-sequence" data-home-reveal="">
-          <h1 className="home-hero__title">
-            <span>{content.titleLead}</span>
-            <span className="home-hero__title-accent">{content.titleAccent}</span>
-            <span>{content.titleTail}</span>
-          </h1>
-          <p className="home-hero__description">{content.description}</p>
-          <div className="home-hero__actions">
-            <PrimaryButton className="home-hero__primary" href={content.primaryAction.href} size="lg">
-              {content.primaryAction.label}
-            </PrimaryButton>
-            <SecondaryButton className="home-hero__secondary" href={content.secondaryAction.href} size="lg">
-              {content.secondaryAction.label}
-            </SecondaryButton>
+        <div className="home-hero__content-layer">
+          <div className="home-hero__content motion-sequence" data-home-reveal="">
+            <h1 className="home-hero__title">
+              <span>{content.titleLead}</span>
+              <span className="home-hero__title-accent">{content.titleAccent}</span>
+              <span>{content.titleTail}</span>
+            </h1>
+            <p className="home-hero__description">{content.description}</p>
+            <div className="home-hero__actions">
+              <PrimaryButton className="home-hero__primary" href={content.primaryAction.href} size="lg">
+                {content.primaryAction.label}
+              </PrimaryButton>
+              <SecondaryButton className="home-hero__secondary" href={content.secondaryAction.href} size="lg">
+                {content.secondaryAction.label}
+              </SecondaryButton>
+            </div>
           </div>
         </div>
+        <HomeHeroTrustRail credentials={credentials} stat={stat} />
       </PageContainer>
 
       <div className="home-hero__fade" />
+      <HomeHeroParallaxController />
     </section>
   );
 }

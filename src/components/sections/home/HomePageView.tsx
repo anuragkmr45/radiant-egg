@@ -17,7 +17,7 @@ export function HomePageView({ content }: HomePageViewProps) {
   return (
     <>
       <HomeMotionController />
-      <HomeHero content={content.hero} />
+      <HomeHero content={content.hero} credentials={content.credentials} stat={content.about.stat} />
       <HomeCredentialsStrip items={content.credentials} />
       <HomeAboutSection content={content.about} />
       <HomeServicesSection content={content.services} />

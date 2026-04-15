@@ -44,7 +44,7 @@ export function MobileNavDrawer({
   const wasOpenRef = useRef(false);
   const inverse = tone === "inverse";
   const servicesActive = pathname?.startsWith("/services/") ?? false;
-  const isHydrated = useSyncExternalStore(subscribe, () => true, () => false);
+  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
   const { itemsBeforeServices, itemsAfterServices } = splitNavItemsForServices(
     primaryItems,
     serviceInsertBeforeHref,
@@ -53,10 +53,12 @@ export function MobileNavDrawer({
   useEffect(() => {
     if (!open) {
       document.body.style.removeProperty("overflow");
+      document.documentElement.style.removeProperty("overflow");
       return undefined;
     }
 
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -68,6 +70,7 @@ export function MobileNavDrawer({
 
     return () => {
       document.body.style.removeProperty("overflow");
+      document.documentElement.style.removeProperty("overflow");
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [open]);
@@ -268,7 +271,7 @@ export function MobileNavDrawer({
       >
         {open ? <X aria-hidden="true" size={18} /> : <Menu aria-hidden="true" size={18} />}
       </button>
-      {isHydrated ? createPortal(drawerOverlay, document.body) : null}
+      {mounted ? createPortal(drawerOverlay, document.body) : null}
     </div>
   );
 }
