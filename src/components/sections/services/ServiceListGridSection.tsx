@@ -1,13 +1,18 @@
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
 import { marketingRevealStyle } from "@/lib/motion";
+import { cn } from "@/lib/utils";
 import type { ServiceListGridContent } from "@/types/content";
 
 interface ServiceListGridSectionProps {
   content: ServiceListGridContent;
+  gridClassName?: string;
 }
 
-export function ServiceListGridSection({ content }: ServiceListGridSectionProps) {
+export function ServiceListGridSection({
+  content,
+  gridClassName,
+}: ServiceListGridSectionProps) {
   return (
     <section className="service-section service-section--page" id={content.anchorId}>
       <PageContainer>
@@ -17,7 +22,7 @@ export function ServiceListGridSection({ content }: ServiceListGridSectionProps)
           {content.description ? <p className="service-section__description">{content.description}</p> : null}
         </div>
 
-        <div className="service-list-grid">
+        <div className={cn("service-list-grid", gridClassName)}>
           {content.items.map((item, index) => (
             <article
               className="service-list-card"

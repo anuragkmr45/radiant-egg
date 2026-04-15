@@ -1,0 +1,20 @@
+{
+  "seo": {
+    "title": "RECPL Gallery",
+    "description": "Explore RECPL field inspections, laboratory work, engineering support, equipment visuals, and team activity highlights.",
+    "path": "/gallery"
+  },
+  "hero": {
+    "eyebrow": "Gallery",
+    "title": "Our Work in Action",
+    "description": "A visual look at RECPL’s inspection assignments, laboratory support, engineering work, equipment handling, and team activity across projects."
+  },
+  "categories": [
+    "Site Inspections",
+    "Laboratory Work",
+    "Design & Engineering",
+    "Equipment & Instruments",
+    "Team Activities"
+  ],
+  "items": []
+}

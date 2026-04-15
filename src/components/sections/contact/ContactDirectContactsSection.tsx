@@ -38,11 +38,11 @@ export function ContactDirectContactsSection({
               </div>
 
               <div className="contact-direct__links">
-                <a href={`tel:${person.phone.replace(/\s+/g, "")}`}>
+                <a className="motion-link motion-link--text" href={`tel:${person.phone.replace(/\s+/g, "")}`}>
                   <Phone aria-hidden="true" size={14} />
                   <span>{person.phone}</span>
                 </a>
-                <a href={`mailto:${person.email}`}>
+                <a className="motion-link motion-link--text" href={`mailto:${person.email}`}>
                   <Mail aria-hidden="true" size={14} />
                   <span>{person.email}</span>
                 </a>

@@ -1,81 +1,90 @@
 {
   "seo": {
-    "title": "Contact",
-    "description": "Get in touch with Radiant Engineering for consultancy, non-destructive testing, and statutory inspection support.",
+    "title": "Contact RECPL",
+    "description": "Get in touch with Radiant Engineering Consultancy Pvt. Ltd. for NDT testing, third party inspection, structural audit, and equipment supply in Bhubaneswar, Odisha.",
     "path": "/contact"
   },
   "hero": {
     "eyebrow": "Contact Us",
     "title": "Get in Touch",
-    "description": "Have a project requirement or need a technical consultation? Reach out to our engineering team — we respond within 24 hours."
+    "description": "We’re here to help you with all your engineering, testing, inspection, and equipment supply needs."
   },
   "infoStrip": [
     {
-      "kind": "address",
-      "label": "Office Address",
-      "value": "Plot No. 12, GIDC Industrial Estate,\nVadodara, Gujarat 390010, India"
-    },
-    {
       "kind": "phone",
       "label": "Phone",
-      "value": "+91 98765 43210",
-      "href": "tel:+919876543210"
+      "value": "+91 8260773310",
+      "href": "tel:+918260773310"
     },
     {
       "kind": "email",
       "label": "Email",
-      "value": "info@recpl.com",
-      "href": "mailto:info@recpl.com"
+      "value": "recpl.bbsr@gmail.com",
+      "href": "mailto:recpl.bbsr@gmail.com"
     }
   ],
   "form": {
     "title": "Send an Enquiry",
     "description": "Fill in the details below and our team will get back to you.",
+    "fullNameLabel": "Full Name *",
+    "fullNamePlaceholder": "Your full name",
+    "emailLabel": "Email Address *",
+    "emailPlaceholder": "you@company.com",
+    "phoneLabel": "Phone Number *",
+    "phonePlaceholder": "+91 XXXXX XXXXX",
+    "companyNameLabel": "Company / Organisation Name",
+    "companyNamePlaceholder": "Your company or organisation",
     "serviceLabel": "Service Required *",
     "servicePlaceholder": "Select a service",
+    "messageLabel": "Message / Project Details *",
+    "messagePlaceholder": "Tell us about your requirement, site condition, inspection need, or equipment enquiry...",
     "serviceOptions": [
       {
-        "label": "Consultancy Services",
+        "label": "Consultancy",
         "value": "consultancy"
       },
       {
-        "label": "Non-Destructive Testing (NDT)",
+        "label": "NDT",
         "value": "ndt"
       },
       {
-        "label": "Third Party Inspection (TPI)",
+        "label": "TPI",
         "value": "tpi"
       },
       {
-        "label": "Industrial Supply",
+        "label": "Supply",
         "value": "supply"
+      },
+      {
+        "label": "Other",
+        "value": "other"
       }
     ],
     "submitLabel": "Submit Enquiry",
     "successMessage": "Enquiry captured. Our engineering team will respond within 24 hours."
   },
   "location": {
+    "addressLabel": "Registered Office",
     "title": "Our Location",
-    "description": "Visit our office or reach us via the details above.",
-    "address": "Plot No. 12, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
-    "mapQuery": "Plot No. 12, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
-    "openInMapsHref": "https://www.google.com/maps/search/?api=1&query=Plot%20No.%2012%2C%20GIDC%20Industrial%20Estate%2C%20Vadodara%2C%20Gujarat%20390010%2C%20India"
+    "description": "Visit our office or reach us using the details below. Emergency inspections are available on request.",
+    "address": "Plot No. 829/2444, Mrutyunjaya Vihar, Lingipur, Bhubaneswar, Odisha 751002, India",
+    "mapLabel": "Open in Maps"
   },
   "directContacts": {
     "title": "Direct Contacts",
     "description": "For urgent requirements, reach out directly to our leadership team.",
     "people": [
       {
-        "name": "Dr. R. K. Sharma",
-        "role": "Director & Chief Consultant",
-        "phone": "+91 98765 43210",
-        "email": "director@recpl.com"
+        "name": "Er. Debasish Mishra",
+        "role": "Director",
+        "phone": "+91 8260773310",
+        "email": "recpl.bbsr@gmail.com"
       },
       {
-        "name": "Er. A. Patel",
-        "role": "Project Head — NDT & TPI",
-        "phone": "+91 98765 43211",
-        "email": "projects@recpl.com"
+        "name": "Dr. Sarada Prasad Parida",
+        "role": "Expert & Project Head",
+        "phone": "+91 9938437148 / 8658105091",
+        "email": "sarada800@gmail.com"
       }
     ]
   }

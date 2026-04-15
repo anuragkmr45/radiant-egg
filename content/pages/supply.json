@@ -1,0 +1,113 @@
+{
+  "seo": {
+    "title": "Material Testing Equipment & Instrument Supply",
+    "description": "RECPL supplies a wide range of material testing instruments, surveying equipment, soil testing devices, NDT instruments, and laboratory apparatus across India.",
+    "path": "/supply"
+  },
+  "hero": {
+    "eyebrow": "Supply",
+    "title": "Material Testing Equipment & Instrument Supply",
+    "summary": "Your One-Stop Source for Quality Testing & Surveying Instruments",
+    "description": "RECPL supplies a wide range of material testing instruments, surveying equipment, soil testing devices, laboratory apparatus, and NDT equipment for industries, construction companies, laboratories, and government agencies across India.",
+    "glowPosition": "right",
+    "primaryAction": {
+      "label": "Request a Quote",
+      "href": "/contact"
+    }
+  },
+  "intro": {
+    "variant": "centered",
+    "description": "In addition to our consultancy, testing, and inspection services, Radiant Engineering Consultancy Pvt. Ltd. (RECPL) is a trusted supplier of material testing instruments, surveying equipment, soil testing devices, laboratory apparatus, and NDT equipment. Whether you are setting up a new testing laboratory, upgrading your field equipment, or procuring instruments for a specific project, RECPL delivers quality products at competitive prices with expert after-sales support."
+  },
+  "listGrid": {
+    "eyebrow": "Product Categories",
+    "title": "What We Supply",
+    "description": "Representative categories from the RECPL supply catalogue. The full catalogue can be expanded as client-approved product data becomes available.",
+    "items": [
+      {
+        "title": "Surveying Instruments",
+        "icon": "building",
+        "items": [
+          "Sokkia Auto Level",
+          "Leica Auto Level",
+          "Digital Theodolite",
+          "Total Stations",
+          "Prism, Prism Pole, and Carbon Pole",
+          "Garmin GPS"
+        ]
+      },
+      {
+        "title": "Soil & Geotechnical Testing Instruments",
+        "icon": "layers",
+        "items": [
+          "CBR Testing Machine",
+          "Cube Moulds and Slump Cone Apparatus",
+          "Rapid Moisture Meter",
+          "Standard Test Sieves and Sieve Shaker",
+          "Proctor Mould Apparatus",
+          "Hot Air Oven and Bitumen Extractor"
+        ]
+      },
+      {
+        "title": "Concrete Testing Instruments",
+        "icon": "hardhat",
+        "items": [
+          "Rebound Hammer",
+          "UPV Testing Equipment",
+          "Core Drilling Machine",
+          "Compression Testing Machine",
+          "Flexural Strength Testing Machine",
+          "Digital Concrete Thermometer"
+        ]
+      },
+      {
+        "title": "NDT Instruments & Equipment",
+        "icon": "search",
+        "items": [
+          "Ultrasonic Flaw Detector",
+          "Ultrasonic Thickness Gauge",
+          "MPI Equipment",
+          "DPT Kits",
+          "Eddy Current Testing Equipment",
+          "Portable Hardness Tester"
+        ]
+      },
+      {
+        "title": "Metal & Material Testing Instruments",
+        "icon": "flask",
+        "items": [
+          "Universal Testing Machine (UTM)",
+          "Impact Testing Machine",
+          "Hardness Testing Machine",
+          "Tensile Testing Machine",
+          "Bend Testing Machine",
+          "Spectro Analyser"
+        ]
+      },
+      {
+        "title": "General Laboratory Equipment",
+        "icon": "package",
+        "items": [
+          "Digital Weighing Balance",
+          "pH Meter",
+          "Muffle Furnace",
+          "Water Bath",
+          "Drying Oven",
+          "Calibration Accessories and Standards"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Looking for a specific instrument? Need bulk pricing?",
+    "description": "Contact our supply team for a customised quotation, practical product guidance, and the fastest delivery support available for your project.",
+    "primaryAction": {
+      "label": "Request a Quote",
+      "href": "/contact"
+    },
+    "secondaryAction": {
+      "label": "Contact Supply Team",
+      "href": "/contact"
+    }
+  }
+}

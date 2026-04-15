@@ -3,6 +3,7 @@
 import { ChevronDown, ArrowRight } from "lucide-react";
 
 import { useContactForm } from "@/components/sections/contact/useContactForm";
+import { marketingRevealStyle } from "@/lib/motion";
 import type { ContactFormContent } from "@/types/content";
 
 interface ContactFormProps {
@@ -18,10 +19,14 @@ export function ContactForm({ content }: ContactFormProps) {
       noValidate
       onSubmit={(event) => void form.submit(event, content.successMessage)}
     >
-      <div className="contact-form__grid">
+      <div
+        className="contact-form__grid motion-sequence"
+        data-marketing-reveal=""
+        style={marketingRevealStyle(80)}
+      >
         <div className="contact-form__field">
           <label className="contact-form__label" htmlFor="contact-full-name">
-            Full Name *
+            {content.fullNameLabel}
           </label>
           <input
             aria-describedby="contact-full-name-error"
@@ -32,7 +37,7 @@ export function ContactForm({ content }: ContactFormProps) {
             name="fullName"
             onBlur={() => form.blurField("fullName")}
             onChange={(event) => form.updateField("fullName", event.target.value)}
-            placeholder="Your name"
+            placeholder={content.fullNamePlaceholder}
             type="text"
             value={form.values.fullName}
           />
@@ -43,7 +48,7 @@ export function ContactForm({ content }: ContactFormProps) {
 
         <div className="contact-form__field">
           <label className="contact-form__label" htmlFor="contact-email">
-            Email Address *
+            {content.emailLabel}
           </label>
           <input
             aria-describedby="contact-email-error"
@@ -54,7 +59,7 @@ export function ContactForm({ content }: ContactFormProps) {
             name="email"
             onBlur={() => form.blurField("email")}
             onChange={(event) => form.updateField("email", event.target.value)}
-            placeholder="you@company.com"
+            placeholder={content.emailPlaceholder}
             type="email"
             value={form.values.email}
           />
@@ -65,7 +70,7 @@ export function ContactForm({ content }: ContactFormProps) {
 
         <div className="contact-form__field">
           <label className="contact-form__label" htmlFor="contact-phone">
-            Phone Number
+            {content.phoneLabel}
           </label>
           <input
             aria-describedby="contact-phone-error"
@@ -77,12 +82,34 @@ export function ContactForm({ content }: ContactFormProps) {
             name="phone"
             onBlur={() => form.blurField("phone")}
             onChange={(event) => form.updateField("phone", event.target.value)}
-            placeholder="+91 XXXXX XXXXX"
+            placeholder={content.phonePlaceholder}
             type="tel"
             value={form.values.phone}
           />
           <p className="contact-form__error" id="contact-phone-error">
             {form.errors.phone ?? ""}
+          </p>
+        </div>
+
+        <div className="contact-form__field">
+          <label className="contact-form__label" htmlFor="contact-company-name">
+            {content.companyNameLabel}
+          </label>
+          <input
+            aria-describedby="contact-company-name-error"
+            aria-invalid={Boolean(form.errors.companyName)}
+            autoComplete="organization"
+            className="contact-form__control"
+            id="contact-company-name"
+            name="companyName"
+            onBlur={() => form.blurField("companyName")}
+            onChange={(event) => form.updateField("companyName", event.target.value)}
+            placeholder={content.companyNamePlaceholder}
+            type="text"
+            value={form.values.companyName}
+          />
+          <p className="contact-form__error" id="contact-company-name-error">
+            {form.errors.companyName ?? ""}
           </p>
         </div>
 
@@ -116,9 +143,13 @@ export function ContactForm({ content }: ContactFormProps) {
         </div>
       </div>
 
-      <div className="contact-form__field">
+      <div
+        className="contact-form__field"
+        data-marketing-reveal=""
+        style={marketingRevealStyle(170)}
+      >
         <label className="contact-form__label" htmlFor="contact-message">
-          Message *
+          {content.messageLabel}
         </label>
         <textarea
           aria-describedby="contact-message-error"
@@ -128,7 +159,7 @@ export function ContactForm({ content }: ContactFormProps) {
           name="message"
           onBlur={() => form.blurField("message")}
           onChange={(event) => form.updateField("message", event.target.value)}
-          placeholder="Describe your project requirement or enquiry..."
+          placeholder={content.messagePlaceholder}
           rows={5}
           value={form.values.message}
         />
@@ -139,7 +170,9 @@ export function ContactForm({ content }: ContactFormProps) {
 
       <button
         className="contact-form__submit"
+        data-marketing-reveal=""
         disabled={form.status === "submitting"}
+        style={marketingRevealStyle(250)}
         type="submit"
       >
         <span>{form.status === "submitting" ? "Submitting..." : content.submitLabel}</span>
@@ -149,7 +182,9 @@ export function ContactForm({ content }: ContactFormProps) {
       <div
         aria-live="polite"
         className={form.status === "success" ? "contact-form__feedback contact-form__feedback--success" : "contact-form__feedback"}
+        data-marketing-reveal=""
         role="status"
+        style={marketingRevealStyle(320)}
       >
         {form.feedback}
       </div>

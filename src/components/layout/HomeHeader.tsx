@@ -25,7 +25,7 @@ export function HomeHeader() {
         <div className="home-header__nav-slot">
           <DesktopNav
             primaryItems={homeChrome.nav}
-            serviceInsertBeforeHref="/#industries"
+            serviceInsertBeforeHref="/supply"
             serviceItems={siteConfig.serviceNav}
             tone="inverse"
           />
@@ -45,7 +45,7 @@ export function HomeHeader() {
             contact={homeChrome.contact}
             cta={homeChrome.quoteCta}
             primaryItems={homeChrome.nav}
-            serviceInsertBeforeHref="/#industries"
+            serviceInsertBeforeHref="/supply"
             serviceItems={siteConfig.serviceNav}
             siteName={homeChrome.brandName}
             tone="inverse"

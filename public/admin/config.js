@@ -141,6 +141,20 @@
     return fields;
   };
 
+  const serviceNavItemFields = (allowChildren = true) => {
+    const fields = navItemFields(true);
+
+    if (allowChildren) {
+      fields.push(
+        objectListField("Children", "children", navItemFields(false), {
+          required: false,
+        }),
+      );
+    }
+
+    return fields;
+  };
+
   const featureCardFields = () => [
     stringField("Title", "title"),
     textField("Description", "description"),
@@ -238,7 +252,7 @@
               textField("Footer Description", "footerDescription"),
               listOfStringsField("Default Keywords", "defaultKeywords"),
               objectListField("Primary Navigation", "primaryNav", navItemFields(false)),
-              objectListField("Services Navigation", "serviceNav", navItemFields(true)),
+              objectListField("Services Navigation", "serviceNav", serviceNavItemFields()),
               objectListField(
                 "Footer Groups",
                 "footerGroups",
@@ -430,14 +444,17 @@
                 stringField("Value", "value"),
                 stringField("Label", "label"),
               ]),
-              objectField("Portfolio", "portfolio", [
+              objectField("Gallery Preview", "galleryPreview", [
                 stringField("Eyebrow", "eyebrow"),
                 stringField("Title", "title"),
                 textField("Description", "description", { required: false }),
-                objectListField("Items", "items", [
-                  stringField("Label", "label"),
-                  iconField(),
-                ]),
+                stringField("View More Label", "viewMoreLabel"),
+                numberField("Preview Count", "previewCount", {
+                  required: false,
+                  value_type: "int",
+                  min: 1,
+                  step: 1,
+                }),
               ]),
               objectField("CTA", "cta", ctaFields(true)),
             ],
@@ -591,6 +608,36 @@
             ],
           },
           {
+            label: "Supply",
+            name: "supply",
+            file: "content/pages/supply.json",
+            format: "json",
+            fields: [
+              objectField("SEO", "seo", seoFields()),
+              objectField("Hero", "hero", serviceHeroFields({
+                includeBackground: false,
+                includeGlow: true,
+                includeAction: true,
+              })),
+              objectField("Intro", "intro", [
+                hiddenField("variant", "centered"),
+                textField("Description", "description"),
+              ]),
+              objectField("List Grid", "listGrid", [
+                stringField("Anchor ID", "anchorId", { required: false }),
+                stringField("Eyebrow", "eyebrow"),
+                stringField("Title", "title"),
+                textField("Description", "description", { required: false }),
+                objectListField("Items", "items", [
+                  stringField("Title", "title"),
+                  iconField(),
+                  listOfStringsField("Items", "items"),
+                ]),
+              ]),
+              objectField("CTA", "cta", ctaFields(true)),
+            ],
+          },
+          {
             label: "Contact",
             name: "contact",
             file: "content/pages/contact.json",
@@ -603,7 +650,7 @@
                 textField("Description", "description"),
               ]),
               objectListField("Info Strip", "infoStrip", [
-                selectField("Kind", "kind", ["address", "phone", "email"]),
+                selectField("Kind", "kind", ["phone", "email"]),
                 stringField("Label", "label"),
                 textField("Value", "value"),
                 stringField("Href", "href", { required: false }),
@@ -611,8 +658,18 @@
               objectField("Form", "form", [
                 stringField("Title", "title"),
                 textField("Description", "description"),
+                stringField("Full Name Label", "fullNameLabel"),
+                stringField("Full Name Placeholder", "fullNamePlaceholder"),
+                stringField("Email Label", "emailLabel"),
+                stringField("Email Placeholder", "emailPlaceholder"),
+                stringField("Phone Label", "phoneLabel"),
+                stringField("Phone Placeholder", "phonePlaceholder"),
+                stringField("Company / Organisation Label", "companyNameLabel"),
+                stringField("Company / Organisation Placeholder", "companyNamePlaceholder"),
                 stringField("Service Label", "serviceLabel"),
                 stringField("Service Placeholder", "servicePlaceholder"),
+                stringField("Message Label", "messageLabel"),
+                stringField("Message Placeholder", "messagePlaceholder"),
                 objectListField("Service Options", "serviceOptions", [
                   stringField("Label", "label"),
                   stringField("Value", "value"),
@@ -621,11 +678,11 @@
                 textField("Success Message", "successMessage"),
               ]),
               objectField("Location", "location", [
+                stringField("Address Label", "addressLabel"),
                 stringField("Title", "title"),
                 textField("Description", "description"),
                 textField("Address", "address"),
-                stringField("Map Query", "mapQuery"),
-                stringField("Open in Maps URL", "openInMapsHref"),
+                stringField("Map Button Label", "mapLabel"),
               ]),
               objectField("Direct Contacts", "directContacts", [
                 stringField("Title", "title"),
@@ -637,6 +694,42 @@
                   stringField("Email", "email"),
                 ]),
               ]),
+            ],
+          },
+        ],
+      },
+      {
+        label: "Gallery",
+        name: "gallery",
+        files: [
+          {
+            label: "Gallery Page",
+            name: "galleryPage",
+            file: "content/gallery.json",
+            format: "json",
+            fields: [
+              objectField("SEO", "seo", seoFields()),
+              objectField("Hero", "hero", [
+                stringField("Eyebrow", "eyebrow"),
+                stringField("Title", "title"),
+                textField("Description", "description"),
+              ]),
+              listOfStringsField("Categories", "categories"),
+              objectListField("Items", "items", [
+                objectField("Image", "image", [
+                  imageField("Source", "src", {
+                    hint: "Use /uploads/... for locally managed media or a full https:// URL.",
+                  }),
+                ]),
+                stringField("Title", "title"),
+                stringField("Alt Text", "alt"),
+                stringField("Category", "category", {
+                  hint: "Use one of the gallery categories above for consistent filters.",
+                }),
+                textField("Caption", "caption", { required: false }),
+              ], {
+                summary: "{{fields.title}}",
+              }),
             ],
           },
         ],

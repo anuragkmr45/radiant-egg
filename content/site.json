@@ -1,18 +1,23 @@
 {
   "name": "Radiant Engineering",
   "shortName": "RECPL",
-  "description": "Independent engineering consultancy, third-party inspection, and non-destructive testing for demanding industrial programs.",
-  "siteUrl": "https://radiant-engineering.example",
+  "description": "Radiant Engineering Consultancy Pvt. Ltd. delivers engineering consultancy, non-destructive testing, third party inspection, structural stability audit, and material testing equipment supply across India.",
+  "siteUrl": "https://www.radiantconsultant.com",
   "locale": "en_US",
-  "tagline": "Consultancy Pvt. Ltd.",
-  "footerHeadline": "Independent engineering, inspection, and quality systems for demanding industrial work.",
-  "footerDescription": "Radiant Engineering supports consultancy, NDT, and third-party inspection scopes with disciplined execution, clear documentation, and reliable field coordination.",
+  "tagline": "Ready to Excel",
+  "footerHeadline": "Engineering consultancy, inspection, and testing support built for industrial safety and compliance.",
+  "footerDescription": "RECPL supports consultancy, NDT, TPI, structural audit, and equipment supply programs with qualified engineers, certified inspectors, and disciplined documentation.",
   "defaultKeywords": [
-    "Radiant Engineering",
-    "engineering consultancy",
-    "third-party inspection",
-    "NDT services",
-    "industrial quality assurance"
+    "NDT services Odisha",
+    "third party inspection India",
+    "structural stability audit",
+    "engineering consultancy Bhubaneswar",
+    "material testing equipment supply",
+    "boiler inspection Odisha",
+    "pressure vessel inspection",
+    "lifting tools inspection",
+    "ultrasonic testing services",
+    "surveying instruments supplier Odisha"
   ],
   "primaryNav": [
     {
@@ -24,6 +29,10 @@
       "href": "/about"
     },
     {
+      "label": "Supply",
+      "href": "/supply"
+    },
+    {
       "label": "Contact",
       "href": "/contact"
     }
@@ -32,17 +41,17 @@
     {
       "label": "Consultancy",
       "href": "/services/consultancy",
-      "description": "Engineering reviews, drawings, and structural audit support."
+      "description": "Structure design, engineering drawings, and structural stability audits for industrial and civil assets."
     },
     {
       "label": "NDT",
       "href": "/services/ndt",
-      "description": "Field-ready non-destructive testing programs for critical assets."
+      "description": "Advanced non-destructive testing for civil structures, equipment, and machinery items."
     },
     {
       "label": "TPI",
       "href": "/services/tpi",
-      "description": "Third-party inspection with process visibility and compliance control."
+      "description": "Third party inspection and statutory certification for lifting tools, tackles, and pressure vessels."
     }
   ],
   "footerGroups": [
@@ -51,18 +60,15 @@
       "links": [
         {
           "label": "Consultancy",
-          "href": "/services/consultancy",
-          "description": "Engineering reviews, drawings, and structural audit support."
+          "href": "/services/consultancy"
         },
         {
           "label": "NDT",
-          "href": "/services/ndt",
-          "description": "Field-ready non-destructive testing programs for critical assets."
+          "href": "/services/ndt"
         },
         {
           "label": "TPI",
-          "href": "/services/tpi",
-          "description": "Third-party inspection with process visibility and compliance control."
+          "href": "/services/tpi"
         }
       ]
     },
@@ -74,33 +80,37 @@
           "href": "/"
         },
         {
-          "label": "About",
+          "label": "About Us",
           "href": "/about"
         },
         {
-          "label": "Contact",
+          "label": "Supply",
+          "href": "/supply"
+        },
+        {
+          "label": "Contact Us",
           "href": "/contact"
         }
       ]
     }
   ],
   "contact": {
-    "email": "info@recpl.com",
-    "phone": "+91 98765 43210",
-    "address": "Plot No. 12, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
+    "email": "recpl.bbsr@gmail.com",
+    "phone": "+91 8260773310",
+    "address": "Plot No. 829/2444, Mrutyunjaya Vihar, Lingipur, Bhubaneswar, Odisha 751002, India",
     "hours": "Mon - Sat, 9:00 AM to 6:00 PM IST"
   },
   "defaultCta": {
-    "label": "Contact the team",
+    "label": "Request a Quote",
     "href": "/contact",
-    "description": "Speak with the team coordinating consultancy, inspection, and field quality scopes."
+    "description": "Speak with the RECPL team about consultancy, inspection, testing, or equipment supply requirements."
   },
   "homeChrome": {
     "brandName": "Radiant Engineering",
     "legalName": "Radiant Engineering Consultancy Pvt. Ltd.",
     "shortName": "RECPL",
-    "tagline": "Consultancy Pvt. Ltd.",
-    "phoneLabel": "+91 98765 43210",
+    "tagline": "Ready to Excel",
+    "phoneLabel": "+91 8260773310",
     "nav": [
       {
         "label": "Home",
@@ -111,8 +121,8 @@
         "href": "/about"
       },
       {
-        "label": "Industry",
-        "href": "/#industries"
+        "label": "Supply",
+        "href": "/supply"
       },
       {
         "label": "Contact",
@@ -120,11 +130,11 @@
       }
     ],
     "quoteCta": {
-      "label": "Get a Quote",
+      "label": "Request a Quote",
       "href": "/contact",
-      "description": "Request a quote for inspection, structural audit, or engineering consultancy support."
+      "description": "Request a quotation for consultancy, inspection, testing, or supply support."
     },
-    "footerDescription": "Radiant Engineering Consultancy Pvt. Ltd. — India's trusted partner for NDT, inspection and consultancy since 2000.",
+    "footerDescription": "Radiant Engineering Consultancy Pvt. Ltd. provides a single-window platform for engineering consultancy, NDT, TPI, structural audit, and testing equipment supply across India.",
     "footerGroups": [
       {
         "title": "Services",
@@ -134,16 +144,16 @@
             "href": "/services/consultancy"
           },
           {
-            "label": "Non-Destructive Testing",
+            "label": "NDT",
             "href": "/services/ndt"
           },
           {
-            "label": "Third Party Inspection",
+            "label": "TPI",
             "href": "/services/tpi"
           },
           {
-            "label": "Industrial Supply",
-            "href": "/contact"
+            "label": "Supply",
+            "href": "/supply"
           }
         ]
       },
@@ -156,23 +166,27 @@
           },
           {
             "label": "About Us",
-            "href": "/#about"
+            "href": "/about"
           },
           {
-            "label": "Industries",
-            "href": "/#industries"
+            "label": "Services",
+            "href": "/#services"
           },
           {
-            "label": "Contact",
+            "label": "Supply",
+            "href": "/supply"
+          },
+          {
+            "label": "Contact Us",
             "href": "/contact"
           }
         ]
       }
     ],
     "contact": {
-      "email": "info@recpl.com",
-      "phone": "+91 98765 43210",
-      "address": "Plot No. 12, GIDC Industrial Estate, Vadodara, Gujarat 390010, India",
+      "email": "recpl.bbsr@gmail.com",
+      "phone": "+91 8260773310",
+      "address": "Plot No. 829/2444, Mrutyunjaya Vihar, Lingipur, Bhubaneswar, Odisha 751002, India",
       "hours": "Mon - Sat, 9:00 AM to 6:00 PM IST"
     }
   },
@@ -188,6 +202,11 @@
       "priority": 0.8
     },
     {
+      "href": "/gallery",
+      "changeFrequency": "monthly",
+      "priority": 0.72
+    },
+    {
       "href": "/services/consultancy",
       "changeFrequency": "monthly",
       "priority": 0.8
@@ -201,6 +220,11 @@
       "href": "/services/tpi",
       "changeFrequency": "monthly",
       "priority": 0.8
+    },
+    {
+      "href": "/supply",
+      "changeFrequency": "monthly",
+      "priority": 0.75
     },
     {
       "href": "/contact",

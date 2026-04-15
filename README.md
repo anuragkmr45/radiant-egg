@@ -18,7 +18,33 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact Form Storage
+
+The contact form now stores enquiries in PostgreSQL through `POST /api/contact`, using Drizzle ORM for the Next.js database connection and inserts.
+
+1. Copy `.env.example` to `.env.local`
+2. Point `DATABASE_URL` at your local PostgreSQL instance
+3. Push the Drizzle schema to your database:
+
+```bash
+npm run db:push
+```
+
+4. Or create the table manually with:
+
+```bash
+psql "$DATABASE_URL" -f db/contact_submissions.sql
+```
+
+Drizzle schema files live in [src/db/schema.ts](./src/db/schema.ts) and [drizzle.config.ts](./drizzle.config.ts).
+
+To inspect submissions locally:
+
+```bash
+psql "$DATABASE_URL" -c "select id, full_name, email, service, submitted_at from contact_submissions order by submitted_at desc;"
+```
+
+Later, you can move the same `DATABASE_URL` setup to Neon without changing the application code.
 
 ## Learn More
 

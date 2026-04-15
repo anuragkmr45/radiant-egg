@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "About",
-    "description": "Learn about Radiant Engineering Consultancy Pvt. Ltd., our engineering expertise, certified leadership team, and compliance-driven inspection approach.",
+    "title": "About RECPL",
+    "description": "Learn about Radiant Engineering Consultancy Pvt. Ltd., a leading NDT, TPI, structural audit, and engineering consultancy firm in Bhubaneswar, Odisha.",
     "path": "/about"
   },
   "hero": {
@@ -21,13 +21,13 @@
     "eyebrow": "Who We Are",
     "title": "Who We Are",
     "paragraphs": [
-      "Radiant Engineering Consultancy Pvt. Ltd. (RECPL) is a premier engineering consultancy and inspection organisation established with a vision to deliver world-class technical services to India's industrial and infrastructure sectors.",
-      "Our expertise spans Non-Destructive Testing, Third Party Inspection, Structural Audits, Material Testing, and Equipment Supply — making us a truly integrated engineering partner.",
-      "Led by a PhD-qualified chief consultant and backed by a team of ASNT-certified engineers, we bring academic rigour and field-proven experience to every engagement."
+      "Radiant Engineering Consultancy Pvt. Ltd. (RECPL) is a professionally managed engineering consultancy and industrial inspection company headquartered in Bhubaneswar, Odisha. Founded with a mission to deliver reliable, accurate, and cost-effective engineering solutions, RECPL has established itself as a trusted name in Non-Destructive Testing (NDT), Third Party Inspection (TPI), Structural Stability Audit, Engineering Design & Consultancy, and the supply of material testing instruments.",
+      "Our operations are led by Er. Debasish Mishra and supported by Dr. Sarada Prasad Parida (Ph.D., VSSUT Burla), who serves as Expert and Project Head. This blend of industry experience and academic rigour enables RECPL to deliver inspection and consultancy services that meet stringent national and international standards.",
+      "RECPL is recognised as a Competent Person under the Factory Act 1948, Sections 28, 29, 31 & Rule 3A, authorising us to inspect and certify boilers, pressure vessels, lifting equipment, and other factory machinery. Our NDT professionals are certified to ASNT SNT-TC-1A Level II standards and our lead auditors carry ISO 18001 accreditation."
     ],
     "image": {
       "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Ff71ec3985d999e3d7ace40c10db92b176b6b5ebe.jpg?generation=1776077481007949&alt=media",
-      "alt": "RECPL engineers inspecting an industrial steel structure at a manufacturing plant"
+      "alt": "RECPL engineers inspecting industrial structural systems"
     },
     "credentials": [
       {
@@ -35,44 +35,44 @@
         "label": " under Factory Act 1948"
       },
       {
-        "accent": "ASNT Level II",
-        "label": " certified inspection expertise"
+        "accent": "ASNT SNT-TC-1A Level II",
+        "label": " certified NDT capability"
       },
       {
         "accent": "ISO 18001",
-        "label": " compliance-focused delivery"
+        "label": " lead auditor expertise"
       }
     ]
   },
   "strengths": {
-    "eyebrow": "Our Strengths",
-    "title": "What Sets Us Apart",
-    "description": "",
+    "eyebrow": "What Sets Us Apart",
+    "title": "Integrated Technical Support, Not Standalone Testing",
+    "description": "RECPL does not merely test — we consult, design, inspect, and supply.",
     "items": [
       {
-        "title": "Integrated Solutions",
-        "description": "End-to-end consulting, testing, inspection, and equipment supply under one roof.",
+        "title": "Integrated Approach",
+        "description": "Engineering design, inspection, testing, and equipment supply coordinated through one technical partner.",
         "icon": "layers"
       },
       {
-        "title": "Certified Experts",
-        "description": "ASNT Level II & III certified professionals with decades of field experience.",
-        "icon": "badge"
-      },
-      {
-        "title": "Compliance Driven",
-        "description": "Every engagement aligned with Factory Act, IS, ASME, and ASTM standards.",
-        "icon": "scroll"
-      },
-      {
         "title": "Advanced Testing Methods",
-        "description": "State-of-the-art NDT, metallurgical, and material testing capabilities.",
-        "icon": "flask"
+        "description": "Ultrasonic, eddy current, magnetic particle, and dye penetrant testing aligned to industrial field conditions.",
+        "icon": "search"
       },
       {
-        "title": "One-Stop Engineering Partner",
-        "description": "From feasibility studies to final certification — a single trusted partner.",
-        "icon": "briefcase"
+        "title": "Statutory Inspection Capability",
+        "description": "Authorised TPI for boilers, pressure vessels, lifting equipment, and factory machinery under the Factory Act 1948.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Design & Analysis Depth",
+        "description": "Detailed engineering drawings, finite element analysis, and structural assessment for complex industrial structures.",
+        "icon": "building"
+      },
+      {
+        "title": "One-Stop Supply Support",
+        "description": "Material testing instruments, surveying equipment, soil testing devices, and laboratory apparatus from trusted manufacturers.",
+        "icon": "package"
       }
     ]
   },
@@ -80,17 +80,17 @@
     "items": [
       {
         "title": "Our Mission",
-        "description": "To deliver technically superior, compliance-driven engineering services that safeguard industrial assets and public safety across India.",
+        "description": "To provide world-class engineering consultancy, inspection, and testing services that help industries maintain the highest standards of safety, quality, and regulatory compliance while delivering tangible value through technical expertise and innovation.",
         "icon": "scroll"
       },
       {
         "title": "Our Vision",
-        "description": "To become India's most trusted engineering consultancy — recognised for integrity, precision, and innovation in every project we undertake.",
+        "description": "To be recognised as India’s most trusted and technically advanced engineering consultancy firm, setting benchmarks in NDT, TPI, structural audit, and material testing services across diverse industrial sectors.",
         "icon": "search"
       },
       {
         "title": "Core Values",
-        "description": "The principles guiding our decisions and delivery standards.",
+        "description": "Integrity, precision, safety-first thinking, innovation, and client-centric execution guide every RECPL engagement.",
         "icon": "shield",
         "values": [
           "Integrity",
@@ -103,86 +103,73 @@
     ]
   },
   "leadership": {
-    "eyebrow": "Leadership",
+    "eyebrow": "Our Team",
     "title": "Meet the Experts Behind RECPL",
-    "description": "",
+    "description": "RECPL’s team brings together experience across mechanical engineering, structural design, NDT, quality assurance, and academic research.",
     "members": [
       {
-        "name": "Dr. Rajesh Kumar",
-        "role": "Project Head & Chief Consultant",
-        "description": "PhD in Structural Engineering with 36+ research publications and 480+ citations. Leads all technical operations.",
-        "icon": "graduation",
-        "badge": "Lead Expert",
+        "name": "Er. Debasish Mishra",
+        "role": "Director",
+        "description": "Co-founder and Director of RECPL with deep expertise in industrial inspection, NDT, and factory safety compliance. Leads strategic direction and client relationships and holds qualifications as a Competent Person under the Factory Act 1948 and an ISO 18001 Lead Auditor.",
+        "icon": "briefcase",
+        "badge": "Director",
         "featured": true
       },
       {
-        "name": "Suresh Patil",
-        "role": "Director — Operations",
-        "description": "25+ years in industrial project management. Oversees pan-India field operations and client delivery.",
-        "icon": "briefcase"
+        "name": "Dr. Sarada Prasad Parida",
+        "role": "Expert & Project Head",
+        "description": "Ph.D. in Engineering from VSSUT Burla with an M.Tech in Mechanical System Design & Dynamics, 36 published journal articles, 480+ citations, multiple patents, and extensive industrial consultancy experience in structural strength assessment, steel design, and RCC audits.",
+        "icon": "graduation",
+        "badge": "PhD Lead"
       },
       {
-        "name": "Anita Sharma",
-        "role": "Head — NDT Division",
-        "description": "ASNT Level III certified. Specialises in ultrasonic and radiographic testing for critical infrastructure.",
+        "name": "Er. Rajat Kumar Panda",
+        "role": "Site Manager",
+        "description": "M.Tech in Heat Power Engineering and experienced CAD/CAM design engineer with proficiency in AutoCAD, UG-NX, CATIA, and ANSYS, supporting design development and site execution.",
+        "icon": "building"
+      },
+      {
+        "name": "Er. Amit Rout",
+        "role": "NDT Expert",
+        "description": "ASNT SNT-TC-1A certified in Ultrasonic Testing and Eddy Current Testing with multi-industry experience in quality control, fabrication inspection, defect analysis, and production supervision.",
         "icon": "search"
       },
       {
-        "name": "Vikram Desai",
-        "role": "Head — TPI & Compliance",
-        "description": "Competent Person under Factory Act. Manages statutory inspections for pressure vessels and lifting equipment.",
-        "icon": "clipboard"
+        "name": "Additional Positions",
+        "role": "HR & Marketing Head / Lab In-charge",
+        "description": "Team expansion roles reserved for future appointments as RECPL grows its laboratory and client-support capabilities.",
+        "icon": "badge"
       }
     ]
   },
   "stats": [
     {
-      "value": "PhD-Led",
-      "label": "Engineering Expertise"
-    },
-    {
-      "value": "36+",
-      "label": "Research Publications"
+      "value": "36",
+      "label": "Published Research Papers"
     },
     {
       "value": "480+",
       "label": "Academic Citations"
     },
     {
-      "value": "Pan-India",
-      "label": "Industrial Projects"
+      "value": "4",
+      "label": "Patents Filed & Granted"
+    },
+    {
+      "value": "9",
+      "label": "Sponsored Industrial Projects"
     }
   ],
-  "portfolio": {
-    "eyebrow": "Portfolio",
+  "galleryPreview": {
+    "eyebrow": "Gallery",
     "title": "Our Work in Action",
-    "description": "",
-    "items": [
-      {
-        "label": "Site Inspections",
-        "icon": "search"
-      },
-      {
-        "label": "Lab Testing",
-        "icon": "flask"
-      },
-      {
-        "label": "Engineering Design",
-        "icon": "building"
-      },
-      {
-        "label": "Equipment",
-        "icon": "package"
-      },
-      {
-        "label": "Team Activities",
-        "icon": "hardhat"
-      }
-    ]
+    "description": "Representative categories for RECPL’s fieldwork, inspection activities, laboratory testing, and engineering support.",
+    "viewMoreLabel": "View More",
+    "previewCount": 6
   },
   "cta": {
-    "title": "Looking for reliable engineering consultancy or inspection services?",
-    "description": "Get in touch with our experts today and let us help you achieve compliance, safety, and quality.",
+    "title": "Need a reliable engineering consultancy and inspection partner?",
+    "description": "Get in touch with our experts today and let RECPL support your safety, compliance, testing, and engineering objectives.",
     "primaryAction": {
       "label": "Contact Us",
       "href": "/contact"

@@ -1,20 +1,20 @@
 {
   "seo": {
-    "title": "Home",
-    "description": "Radiant Engineering Consultancy Pvt. Ltd. delivers engineering consultancy, NDT, third-party inspection, and structural audit support for critical industrial programs.",
+    "title": "Radiant Engineering Consultancy Pvt. Ltd.",
+    "description": "RECPL provides expert NDT testing, third party inspection, structural stability audit, structure design, and material testing equipment supply across India.",
     "path": "/"
   },
   "hero": {
     "titleLead": "Engineering Excellence.",
     "titleAccent": "Industrial Safety.",
     "titleTail": "Structural Integrity.",
-    "description": "Your Trusted Partner for NDT, Third Party Inspection & Structural Audit",
+    "description": "Your Trusted Partner for Non-Destructive Testing, Third Party Inspection, Structural Audit & Engineering Consultancy across India.",
     "backgroundImage": {
       "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fa07ebf93aea5b7be07d3e0293378213b11b5e22a.jpg?generation=1776077012445006&alt=media",
-      "alt": "Industrial plant inspection by RECPL engineers"
+      "alt": "RECPL engineers conducting industrial inspection and structural review on site"
     },
     "primaryAction": {
-      "label": "Explore Services",
+      "label": "Explore Our Services",
       "href": "/#services"
     },
     "secondaryAction": {
@@ -24,32 +24,33 @@
   },
   "credentials": [
     {
-      "label": "Factory Act Competent Person",
+      "label": "Competent Person under Factory Act 1948",
       "icon": "shield"
     },
     {
-      "label": "ASNT Level II Certified",
+      "label": "ASNT NDT Level II",
       "icon": "award"
     },
     {
-      "label": "ISO 18001 Compliant",
+      "label": "ISO 18001 Lead Auditor",
       "icon": "badge"
     }
   ],
   "about": {
-    "eyebrow": "About RECPL",
-    "title": "Radiant Engineering Consultancy Pvt. Ltd.",
+    "eyebrow": "Who We Are",
+    "title": "India’s Emerging Leader in Engineering Consultancy & Industrial Testing",
     "paragraphs": [
-      "RECPL is a premier engineering consultancy firm specialising in Non-Destructive Testing, Third Party Inspection, Structural Audits, and industrial supply solutions. With a PhD-led leadership team and decades of field expertise, we serve India's most demanding industrial and government clients.",
-      "Our mission is simple: deliver uncompromising quality, safety, and compliance — every project, every time."
+      "Radiant Engineering Consultancy Pvt. Ltd. (RECPL) is a Bhubaneswar-based engineering consultancy firm specialising in Non-Destructive Testing (NDT), Third Party Inspection (TPI), Structural Stability Audit, Structure Design & Drawings, and the supply of material testing instruments.",
+      "Equipped with a material testing laboratory and backed by qualified engineers, certified NDT experts, skilled laboratory technicians, and academia experts, RECPL is committed to delivering a single-window platform for precision-driven inspection and consultancy solutions across India.",
+      "We believe in an M2M policy — from Macro to Micro. From large concrete and steel structures to tiny lifting tackles, and from pressure vessels to EOT cranes, RECPL ensures every asset meets the highest standards of safety, compliance, and performance."
     ],
     "image": {
       "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F214fc4d9c6d3e6d4b128b22124c6e661e57ce8b1.jpg?generation=1776077012460906&alt=media",
-      "alt": "RECPL engineers conducting structural audit work"
+      "alt": "RECPL engineers reviewing industrial structural details on site"
     },
     "stat": {
-      "value": "25+",
-      "label": "Years in Industry"
+      "value": "One Roof",
+      "label": "Consultancy, Testing & Supply"
     },
     "action": {
       "label": "Learn More",
@@ -57,142 +58,157 @@
     }
   },
   "services": {
-    "eyebrow": "What We Do",
-    "title": "Our Core Services",
-    "description": "End-to-end engineering solutions — from inspection to supply.",
+    "eyebrow": "Our Core Services",
+    "title": "Comprehensive Engineering Solutions",
+    "description": "Engineering consultancy, industrial testing, statutory inspection, and equipment supply under one roof.",
     "items": [
       {
-        "title": "Consultancy",
-        "description": "Expert engineering consultancy for design review, fitness-for-service, and remaining life assessment of critical assets.",
+        "title": "Engineering Consultancy",
+        "description": "Expert structure design, detailed engineering drawings, and structural stability audits for industrial and commercial infrastructures.",
         "href": "/services/consultancy",
         "icon": "briefcase"
       },
       {
-        "title": "Non-Destructive Testing",
-        "description": "UT, RT, MPT, DPT and advanced NDT methods for weld integrity, corrosion mapping, and material characterisation.",
+        "title": "Non-Destructive Testing (NDT)",
+        "description": "Advanced NDT services for civil and mechanical structures, equipment, and machinery items without compromising testing quality.",
         "href": "/services/ndt",
         "icon": "search"
       },
       {
-        "title": "Third Party Inspection",
-        "description": "Independent QA/QC inspection and certification services ensuring compliance with national and international codes.",
+        "title": "Third Party Inspection (TPI)",
+        "description": "Independent inspection and certification of lifting tools, tackles, and pressure vessels under Factory Act 1948 compliance.",
         "href": "/services/tpi",
         "icon": "clipboard"
       },
       {
-        "title": "Supply",
-        "description": "Industrial supply of testing equipment, consumables, and calibration instruments for NDT and inspection needs.",
-        "href": "/contact",
+        "title": "Material Testing Equipment Supply",
+        "description": "Comprehensive supply of surveying instruments, soil testing equipment, NDT devices, and laboratory testing apparatus from leading manufacturers.",
+        "href": "/supply",
         "icon": "package"
       }
     ]
   },
   "reasons": {
-    "eyebrow": "Why RECPL",
-    "title": "Why Choose Us",
-    "description": "Trusted by industries and government bodies across India.",
+    "eyebrow": "Why Choose RECPL?",
+    "title": "Trusted Technical Capability With Compliance at the Core",
+    "description": "Qualified people, statutory authorisation, and practical engineering support for demanding industrial assets.",
     "items": [
       {
-        "title": "Certified Experts",
-        "description": "ASNT, ISNT, and Factory Act certified professionals with deep domain expertise.",
+        "title": "Certified Expertise",
+        "description": "ASNT NDT Level II certified professionals and Competent Persons under Factory Act 1948 Sections 28, 29, 31 & Rule 3A.",
         "icon": "award"
       },
       {
-        "title": "PhD-Led Team",
-        "description": "Leadership backed by doctoral-level research in material science and structural engineering.",
+        "title": "Highly Qualified Technical Team",
+        "description": "Project leadership backed by chartered engineering credentials, a Ph.D. in Engineering, 36 published research papers, 480+ citations, and multiple patents.",
         "icon": "graduation"
       },
       {
         "title": "End-to-End Solutions",
-        "description": "From initial consultation to final report — comprehensive engineering services under one roof.",
+        "description": "From design and testing to inspection and equipment supply — everything under one roof.",
         "icon": "layers"
       },
       {
+        "title": "Pan-India Reach",
+        "description": "Headquartered in Bhubaneswar, Odisha and serving industries, factories, and projects across India.",
+        "icon": "train"
+      },
+      {
         "title": "Compliance-Driven",
-        "description": "Every engagement aligned with IS, ASME, AWS, API, and other national/international standards.",
+        "description": "All inspections and audits are conducted in strict adherence to the Factory Act 1948, Indian Boiler Regulations, and relevant IS/ASME/ASTM codes.",
         "icon": "scroll"
+      },
+      {
+        "title": "ISO-Led Safety Culture",
+        "description": "ISO 18001 Lead Auditor capability supporting occupational health and safety discipline across engineering programs.",
+        "icon": "shield"
       }
     ]
   },
   "industries": {
-    "eyebrow": "Sectors",
-    "title": "Industries We Serve",
-    "description": "Delivering safety and compliance across India's critical infrastructure sectors.",
+    "eyebrow": "Industries We Serve",
+    "title": "Cross-Sector Technical Support Across India",
+    "description": "From heavy industry to public infrastructure, RECPL supports assets that demand safety, compliance, and dependable performance.",
     "items": [
       {
-        "title": "Oil & Gas",
-        "icon": "fuel"
-      },
-      {
-        "title": "Power & Energy",
-        "icon": "bolt"
-      },
-      {
-        "title": "Manufacturing",
+        "title": "Steel & Metal Manufacturing",
         "icon": "factory"
       },
       {
-        "title": "Railways",
-        "icon": "train"
+        "title": "Power Plants & Thermal Stations",
+        "icon": "bolt"
       },
       {
-        "title": "Infrastructure",
-        "icon": "building"
+        "title": "Refineries & Petrochemical",
+        "icon": "fuel"
       },
       {
-        "title": "Water & Utilities",
-        "icon": "droplets"
-      },
-      {
-        "title": "Petrochemical",
+        "title": "Cement & Mining",
         "icon": "flask"
       },
       {
-        "title": "Construction",
+        "title": "Infrastructure & Construction",
+        "icon": "building"
+      },
+      {
+        "title": "Boiler & Pressure Vessel Manufacturers",
+        "icon": "scroll"
+      },
+      {
+        "title": "Fabrication & Heavy Engineering",
         "icon": "hardhat"
+      },
+      {
+        "title": "Ports & Logistics",
+        "icon": "package"
+      },
+      {
+        "title": "Food & Pharmaceutical Processing",
+        "icon": "droplets"
+      },
+      {
+        "title": "Government & Public Sector Undertakings",
+        "icon": "badge"
       }
     ]
   },
   "clients": {
     "eyebrow": "Our Clients & Associations",
     "title": "Trusted by Industry Leaders",
-    "description": "Trusted by Industry Leaders",
+    "description": "RECPL has worked in association with reputed organisations across steel, energy, manufacturing, and engineering sectors.",
     "items": [
       {
-        "label": "Tata Steel"
+        "label": "AM/NS India"
       },
       {
-        "label": "BHEL"
+        "label": "Hindalco Industries"
       },
       {
-        "label": "Indian Oil"
+        "label": "MGM Green Energy"
       },
       {
-        "label": "NTPC"
+        "label": "RHI Magnesita India"
       },
       {
-        "label": "L&T"
+        "label": "Balajee Infratech"
       },
       {
-        "label": "Reliance"
+        "label": "Creative Engineering Consultancy Services"
       },
       {
-        "label": "ONGC"
+        "label": "Mantra Udyog"
       },
       {
-        "label": "Adani Group"
-      },
-      {
-        "label": "JSW Steel"
+        "label": "United Eco Care Consultancy"
       }
     ]
   },
   "cta": {
-    "titleLead": "Need Inspection or",
-    "titleAccent": "Audit?",
-    "description": "Get in touch with our team of certified engineers today. We're ready to help.",
+    "titleLead": "Need an Inspection or Structural Audit?",
+    "titleAccent": "Need Testing Equipment?",
+    "description": "Get in touch with our expert team today for a free consultation and customised quotation.",
     "action": {
-      "label": "Request a Free Consultation",
+      "label": "Contact Us",
       "href": "/contact"
     }
   }

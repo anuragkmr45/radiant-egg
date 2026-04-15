@@ -4,6 +4,7 @@ import { StructuredData } from "@/components/seo/StructuredData";
 import { AboutPageView } from "@/components/sections/about/AboutPageView";
 import { getSiteConfig } from "@/config/site";
 import { getAboutPage } from "@/content/about";
+import { getGalleryPage } from "@/content/gallery";
 import { createPageMetadata } from "@/lib/metadata";
 import {
   createBreadcrumbStructuredData,
@@ -17,6 +18,7 @@ export function generateMetadata(): Metadata {
 export default function AboutPage() {
   const siteConfig = getSiteConfig();
   const aboutPage = getAboutPage();
+  const galleryPage = getGalleryPage();
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function AboutPage() {
           ]),
         ]}
       />
-      <AboutPageView content={aboutPage} />
+      <AboutPageView content={aboutPage} gallery={galleryPage} />
     </>
   );
 }

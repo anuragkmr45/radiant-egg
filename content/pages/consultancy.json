@@ -1,17 +1,17 @@
 {
   "seo": {
-    "title": "Consultancy Services",
-    "description": "Engineering consultancy services for structural design, technical review, and compliance-led industrial asset assessment.",
+    "title": "Structure Design, Drawing & Structural Stability Audit",
+    "description": "RECPL offers expert structural design and drawing services along with comprehensive structural stability audits for industrial plants, factories, and civil infrastructure across India.",
     "path": "/services/consultancy"
   },
   "hero": {
     "eyebrow": "Consultancy Services",
     "title": "Engineering Consultancy Services",
-    "summary": "Precision Design. Structural Integrity. Compliance Assurance.",
-    "description": "From concept design and structural detailing to safety audits and residual life assessment, RECPL delivers engineering solutions that are practical, code-compliant, and built for long-term performance across industrial plants, infrastructure, and civil structures.",
+    "summary": "Structure Design. Structural Stability. Engineering Assurance.",
+    "description": "RECPL delivers specialised consultancy for engineering design, structural strength validation, detailed drawings, and residual life assessment of industrial and civil assets.",
     "backgroundImage": {
       "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fb4b2d07d8778381446006944baa264296d4904d3.jpg?generation=1776077631084955&alt=media",
-      "alt": "Industrial steel plant site for consultancy services"
+      "alt": "Industrial steel plant and engineering consultancy site environment"
     },
     "primaryAction": {
       "label": "Request Consultancy",
@@ -20,207 +20,209 @@
   },
   "intro": {
     "variant": "split",
-    "eyebrow": "Who We Are",
-    "title": "Specialised Engineering Solutions",
+    "eyebrow": "Services Overview",
+    "title": "Specialised Engineering Solutions for Industrial Safety & Compliance",
     "paragraphs": [
-      "RECPL's consultancy division provides specialised engineering solutions for industries that demand precision, safety, and regulatory compliance. Our work spans structural design, engineering analysis, stability audits, and residual life assessments — all grounded in code-compliant methodology and practical site understanding.",
-      "Our PhD-led team combines analytical tools such as Finite Element Analysis with decades of field experience across steel plants, power facilities, and heavy infrastructure. Every project is approached with engineering judgement shaped by real-world conditions — not theoretical assumptions alone.",
-      "Whether it's validating an existing structure's load-bearing capacity, designing a new industrial installation, or providing retrofit recommendations for ageing assets, we deliver solutions that prioritise safety, serviceability, and long-term performance."
+      "At Radiant Engineering Consultancy Pvt. Ltd. (RECPL), our consultancy division provides specialised engineering solutions for industries that demand precision, safety, and regulatory compliance.",
+      "Our team of structural engineers and Ph.D.-level researchers uses advanced analytical tools, finite element analysis (FEA), and industry codes to deliver reliable and cost-effective design and audit solutions.",
+      "From structure design and detailed engineering drawings to structural stability audits and residual life assessment, each assignment is grounded in practical site understanding and code-compliant engineering judgement."
     ],
     "image": {
       "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F40278119f316b292a7df24a060158228d46bbf66.jpg?generation=1776077631075758&alt=media",
-      "alt": "Engineers working on structural CAD designs"
+      "alt": "RECPL engineers preparing structural design drawings and analysis"
     },
     "highlights": [
       {
-        "label": "Code-compliant structural design",
+        "label": "Advanced analytical tools and FEA",
+        "icon": "bolt"
+      },
+      {
+        "label": "Code-compliant design methodology",
         "icon": "shield"
       },
       {
-        "label": "Detailed engineering and drawing support",
+        "label": "Detailed engineering drawings",
         "icon": "building"
       },
       {
-        "label": "Residual life and safety assessment",
+        "label": "Residual life and stability assessment",
         "icon": "award"
-      },
-      {
-        "label": "Practical retrofit-oriented recommendations",
-        "icon": "layers"
       }
     ]
   },
   "detailSections": [
     {
-      "anchorId": "industries",
+      "anchorId": "structure-design-drawing",
       "title": "Structure Design & Engineering Drawings",
       "icon": "building",
       "image": {
         "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F40278119f316b292a7df24a060158228d46bbf66.jpg?generation=1776077631075758&alt=media",
-        "alt": "CAD structural design software"
+        "alt": "Structural design and CAD modelling for industrial assets"
       },
       "imageSide": "left",
       "tone": "muted",
       "paragraphs": [
-        "We provide end-to-end structural design support — from concept development and load path optimisation to detailed engineering drawings ready for fabrication and construction. Our designs account for real-world site conditions, constructability constraints, and serviceability requirements.",
-        "Every design undergoes rigorous strength and stability checks in accordance with applicable Indian Standards and international codes, ensuring structural integrity, safety, and long-term performance."
+        "Our structural design and drawing services cover the complete lifecycle of industrial and civil structures — from concept and preliminary design to detailed engineering drawings and design validation.",
+        "We specialise in designing steel structures, RCC structures, foundations, conveyor systems, crane railings, solar mounting structures, silencer derricks, and more.",
+        "Our design process integrates AutoCAD, CATIA, ANSYS, and STAAD.Pro to produce accurate, code-compliant, and buildable designs. Every design undergoes rigorous strength assessment, load analysis, and stability checks before final drawings are issued."
       ],
-      "scopeLabel": "Scope of design support across industrial, infrastructure, and heavy engineering applications",
+      "scopeLabel": "Key services delivered under structural design and drawing consultancy",
       "capabilities": [
         {
-          "label": "Structural design for steel & RCC",
+          "label": "Structural design and analysis for steel and RCC structures",
           "icon": "building"
         },
         {
-          "label": "Detailed engineering drawings",
+          "label": "Detailed engineering drawings for fabrication, erection, and GA layouts",
           "icon": "clipboard"
         },
         {
-          "label": "Design validation & review",
+          "label": "Design validation and strength assessment for existing structures",
           "icon": "shield"
         },
         {
-          "label": "Conveyor structure design",
+          "label": "Conveyor structure design for additional load considerations",
           "icon": "train"
         },
         {
-          "label": "Solar mounting structure design",
+          "label": "Solar panel mounting structure design and analysis",
           "icon": "bolt"
         },
         {
-          "label": "Crane structure design",
+          "label": "Crane railing and overhead crane structure design",
           "icon": "hardhat"
         },
         {
-          "label": "Steel derrick design",
+          "label": "Steel derrick structure design for industrial equipment",
           "icon": "layers"
         },
         {
-          "label": "Foundation design & analysis",
+          "label": "Foundation design and analysis",
           "icon": "package"
         },
         {
-          "label": "Finite Element Analysis (FEA)",
+          "label": "Finite Element Analysis (FEA) for complex loading conditions",
           "icon": "search"
         },
         {
-          "label": "Code-compliant design (IS, ASME, ASTM)",
+          "label": "Design consultancy as per IS, ASME, ASTM, and Eurocode standards",
           "icon": "scroll"
         }
       ],
-      "projectsTitle": "Past Projects",
+      "projectsTitle": "Past Projects (Design & Drawings)",
       "projects": [
         {
-          "title": "Conveyor Structure Design",
-          "client": "AM/NS India",
-          "description": "Strength assessment for additional solar panel load on existing conveyor system.",
+          "title": "Conveyor Structure Strength Assessment",
+          "client": "AM/NS India, Paradeep",
+          "description": "Design strength assessment of existing conveyor structure for additional load of proposed overhead solar panels.",
           "icon": "train"
         },
         {
-          "title": "Solar Grid Structure Design",
-          "client": "MGM Green Energy",
-          "description": "Design and analysis of steel support systems for solar installation.",
+          "title": "Steel Structures for Solar Grids",
+          "client": "MGM Green Energy Ltd., Bhubaneswar",
+          "description": "Design and analysis of steel structures for erection of solar grid systems.",
           "icon": "bolt"
         },
         {
-          "title": "Steel Derrick Structure",
-          "client": "Hindalco",
-          "description": "Engineered steel support solution for silencer erection requirements.",
+          "title": "Silencer Derrick Design",
+          "client": "Hindalco Industries, Sambalpur",
+          "description": "Design of steel derrick structures to erect silencer units in an industrial setting.",
           "icon": "building"
         },
         {
-          "title": "Crane Railing Design",
-          "client": "Hindalco",
-          "description": "Structural safety and load-based design validation for overhead railing system.",
+          "title": "Overhead Crane Railing Design",
+          "client": "Hindalco Industries, Sambalpur",
+          "description": "Design strength estimation and validation for overhead crane railing structures.",
           "icon": "hardhat"
         },
         {
-          "title": "Edge Protection Railing",
-          "client": "Balajee Infratech",
-          "description": "Design validation for operational safety and code alignment.",
+          "title": "Edge Protection Railing Validation",
+          "client": "Balajee Infratech and Construction Pvt. Ltd.",
+          "description": "Design validation of edge protection railing for operational safety and compliance.",
           "icon": "shield"
         },
         {
-          "title": "Unloading Mechanism Link & Joint Design",
-          "client": "Balajee Infratech",
-          "description": "Component-level engineering support for one-way unloading tipper mechanism.",
+          "title": "Tipper Unloading Mechanism Link & Joint Design",
+          "client": "Balajee Infratech and Construction Pvt. Ltd.",
+          "description": "Links and joints design for unloading mechanism of one-way unloading tipper systems.",
           "icon": "layers"
         }
       ]
     },
     {
+      "anchorId": "structure-stability-audit",
       "title": "Structural Stability Audit & Residual Life Assessment",
       "icon": "shield",
       "image": {
         "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F2b27c016cd46d321777cd8b4ef3b9311048ae905.jpg?generation=1776077632257271&alt=media",
-        "alt": "Engineers inspecting industrial structure"
+        "alt": "Engineers carrying out structural stability audit of industrial infrastructure"
       },
       "imageSide": "right",
       "stickyImage": true,
       "paragraphs": [
-        "Industrial structures age, corrode, and undergo loading conditions that differ from original design assumptions. Our structural audit services provide a systematic evaluation of ageing, distressed, or modified structures — assessing their current condition, load-bearing performance, and remaining service life.",
-        "We combine visual inspection with advanced non-destructive testing, material evaluation, and analytical modelling to identify distress mechanisms including cracking, deflection, corrosion, and degradation. Our assessments go beyond surface-level observation — we evaluate durability indicators, reinforcement condition, concrete quality, and structural adequacy against current codal provisions.",
-        "Each audit concludes with actionable recommendations — whether it's continued service with monitoring, targeted repair, structural strengthening, or full retrofit — enabling clients to make informed decisions about asset life extension, safety compliance, and capital planning."
+        "A structural stability audit is a comprehensive evaluation of the health, integrity, and load-bearing capacity of existing structures. RECPL conducts audits for factories, industrial plants, boiler houses, warehouses, bridges, and civil infrastructure to determine whether assets are safe for continued operation, require retrofitting, or have reached the end of serviceable life.",
+        "Our audit methodology combines visual inspection, non-destructive testing, material sampling, structural analysis, and code-based assessment to build an accurate picture of structural condition.",
+        "Every audit concludes with detailed reports covering findings, risk categorisation, compliance references, and actionable recommendations for repair, strengthening, monitoring, or retrofit."
       ],
-      "scopeLabel": "Comprehensive assessment tools for safety, durability, serviceability, and remedial planning",
+      "scopeLabel": "Key services delivered under structural stability audit and residual life assessment",
       "capabilities": [
         {
-          "label": "Structural audits for industrial buildings",
+          "label": "Structural stability audit for industrial buildings, factories, and plants",
           "icon": "building"
         },
         {
-          "label": "Residual life assessment",
+          "label": "Residual life assessment of RCC and steel structures",
           "icon": "award"
         },
         {
-          "label": "Boiler & equipment foundation audits",
+          "label": "Structural audit of boiler foundations and supporting structures",
           "icon": "flask"
         },
         {
-          "label": "Wagon tippler structural assessment",
+          "label": "Condition assessment of wagon tippler foundations",
           "icon": "train"
         },
         {
-          "label": "Fire & corrosion damage evaluation",
+          "label": "Assessment of fire-damaged, corrosion-affected, or ageing structures",
           "icon": "droplets"
         },
         {
-          "label": "Load testing & performance review",
+          "label": "Load testing and proof load analysis",
           "icon": "badge"
         },
         {
-          "label": "Concrete testing (UPV, rebound hammer)",
+          "label": "Concrete quality assessment using core testing, rebound hammer, and UPV",
           "icon": "search"
         },
         {
-          "label": "Reinforcement mapping & cover survey",
+          "label": "Reinforcement mapping and corrosion assessment",
           "icon": "layers"
         },
         {
-          "label": "Crack pattern analysis & diagnosis",
+          "label": "Crack pattern analysis and structural health monitoring",
           "icon": "shield"
         },
         {
-          "label": "Retrofit & repair recommendations",
+          "label": "Retrofit design recommendations and compliance reporting",
           "icon": "briefcase"
         },
         {
-          "label": "Code compliance & safety reports",
+          "label": "Assessment as per IS 456, IS 800, IS 875, and related codes",
           "icon": "scroll"
         }
       ],
-      "projectsTitle": "Past Projects",
+      "projectsTitle": "Past Projects (Structural Audit)",
       "projects": [
         {
-          "title": "RCC Foundation Residual Life Assessment",
-          "client": "TSM with Mantra Udyog",
-          "description": "Structural audit and continued-service evaluation of wagon tippler foundation system.",
+          "title": "Residual Life Assessment of RCC Wagon Tippler Foundation",
+          "client": "TSM in association with Mantra Udyog, Bhubaneswar",
+          "description": "Structural audit and residual life assessment of RCC foundation supporting wagon tipplers.",
           "icon": "award"
         },
         {
-          "title": "Structural Stability Audit of RCC & Steel Structures",
-          "client": "RHI Magnesita with Mantra Udyog",
-          "description": "Condition assessment of industrial structural assets for safety and performance review.",
+          "title": "Structural Stability of RCC and Steel Structures",
+          "client": "RHI Magnesita India Ltd., Rajgangpur",
+          "description": "Assessment of RCC and steel structures in association with Mantra Udyog for safety and continued serviceability.",
           "icon": "shield"
         }
       ]
@@ -228,31 +230,31 @@
   ],
   "expertiseStrip": [
     {
-      "label": "PhD-led engineering expertise",
+      "label": "Ph.D.-level engineering research support",
       "icon": "graduation"
     },
     {
-      "label": "Advanced FEA & structural analysis",
+      "label": "AutoCAD, CATIA, ANSYS, and STAAD.Pro workflows",
       "icon": "bolt"
     },
     {
-      "label": "Compliance with IS, ASME, ASTM standards",
+      "label": "IS, ASME, ASTM, and Eurocode alignment",
       "icon": "scroll"
     },
     {
-      "label": "Pan-India industrial project delivery",
+      "label": "Industrial design and audit experience across India",
       "icon": "train"
     }
   ],
   "cta": {
-    "title": "Need expert structural design or audit services?",
-    "description": "From structural design to stability audits — let our certified experts partner with you.",
+    "title": "Need structure design or structural stability audit support?",
+    "description": "RECPL can help with detailed engineering, design validation, residual life assessment, and practical compliance-led recommendations.",
     "primaryAction": {
-      "label": "Contact Us",
+      "label": "Request Consultancy",
       "href": "/contact"
     },
     "secondaryAction": {
-      "label": "Request Quote",
+      "label": "Contact Our Team",
       "href": "/contact"
     }
   }

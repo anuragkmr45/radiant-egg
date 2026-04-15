@@ -29,7 +29,9 @@ export function ContactInfoStrip({ items }: ContactInfoStripProps) {
         <div className="contact-strip__grid">
           {items.map((item, index) => {
             const content = item.href ? (
-              <a href={item.href}>{item.value}</a>
+              <a className="motion-link motion-link--text" href={item.href}>
+                {item.value}
+              </a>
             ) : (
               <span>{item.value}</span>
             );

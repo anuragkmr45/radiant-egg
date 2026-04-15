@@ -72,6 +72,10 @@ export function ServicesDropdown({
 
   useEffect(() => () => cancelClose(), []);
 
+  function isItemActive(href: NavItem["href"]) {
+    return currentPath === href || currentPath === href.split("#")[0];
+  }
+
   return (
     <div
       className="services-dropdown"
@@ -152,21 +156,40 @@ export function ServicesDropdown({
       >
         <div className="services-dropdown__grid">
           {items.map((item) => (
-            <Link
-              aria-current={currentPath === item.href ? "page" : undefined}
-              className="services-dropdown__item"
-              href={item.href}
-              key={item.href}
-              onClick={() => {
-                cancelClose();
-                setOpen(false);
-              }}
-            >
-              <span className="services-dropdown__title">{item.label}</span>
-              <span className="services-dropdown__description">
-                {item.description ?? "View the service scope."}
-              </span>
-            </Link>
+            <div className="services-dropdown__group" key={item.href}>
+              <Link
+                aria-current={isItemActive(item.href) ? "page" : undefined}
+                className="services-dropdown__item"
+                href={item.href}
+                onClick={() => {
+                  cancelClose();
+                  setOpen(false);
+                }}
+              >
+                <span className="services-dropdown__title">{item.label}</span>
+                <span className="services-dropdown__description">
+                  {item.description ?? "View the service scope."}
+                </span>
+              </Link>
+
+              {item.children?.length ? (
+                <div className="services-dropdown__children">
+                  {item.children.map((child) => (
+                    <Link
+                      className="services-dropdown__child motion-link motion-link--text"
+                      href={child.href}
+                      key={child.href}
+                      onClick={() => {
+                        cancelClose();
+                        setOpen(false);
+                      }}
+                    >
+                      <span>{child.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+            </div>
           ))}
         </div>
       </div>

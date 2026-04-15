@@ -56,7 +56,7 @@ function mergeCmsValue<T>(defaultValue: T, rawValue: unknown, key?: string): T {
     const sample = defaultValue[0];
 
     if (sample === undefined) {
-      return [] as T;
+      return structuredClone(rawValue) as T;
     }
 
     if (typeof sample === "string") {

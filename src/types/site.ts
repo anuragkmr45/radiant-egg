@@ -4,11 +4,13 @@ export type SitePath =
   | "/"
   | "/about"
   | "/contact"
+  | "/gallery"
+  | "/supply"
   | "/services/consultancy"
   | "/services/ndt"
   | "/services/tpi";
 
-export type SiteSectionHref = `/#${string}`;
+export type SiteSectionHref = `/#${string}` | `${SitePath}#${string}`;
 export type SiteHref = SitePath | SiteSectionHref;
 
 export type SitemapChangeFrequency = NonNullable<
@@ -19,6 +21,7 @@ export interface NavItem {
   label: string;
   href: SiteHref;
   description?: string;
+  children?: readonly NavItem[];
 }
 
 export interface FooterGroup {

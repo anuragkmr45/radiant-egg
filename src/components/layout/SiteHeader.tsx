@@ -27,6 +27,7 @@ export function SiteHeader() {
         <div className="site-header__actions">
           <DesktopNav
             primaryItems={siteConfig.primaryNav}
+            serviceInsertBeforeHref="/supply"
             serviceItems={siteConfig.serviceNav}
           />
 
@@ -38,6 +39,7 @@ export function SiteHeader() {
             contact={siteConfig.contact}
             cta={siteConfig.defaultCta}
             primaryItems={siteConfig.primaryNav}
+            serviceInsertBeforeHref="/supply"
             siteName={siteConfig.name}
             serviceItems={siteConfig.serviceNav}
           />

@@ -6,18 +6,27 @@ import { ContactHero } from "@/components/sections/contact/ContactHero";
 import { ContactInfoStrip } from "@/components/sections/contact/ContactInfoStrip";
 import { ContactMapCard } from "@/components/sections/contact/ContactMapCard";
 import { marketingRevealStyle } from "@/lib/motion";
-import type { ContactPageContent } from "@/types/content";
+import type { ContactInfoItem, ContactPageContent } from "@/types/content";
 
 interface ContactPageViewProps {
   content: ContactPageContent;
 }
 
 export function ContactPageView({ content }: ContactPageViewProps) {
+  const infoStripItems: ContactInfoItem[] = [
+    {
+      kind: "address",
+      label: content.location.addressLabel,
+      value: content.location.address,
+    },
+    ...content.infoStrip.filter((item) => item.kind !== "address"),
+  ];
+
   return (
     <>
       <MarketingMotionController />
       <ContactHero content={content.hero} />
-      <ContactInfoStrip items={content.infoStrip ?? []} />
+      <ContactInfoStrip items={infoStripItems} />
 
       <section className="contact-body">
         <PageContainer>

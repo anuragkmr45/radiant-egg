@@ -206,7 +206,7 @@ export function MobileNavDrawer({
               <div className="mobile-drawer__section-body">
                 <ul className="mobile-drawer__list mobile-drawer__list--nested" role="list">
                   {serviceItems.map((item) => (
-                    <li key={item.href}>
+                    <li className="mobile-drawer__service-group" key={item.href}>
                       <Link
                         aria-current={pathname === item.href ? "page" : undefined}
                         className={inverse ? "mobile-drawer__link mobile-drawer__link--inverse" : "mobile-drawer__link"}
@@ -216,6 +216,26 @@ export function MobileNavDrawer({
                         <span>{item.label}</span>
                         <small>{item.description ?? "View the service scope."}</small>
                       </Link>
+
+                      {item.children?.length ? (
+                        <ul className="mobile-drawer__sublist" role="list">
+                          {item.children.map((child) => (
+                            <li key={child.href}>
+                              <Link
+                                className={
+                                  inverse
+                                    ? "mobile-drawer__sublink mobile-drawer__sublink--inverse motion-link motion-link--text"
+                                    : "mobile-drawer__sublink motion-link motion-link--text"
+                                }
+                                href={child.href}
+                                onClick={closeDrawer}
+                              >
+                                <span>{child.label}</span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
                     </li>
                   ))}
                 </ul>

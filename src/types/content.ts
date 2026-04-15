@@ -168,9 +168,32 @@ export interface AboutTeamMember {
   featured?: boolean;
 }
 
-export interface AboutPortfolioTile {
-  label: string;
-  icon: HomeIconKey;
+export interface AboutGalleryPreviewContent extends HomeSectionIntro {
+  viewMoreLabel: string;
+  previewCount?: number;
+}
+
+export interface GalleryItem {
+  image: {
+    src: string;
+  };
+  title: string;
+  alt: string;
+  category: string;
+  caption?: string;
+}
+
+export interface GalleryHeroContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+}
+
+export interface GalleryPageContent {
+  seo: SeoFields;
+  hero: GalleryHeroContent;
+  categories: readonly string[];
+  items: readonly GalleryItem[];
 }
 
 export interface AboutPageContent {
@@ -187,9 +210,7 @@ export interface AboutPageContent {
     members: readonly AboutTeamMember[];
   };
   stats: readonly HomeStat[];
-  portfolio: HomeSectionIntro & {
-    items: readonly AboutPortfolioTile[];
-  };
+  galleryPreview: AboutGalleryPreviewContent;
   cta: {
     title: string;
     description: string;
@@ -391,19 +412,29 @@ export interface ContactFormOption {
 export interface ContactFormContent {
   title: string;
   description: string;
+  fullNameLabel: string;
+  fullNamePlaceholder: string;
+  emailLabel: string;
+  emailPlaceholder: string;
+  phoneLabel: string;
+  phonePlaceholder: string;
+  companyNameLabel: string;
+  companyNamePlaceholder: string;
   serviceLabel: string;
   servicePlaceholder: string;
+  messageLabel: string;
+  messagePlaceholder: string;
   serviceOptions: readonly ContactFormOption[];
   submitLabel: string;
   successMessage: string;
 }
 
 export interface ContactLocationContent {
+  addressLabel: string;
   title: string;
   description: string;
   address: string;
-  mapQuery: string;
-  openInMapsHref: string;
+  mapLabel: string;
 }
 
 export interface ContactPerson {

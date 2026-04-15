@@ -1,102 +1,107 @@
 {
   "seo": {
-    "title": "NDT Services",
-    "description": "Non-destructive testing services for welds, pressure equipment, structures, and critical industrial components.",
+    "title": "NDT Testing Services",
+    "description": "RECPL offers advanced NDT services for civil and mechanical structures including ultrasonic testing, eddy current testing, magnetic particle inspection, and dye penetrant testing.",
     "path": "/services/ndt"
   },
   "hero": {
     "eyebrow": "NDT Services",
-    "title": "Non-Destructive Testing",
-    "summary": "Precision inspection without compromising component integrity — ensuring safety, compliance, and asset longevity.",
+    "title": "NDT of Civil and Mechanical Structures & Equipment",
+    "summary": "Reliable non-destructive inspection for safety, integrity, and compliance without damaging the asset under test.",
+    "description": "RECPL offers a full range of non-destructive testing services for civil structures, pressure equipment, fabricated components, and critical industrial machinery items.",
     "glowPosition": "right"
   },
   "intro": {
     "variant": "centered",
-    "description": "Non-Destructive Testing (NDT) allows critical industrial components to be inspected for defects, degradation, and material anomalies — all without causing damage. RECPL's ASNT-certified technicians deploy a comprehensive suite of NDT methods across petrochemical, power, steel, and infrastructure sectors, delivering reliable data that drives informed maintenance and compliance decisions."
+    "description": "Non-Destructive Testing (NDT) is a group of inspection techniques used to evaluate the properties and integrity of materials, components, and structures without causing any damage. RECPL’s NDT professionals are certified to ASNT SNT-TC-1A standards and use calibrated, industry-grade equipment to deliver accurate and reliable results in compliance with relevant IS, ASME, ASTM, and AWS codes."
   },
   "methods": {
-    "eyebrow": "Our Capabilities",
-    "title": "NDT Methods",
-    "description": "Industry-standard techniques executed by certified professionals with calibrated equipment.",
+    "eyebrow": "NDT Methods We Offer",
+    "title": "Testing Methods and Capabilities",
+    "description": "Advanced testing methods for civil and mechanical structures, welds, fabricated equipment, and critical components.",
     "items": [
       {
         "title": "Ultrasonic Testing (UT)",
-        "description": "High-frequency sound waves detect internal flaws, measure wall thickness, and assess weld integrity — ideal for pressure vessels, pipelines, and structural members.",
+        "description": "High-frequency sound waves are used to detect internal flaws, measure thickness, and assess weld integrity in pressure vessels, pipelines, castings, and forgings.",
         "icon": "search"
       },
       {
         "title": "Magnetic Particle Inspection (MPI)",
-        "description": "Surface and near-surface defects in ferromagnetic materials are revealed using magnetic fields and fine iron particles — widely used on welds, castings, and forgings.",
+        "description": "Detects surface and near-surface discontinuities in ferromagnetic materials including welds, castings, forgings, and machined components.",
         "icon": "award"
       },
       {
-        "title": "Dye Penetrant Testing (DPT)",
-        "description": "A cost-effective method for detecting surface-breaking cracks and porosity on non-porous materials including stainless steel, aluminium, and ceramics.",
+        "title": "Dye Penetrant Testing (DPT / LPT)",
+        "description": "Identifies cracks, porosity, and other open-to-surface discontinuities on non-porous materials and non-ferromagnetic metals.",
         "icon": "droplets"
       },
       {
         "title": "Eddy Current Testing (ECT)",
-        "description": "Electromagnetic induction identifies surface and sub-surface flaws in conductive materials — particularly effective for heat exchanger tubes and aircraft components.",
+        "description": "Uses electromagnetic induction to detect surface and near-surface defects in conductive materials, especially heat exchanger tubes and pipes.",
         "icon": "bolt"
       },
       {
         "title": "Hardness Testing",
-        "description": "On-site hardness measurements (Brinell, Rockwell, Vickers, Leeb) verify material properties, heat-treatment quality, and service degradation of critical components.",
+        "description": "Portable Brinell, Rockwell, Vickers, and Leeb testing for material verification, heat-treatment validation, and weld procedure qualification.",
         "icon": "shield"
       },
       {
-        "title": "Universal Testing Machine (UTM)",
-        "description": "Tensile, compression, and bend tests determine mechanical properties of metals, polymers, and composites — essential for material qualification and failure analysis.",
+        "title": "Universal Testing Machine (UTM) Testing",
+        "description": "Evaluates tensile, compressive, yield, and elongation properties for metallic and non-metallic materials used in industrial applications.",
         "icon": "flask"
+      },
+      {
+        "title": "Additional NDT & Testing Services",
+        "description": "Macro examination, pickling tests, positive material identification (PMI), rebound hammer testing, and UPV testing for concrete quality assessment.",
+        "icon": "clipboard"
       }
     ]
   },
   "applications": {
-    "anchorId": "industries",
-    "eyebrow": "Where We Work",
-    "title": "Applications and Industries",
-    "industriesTitle": "Industries Served",
+    "eyebrow": "Where We Apply NDT",
+    "title": "Structures, Equipment, and Components We Test",
+    "industriesTitle": "Testing Applications",
     "industries": [
       {
-        "icon": "factory",
-        "label": "Petrochemical & Refineries"
+        "label": "Boilers and boiler components",
+        "icon": "flask"
       },
       {
-        "icon": "bolt",
-        "label": "Power & Energy Plants"
+        "label": "Pressure vessels and storage tanks",
+        "icon": "fuel"
       },
       {
-        "icon": "building",
-        "label": "Steel & Cement Industries"
+        "label": "Pipelines and piping systems",
+        "icon": "droplets"
       },
       {
-        "icon": "fuel",
-        "label": "Shipbuilding & Marine"
+        "label": "Cranes, hoists, and lifting equipment",
+        "icon": "hardhat"
       },
       {
-        "icon": "train",
-        "label": "Railways & Infrastructure"
+        "label": "Structural steel members and fabricated welds",
+        "icon": "building"
       },
       {
-        "icon": "flask",
-        "label": "Pressure Vessels & Boilers"
+        "label": "RCC, PSC, bridges, chimneys, and flyovers",
+        "icon": "train"
       }
     ],
-    "equipmentTitle": "Equipment & Components",
+    "equipmentTitle": "Detailed Coverage",
     "equipment": [
-      "Pressure vessels & storage tanks",
-      "Pipelines & piping systems",
-      "Crane girders & structural steelwork",
-      "Heat exchangers & condensers",
-      "Boiler drums & headers",
-      "Weld joints (butt, fillet, socket)",
-      "Castings, forgings & rolled products",
-      "Bridge components & foundations"
+      "Heat exchangers and condensers",
+      "Castings, forgings, and rolled products",
+      "Wall thickness measurement and corrosion mapping",
+      "Weld joints in fabrication and erection",
+      "Industrial chimneys and stacks",
+      "Bridge components and foundations",
+      "Concrete strength assessment with rebound hammer",
+      "UPV-based void and honeycombing detection"
     ]
   },
   "cta": {
-    "title": "Need NDT inspection?",
-    "description": "From ultrasonic testing to hardness surveys — our certified team is ready to inspect your critical assets.",
+    "title": "Need advanced NDT support for your assets?",
+    "description": "From weld inspection and thickness gauging to PMI, UPV, and hardness surveys, RECPL provides reliable inspection data for informed engineering decisions.",
     "primaryAction": {
       "label": "Book Inspection",
       "href": "/contact"
