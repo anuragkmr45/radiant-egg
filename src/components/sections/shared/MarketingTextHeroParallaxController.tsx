@@ -9,9 +9,9 @@ function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
 }
 
-export function AboutHeroParallaxController() {
+export function MarketingTextHeroParallaxController() {
   useEffect(() => {
-    const hero = document.querySelector<HTMLElement>("[data-about-hero]");
+    const hero = document.querySelector<HTMLElement>("[data-marketing-text-hero]");
 
     if (!hero) {
       return undefined;

@@ -16,8 +16,27 @@
     }
   },
   "intro": {
-    "variant": "centered",
-    "description": "In addition to our consultancy, testing, and inspection services, Radiant Engineering Consultancy Pvt. Ltd. (RECPL) is a trusted supplier of material testing instruments, surveying equipment, soil testing devices, laboratory apparatus, and NDT equipment. Whether you are setting up a new testing laboratory, upgrading your field equipment, or procuring instruments for a specific project, RECPL delivers quality products at competitive prices with expert after-sales support."
+    "variant": "split",
+    "eyebrow": "Why Choose RECPL Supply",
+    "title": "Technical Procurement Support for Field and Laboratory Equipment",
+    "paragraphs": [
+      "In addition to our consultancy, testing, and inspection services, Radiant Engineering Consultancy Pvt. Ltd. (RECPL) is a trusted supplier of material testing instruments, surveying equipment, soil testing devices, laboratory apparatus, and NDT equipment.",
+      "Whether you are setting up a new testing laboratory, upgrading your field equipment, or procuring instruments for a specific project, RECPL delivers quality products at competitive prices with expert after-sales support."
+    ],
+    "image": {
+      "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F2b27c016cd46d321777cd8b4ef3b9311048ae905.jpg?generation=1776077632257271&alt=media",
+      "alt": "Material testing and field inspection instruments arranged for technical procurement and deployment"
+    },
+    "highlights": [
+      {
+        "label": "Quality products at competitive prices",
+        "icon": "award"
+      },
+      {
+        "label": "Expert after-sales support",
+        "icon": "shield"
+      }
+    ]
   },
   "listGrid": {
     "eyebrow": "Product Categories",
@@ -98,16 +117,22 @@
       }
     ]
   },
-  "cta": {
-    "title": "Looking for a specific instrument? Need bulk pricing?",
-    "description": "Contact our supply team for a customised quotation, practical product guidance, and the fastest delivery support available for your project.",
+  "catalogue": {
+    "title": "Full Product Catalogue",
+    "note": "Note: The complete product catalogue with 450–500 items will be updated here once received from the client. The above categories and items serve as a representative framework. Each product listing will include product name, brief description, specifications, and a \"Request Quote\" button.",
+    "description": "Looking for a specific instrument? Need bulk pricing? Contact our supply team for a customised quotation and fastest delivery.",
     "primaryAction": {
       "label": "Request a Quote",
       "href": "/contact"
     },
-    "secondaryAction": {
-      "label": "Contact Supply Team",
-      "href": "/contact"
+    "pdfAction": {
+      "label": "Download Product Catalogue (PDF)",
+      "pdfState": "comingSoon",
+      "statusLabel": "Coming Soon"
+    },
+    "callAction": {
+      "label": "Call: +91 8260773310",
+      "phone": "+91 8260773310"
     }
   }
 }

@@ -4,9 +4,14 @@ import type { HomeCredentialItem, HomeStat } from "@/types/content";
 interface HomeHeroTrustRailProps {
   credentials: readonly HomeCredentialItem[];
   stat: HomeStat;
+  showStat?: boolean;
 }
 
-export function HomeHeroTrustRail({ credentials, stat }: HomeHeroTrustRailProps) {
+export function HomeHeroTrustRail({
+  credentials,
+  stat,
+  showStat = true,
+}: HomeHeroTrustRailProps) {
   const items = credentials.slice(0, 3);
 
   return (
@@ -16,11 +21,13 @@ export function HomeHeroTrustRail({ credentials, stat }: HomeHeroTrustRailProps)
         className="home-hero__trust-rail motion-sequence"
         data-home-reveal=""
       >
-        <div className="home-hero__trust-stat">
-          <span className="home-hero__trust-stat-label">Experience</span>
-          <span className="home-hero__trust-stat-value">{stat.value}</span>
-          <span className="home-hero__trust-stat-text">{stat.label}</span>
-        </div>
+        {showStat ? (
+          <div className="home-hero__trust-stat">
+            <span className="home-hero__trust-stat-label">Experience</span>
+            <span className="home-hero__trust-stat-value">{stat.value}</span>
+            <span className="home-hero__trust-stat-text">{stat.label}</span>
+          </div>
+        ) : null}
 
         <ul className="home-hero__trust-list" role="list">
           {items.map((item) => (

@@ -324,6 +324,35 @@ export interface ServicePageContent {
   cta: ServiceCtaContent;
 }
 
+export interface SupplyCataloguePdfAction {
+  label: string;
+  pdfState: "comingSoon" | "available" | "hidden";
+  href?: string;
+  statusLabel?: string;
+}
+
+export interface SupplyCatalogueCallAction {
+  label: string;
+  phone: string;
+}
+
+export interface SupplyCatalogueSectionContent {
+  title: string;
+  note: string;
+  description: string;
+  primaryAction: HomeAction;
+  pdfAction: SupplyCataloguePdfAction;
+  callAction: SupplyCatalogueCallAction;
+}
+
+export interface SupplyPageContent {
+  seo: SeoFields;
+  hero: ServiceHeroContent;
+  intro: ServiceIntroContent;
+  listGrid?: ServiceListGridContent;
+  catalogue: SupplyCatalogueSectionContent;
+}
+
 export interface ConsultancyCapabilityItem {
   label: string;
   icon: HomeIconKey;
@@ -378,7 +407,7 @@ export interface NdtApplicationsContent {
   industriesTitle: string;
   industries: readonly NdtApplicationItem[];
   equipmentTitle: string;
-  equipment: readonly string[];
+  equipment: readonly NdtApplicationItem[];
 }
 
 export interface NdtPageContent {

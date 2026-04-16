@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { BadgePill } from "@/components/ui/BadgePill";
 import { SecondaryButton } from "@/components/ui/ButtonLink";
 import { getSiteConfig } from "@/config/site";
 import { revealStyle } from "@/lib/motion";
@@ -11,13 +11,16 @@ export function SiteFooter() {
   const siteConfig = getSiteConfig();
   const footerLinks = siteConfig.footerGroups ?? [];
   const currentYear = new Date().getFullYear();
+  const legalName = siteConfig.homeChrome.legalName;
 
   return (
     <footer className="site-footer">
       <PageContainer className="site-footer__inner">
         <div className="site-footer__top">
           <div className="site-footer__summary motion-sequence" data-marketing-reveal="">
-            <BadgePill tone="dark">{siteConfig.shortName}</BadgePill>
+            <div className="site-footer__brand-lockup">
+              <BrandLogo className="site-footer__logo" variant="footer" />
+            </div>
             <h2 className="site-footer__title">{siteConfig.footerHeadline}</h2>
             <p className="site-footer__copy">
               {siteConfig.footerDescription}
@@ -78,11 +81,13 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="footer-bottom" data-marketing-reveal="" style={revealStyle(300)}>
-          <span>
-            &copy; {currentYear} {siteConfig.name}. All rights reserved.
-          </span>
-          <span>{siteConfig.tagline}</span>
+        <div className="footer-bottom">
+          <p className="footer-bottom__legal">
+            &copy; {currentYear} {legalName}. All Rights Reserved. Made with <span role="img" aria-label="heart">❤️</span> by{" "}
+            <a className="footer-bottom__link" href="http://hexmontechnology.com/" target="_blank" rel="noopener noreferrer">
+              Hexmon Technology
+            </a>
+          </p>
         </div>
       </PageContainer>
     </footer>

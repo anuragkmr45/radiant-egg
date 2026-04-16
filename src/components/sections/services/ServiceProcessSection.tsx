@@ -1,15 +1,20 @@
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
 import { marketingRevealStyle } from "@/lib/motion";
+import { cn } from "@/lib/utils";
 import type { ServiceProcessContent } from "@/types/content";
 
 interface ServiceProcessSectionProps {
+  className?: string;
   content: ServiceProcessContent;
 }
 
-export function ServiceProcessSection({ content }: ServiceProcessSectionProps) {
+export function ServiceProcessSection({
+  className,
+  content,
+}: ServiceProcessSectionProps) {
   return (
-    <section className="service-section service-section--page">
+    <section className={cn("service-section service-section--page", className)}>
       <PageContainer>
         <div className="service-section__header service-section__header--center motion-sequence" data-marketing-reveal="">
           <span className="service-section__eyebrow">{content.eyebrow}</span>

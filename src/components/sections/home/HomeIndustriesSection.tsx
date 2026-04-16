@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 
 import { PageContainer } from "@/components/layout/PageContainer";
-import { HomeIcon } from "@/components/sections/home/HomeIcon";
+import { HomeIndustriesMarquee } from "@/components/sections/home/HomeIndustriesMarquee";
 import type { HomePageContent } from "@/types/content";
 
 interface HomeIndustriesSectionProps {
@@ -25,20 +25,8 @@ export function HomeIndustriesSection({ content }: HomeIndustriesSectionProps) {
           </p>
         </div>
 
-        <div className="home-industries__grid">
-          {items.map((item, index) => (
-            <article
-              className="home-industry-card"
-              data-home-reveal=""
-              key={item.title}
-              style={{ "--reveal-delay": `${index * 55}ms` } as CSSProperties}
-            >
-              <span className="home-industry-card__icon">
-                <HomeIcon name={item.icon} size={30} />
-              </span>
-              <h3 className="home-industry-card__title">{item.title}</h3>
-            </article>
-          ))}
+        <div data-home-reveal="" style={{ "--reveal-delay": "70ms" } as CSSProperties}>
+          <HomeIndustriesMarquee items={items} />
         </div>
       </PageContainer>
     </section>

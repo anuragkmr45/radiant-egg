@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
 import { getSiteConfig } from "@/config/site";
@@ -16,8 +17,7 @@ export function HomeFooter() {
         <div className="home-footer__grid">
           <div className="home-footer__brand motion-sequence" data-home-reveal="">
             <div className="home-footer__lockup">
-              <span className="home-footer__mark">RE</span>
-              <span className="home-footer__short">{homeChrome.shortName}</span>
+              <BrandLogo className="home-footer__logo" variant="footer" />
             </div>
             <p className="home-footer__description">{homeChrome.footerDescription}</p>
           </div>
@@ -68,7 +68,7 @@ export function HomeFooter() {
         </div>
 
         <div className="home-footer__bottom" data-home-reveal="" style={revealStyle(280)}>
-          <p>&copy; {currentYear} {homeChrome.legalName}. All rights reserved.</p>
+          <p>&copy; {currentYear} {homeChrome.legalName}. All Rights Reserved.</p>
         </div>
       </PageContainer>
     </footer>

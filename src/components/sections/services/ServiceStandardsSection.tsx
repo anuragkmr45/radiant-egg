@@ -1,15 +1,20 @@
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
 import { marketingRevealStyle } from "@/lib/motion";
+import { cn } from "@/lib/utils";
 import type { ServiceStandardsContent } from "@/types/content";
 
 interface ServiceStandardsSectionProps {
+  className?: string;
   content: ServiceStandardsContent;
 }
 
-export function ServiceStandardsSection({ content }: ServiceStandardsSectionProps) {
+export function ServiceStandardsSection({
+  className,
+  content,
+}: ServiceStandardsSectionProps) {
   return (
-    <section className="service-section service-section--muted">
+    <section className={cn("service-section service-section--muted", className)}>
       <PageContainer>
         <div className="service-section__header service-section__header--center motion-sequence" data-marketing-reveal="">
           <span className="service-section__eyebrow">{content.eyebrow}</span>

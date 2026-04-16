@@ -17,9 +17,24 @@ export function TpiPageView({ content }: TpiPageViewProps) {
       <MarketingMotionController />
       <ServiceHero content={content.hero} />
       <ServiceIntroSection content={content.intro} />
-      {content.listGrid ? <ServiceListGridSection content={content.listGrid} /> : null}
-      {content.process ? <ServiceProcessSection content={content.process} /> : null}
-      {content.standards ? <ServiceStandardsSection content={content.standards} /> : null}
+      {content.listGrid ? (
+        <ServiceListGridSection
+          content={content.listGrid}
+          gridClassName="service-list-grid--tpi"
+        />
+      ) : null}
+      {content.process ? (
+        <ServiceProcessSection
+          className="service-section--tpi-process"
+          content={content.process}
+        />
+      ) : null}
+      {content.standards ? (
+        <ServiceStandardsSection
+          className="service-section--tpi-standards"
+          content={content.standards}
+        />
+      ) : null}
       <ServiceCtaSection content={content.cta} />
     </>
   );

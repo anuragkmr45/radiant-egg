@@ -179,6 +179,23 @@
     return fields;
   };
 
+  const supplyCatalogueFields = () => [
+    stringField("Title", "title"),
+    textField("Note", "note"),
+    textField("Description", "description"),
+    objectField("Primary Action", "primaryAction", actionFields(false)),
+    objectField("PDF Action", "pdfAction", [
+      stringField("Label", "label"),
+      selectField("PDF State", "pdfState", ["comingSoon", "available", "hidden"]),
+      stringField("Href", "href", { required: false }),
+      stringField("Status Label", "statusLabel", { required: false }),
+    ]),
+    objectField("Call Action", "callAction", [
+      stringField("Label", "label"),
+      stringField("Phone", "phone"),
+    ]),
+  ];
+
   const serviceHeroFields = ({
     includeBackground,
     backgroundRequired = true,
@@ -218,6 +235,20 @@
 
     return fields;
   };
+
+  const serviceIntroSplitFields = () => [
+    hiddenField("variant", "split"),
+    stringField("Eyebrow", "eyebrow"),
+    stringField("Title", "title"),
+    listOfStringsField("Paragraphs", "paragraphs"),
+    objectField("Image", "image", imageFields()),
+    objectListField("Highlights", "highlights", [
+      stringField("Label", "label"),
+      iconField(),
+    ], {
+      required: false,
+    }),
+  ];
 
   const cmsConfig = {
     load_config_file: false,
@@ -537,10 +568,7 @@
                 includeGlow: true,
                 includeAction: false,
               })),
-              objectField("Intro", "intro", [
-                hiddenField("variant", "centered"),
-                textField("Description", "description"),
-              ]),
+              objectField("Intro", "intro", serviceIntroSplitFields()),
               objectField("Methods", "methods", [
                 stringField("Anchor ID", "anchorId", { required: false }),
                 stringField("Eyebrow", "eyebrow"),
@@ -558,7 +586,10 @@
                   iconField(),
                 ]),
                 stringField("Equipment Title", "equipmentTitle"),
-                listOfStringsField("Equipment", "equipment"),
+                objectListField("Equipment", "equipment", [
+                  stringField("Label", "label"),
+                  iconField(),
+                ]),
               ]),
               objectField("CTA", "cta", ctaFields(false)),
             ],
@@ -628,10 +659,7 @@
                 includeGlow: true,
                 includeAction: true,
               })),
-              objectField("Intro", "intro", [
-                hiddenField("variant", "centered"),
-                textField("Description", "description"),
-              ]),
+              objectField("Intro", "intro", serviceIntroSplitFields()),
               objectField("List Grid", "listGrid", [
                 stringField("Anchor ID", "anchorId", { required: false }),
                 stringField("Eyebrow", "eyebrow"),
@@ -643,7 +671,7 @@
                   listOfStringsField("Items", "items"),
                 ]),
               ]),
-              objectField("CTA", "cta", ctaFields(true)),
+              objectField("Catalogue Section", "catalogue", supplyCatalogueFields()),
             ],
           },
           {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { getContactPage } from "@/content/contact";
 import {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     follow: false,
     index: false,
   },
-  title: "Admin Dashboard",
+  title: "RECPL Admin Dashboard",
 };
 
 export default async function AdminPage() {
@@ -37,7 +38,10 @@ export default async function AdminPage() {
     <main className="admin-submissions-page">
       <PageContainer className="admin-submissions-page__inner">
         <div className="admin-submissions-page__topbar">
-          <p className="admin-submissions-page__eyebrow">Admin</p>
+          <div className="admin-submissions-page__brand">
+            <BrandLogo className="admin-submissions-page__logo" variant="compact" />
+            <p className="admin-submissions-page__eyebrow">RECPL Admin</p>
+          </div>
           <form action="/api/admin/logout" method="post">
             <button className="admin-panel__link admin-panel__link--button" type="submit">
               Logout
@@ -48,6 +52,7 @@ export default async function AdminPage() {
         <section className="admin-panel">
           <div className="admin-panel__header">
             <div>
+              <BrandLogo className="admin-panel__logo" variant="full" />
               <p className="admin-panel__eyebrow">Email and Password</p>
               <h1 className="admin-panel__title">Admin Dashboard</h1>
               <p className="admin-panel__description">
@@ -93,8 +98,8 @@ export default async function AdminPage() {
               <p className="admin-dashboard__label">Contact Form</p>
               <h2 className="admin-dashboard__title">{contactPage.form.serviceOptions.length} services</h2>
               <p className="admin-dashboard__copy">
-                Current enquiry services include consultancy, NDT, TPI, supply, and other. Phone and company
-                name are already captured into the database.
+                Current enquiry services include consultancy, NDT, material testing, supply, and other.
+                Phone and company name are already captured into the database.
               </p>
               <span className="admin-dashboard__hint">
                 DATABASE_URL {isDatabaseReady ? "configured" : "not configured"}

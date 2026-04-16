@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileNavDrawer } from "@/components/navigation/MobileNavDrawer";
 import { PageContainer } from "@/components/layout/PageContainer";
@@ -17,11 +18,7 @@ export function SiteHeader() {
     >
       <PageContainer className="site-header__inner">
         <Link aria-label={`${siteConfig.name} home`} className="brand-lockup" href="/">
-          <span className="brand-lockup__mark">RE</span>
-          <span className="brand-lockup__text">
-            <span className="brand-lockup__name">{siteConfig.name}</span>
-            <span className="brand-lockup__tagline">{siteConfig.tagline}</span>
-          </span>
+          <BrandLogo className="brand-lockup__logo" priority variant="nav" />
         </Link>
 
         <div className="site-header__actions">

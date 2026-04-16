@@ -16,8 +16,27 @@
     }
   },
   "intro": {
-    "variant": "centered",
-    "description": "Non-Destructive Testing (NDT) is a group of inspection techniques used to evaluate the properties and integrity of materials, components, and structures without causing any damage. RECPL’s NDT professionals are certified to ASNT SNT-TC-1A standards and use calibrated, industry-grade equipment to deliver accurate and reliable results in compliance with relevant IS, ASME, ASTM, and AWS codes."
+    "variant": "split",
+    "eyebrow": "About RECPL NDT",
+    "title": "Reliable Inspection Without Damaging the Asset",
+    "paragraphs": [
+      "Non-Destructive Testing (NDT) is a group of inspection techniques used to evaluate the properties and integrity of materials, components, and structures without causing any damage.",
+      "RECPL’s NDT professionals are certified to ASNT SNT-TC-1A standards and use calibrated, industry-grade equipment to deliver accurate and reliable results in compliance with relevant IS, ASME, ASTM, and AWS codes."
+    ],
+    "image": {
+      "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fa07ebf93aea5b7be07d3e0293378213b11b5e22a.jpg?generation=1776077012445006&alt=media",
+      "alt": "RECPL engineers planning non-destructive testing activities at an industrial site"
+    },
+    "highlights": [
+      {
+        "label": "ASNT SNT-TC-1A certified execution",
+        "icon": "award"
+      },
+      {
+        "label": "IS, ASME, ASTM, and AWS aligned reporting",
+        "icon": "scroll"
+      }
+    ]
   },
   "methods": {
     "eyebrow": "NDT Methods We Offer",
@@ -93,14 +112,38 @@
     ],
     "equipmentTitle": "Detailed Coverage",
     "equipment": [
-      "Heat exchangers and condensers",
-      "Castings, forgings, and rolled products",
-      "Wall thickness measurement and corrosion mapping",
-      "Weld joints in fabrication and erection",
-      "Industrial chimneys and stacks",
-      "Bridge components and foundations",
-      "Concrete strength assessment with rebound hammer",
-      "UPV-based void and honeycombing detection"
+      {
+        "label": "Heat exchangers and condensers",
+        "icon": "fuel"
+      },
+      {
+        "label": "Castings, forgings, and rolled products",
+        "icon": "layers"
+      },
+      {
+        "label": "Wall thickness measurement and corrosion mapping",
+        "icon": "shield"
+      },
+      {
+        "label": "Weld joints in fabrication and erection",
+        "icon": "hardhat"
+      },
+      {
+        "label": "Industrial chimneys and stacks",
+        "icon": "factory"
+      },
+      {
+        "label": "Bridge components and foundations",
+        "icon": "train"
+      },
+      {
+        "label": "Concrete strength assessment with rebound hammer",
+        "icon": "badge"
+      },
+      {
+        "label": "UPV-based void and honeycombing detection",
+        "icon": "search"
+      }
     ]
   },
   "cta": {

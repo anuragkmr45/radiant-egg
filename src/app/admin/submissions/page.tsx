@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { AdminSubmissionsPanel } from "@/components/admin/AdminSubmissionsPanel";
 import { getContactPage } from "@/content/contact";
 import {
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     follow: false,
     index: false,
   },
-  title: "Contact Submissions",
+  title: "RECPL Contact Submissions",
 };
 
 export default async function AdminSubmissionsPage() {
@@ -44,7 +45,10 @@ export default async function AdminSubmissionsPage() {
     <main className="admin-submissions-page">
       <PageContainer className="admin-submissions-page__inner">
         <div className="admin-submissions-page__topbar">
-          <p className="admin-submissions-page__eyebrow">Admin</p>
+          <div className="admin-submissions-page__brand">
+            <BrandLogo className="admin-submissions-page__logo" variant="compact" />
+            <p className="admin-submissions-page__eyebrow">RECPL Admin</p>
+          </div>
           <div className="admin-submissions-page__actions">
             <a className="admin-panel__link" href="/admin">
               Back to dashboard

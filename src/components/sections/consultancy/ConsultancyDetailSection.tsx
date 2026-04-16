@@ -92,7 +92,7 @@ export function ConsultancyDetailSection({
 
             {!usesFullWidthCapabilities ? (
               <>
-                <p className="consultancy-detail__scope">{content.scopeLabel}</p>
+                <h3 className="consultancy-detail__scope">{content.scopeLabel}</h3>
                 <ul className={capabilityGridClassName} role="list">
                   {content.capabilities.map((item, index) => (
                     <li
@@ -123,9 +123,9 @@ export function ConsultancyDetailSection({
               data-marketing-reveal=""
               style={marketingRevealStyle(130)}
             >
-              <p className="consultancy-detail__scope consultancy-detail__scope--full">
+              <h3 className="consultancy-detail__scope consultancy-detail__scope--full">
                 {content.scopeLabel}
-              </p>
+              </h3>
               <ul className={capabilityGridClassName} role="list">
                 {content.capabilities.map((item, index) => (
                   <li

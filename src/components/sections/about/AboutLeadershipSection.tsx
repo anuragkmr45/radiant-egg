@@ -20,7 +20,7 @@ export function AboutLeadershipSection({ content }: AboutLeadershipSectionProps)
           {content.members.map((member, index) => (
             <article
               data-marketing-reveal=""
-              className={member.featured ? "about-team-card about-team-card--featured" : "about-team-card"}
+              className={member.featured ? "about-team-card about-team-card--framed about-team-card--featured" : "about-team-card about-team-card--framed"}
               key={member.name}
               style={marketingRevealStyle(index * 70)}
             >

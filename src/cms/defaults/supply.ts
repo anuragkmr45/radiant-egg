@@ -1,5 +1,5 @@
-import type { ServicePageContent } from "@/types/content";
+import type { SupplyPageContent } from "@/types/content";
 
 import supplyPageData from "../../../content/pages/supply.json";
 
-export const supplyPage = supplyPageData as ServicePageContent;
+export const supplyPage = supplyPageData as SupplyPageContent;

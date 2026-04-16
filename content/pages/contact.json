@@ -40,23 +40,23 @@
     "messagePlaceholder": "Tell us about your requirement, site condition, inspection need, or equipment enquiry...",
     "serviceOptions": [
       {
-        "label": "Consultancy",
+        "label": "Engineering Consultancy",
         "value": "consultancy"
       },
       {
-        "label": "NDT",
+        "label": "Non-Destructive Testing (NDT)",
         "value": "ndt"
       },
       {
-        "label": "TPI",
+        "label": "Material Testing (Metal & Concrete)",
         "value": "tpi"
       },
       {
-        "label": "Supply",
+        "label": "Material Testing Equipment & Instrument Supply",
         "value": "supply"
       },
       {
-        "label": "Other",
+        "label": "Other / General Enquiry",
         "value": "other"
       }
     ],

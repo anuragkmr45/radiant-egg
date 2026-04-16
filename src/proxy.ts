@@ -7,12 +7,20 @@ export function proxy(request: NextRequest) {
   const { nextUrl } = request;
   const pathname = nextUrl.pathname;
   const isAuthenticated = verifyAdminSession(request.cookies.get(ADMIN_SESSION_COOKIE)?.value);
+  const isAdminStaticAsset =
+    pathname.startsWith("/admin/") &&
+    pathname !== "/admin/index.html" &&
+    /\.[a-z0-9]+$/i.test(pathname);
 
   if (pathname === "/admin/login") {
     if (isAuthenticated) {
       return NextResponse.redirect(new URL("/admin", request.url));
     }
 
+    return NextResponse.next();
+  }
+
+  if (isAdminStaticAsset) {
     return NextResponse.next();
   }
 
@@ -26,11 +34,6 @@ export function proxy(request: NextRequest) {
 
     return NextResponse.redirect(loginUrl);
   }
-
-  if (pathname === "/admin/index.html" && process.env.NODE_ENV === "production") {
-    return NextResponse.redirect(new URL("/admin", request.url));
-  }
-
   return NextResponse.next();
 }
 

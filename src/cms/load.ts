@@ -31,6 +31,7 @@ const stringEnums = {
   imageSide: new Set(["left", "right"]),
   kind: new Set(["address", "phone", "email"]),
   layout: new Set(["split", "splitWithFullWidthCapabilities"]),
+  pdfState: new Set(["comingSoon", "available", "hidden"]),
   tone: new Set(["default", "muted"]),
   variant: new Set(["centered", "split"]),
 } as const;

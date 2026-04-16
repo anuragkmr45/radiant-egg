@@ -2,16 +2,13 @@
 
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { createPortal } from "react-dom";
 
 import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
 import { splitNavItemsForServices } from "@/lib/navigation";
 import { PrimaryButton } from "@/components/ui/ButtonLink";
 import type { ContactDetails, NavItem, SiteCta, SiteHref } from "@/types/site";
-
-const subscribe = () => () => {};
 
 interface MobileNavDrawerProps {
   siteName: string;
@@ -44,7 +41,6 @@ export function MobileNavDrawer({
   const wasOpenRef = useRef(false);
   const inverse = tone === "inverse";
   const servicesActive = pathname?.startsWith("/services/") ?? false;
-  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
   const { itemsBeforeServices, itemsAfterServices } = splitNavItemsForServices(
     primaryItems,
     serviceInsertBeforeHref,
@@ -291,7 +287,7 @@ export function MobileNavDrawer({
       >
         {open ? <X aria-hidden="true" size={18} /> : <Menu aria-hidden="true" size={18} />}
       </button>
-      {mounted ? createPortal(drawerOverlay, document.body) : null}
+      {drawerOverlay}
     </div>
   );
 }

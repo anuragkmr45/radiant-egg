@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 
 import { PageContainer } from "@/components/layout/PageContainer";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileNavDrawer } from "@/components/navigation/MobileNavDrawer";
 import { PrimaryButton } from "@/components/ui/ButtonLink";
@@ -15,11 +16,7 @@ export function HomeHeader() {
     <header className="site-header site-header--home">
       <PageContainer className="home-header__inner">
         <Link aria-label={`${homeChrome.brandName} home`} className="home-brand" href="/">
-          <span className="home-brand__mark">RE</span>
-          <span className="home-brand__text">
-            <span className="home-brand__name">{homeChrome.brandName}</span>
-            <span className="home-brand__tagline">{homeChrome.tagline}</span>
-          </span>
+          <BrandLogo className="home-brand__logo" priority variant="nav" />
         </Link>
 
         <div className="home-header__nav-slot">

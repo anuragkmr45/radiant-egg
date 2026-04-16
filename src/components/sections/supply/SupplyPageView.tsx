@@ -1,19 +1,19 @@
 import { MarketingMotionController } from "@/components/motion/MarketingMotionController";
-import { ServiceCtaSection } from "@/components/sections/services/ServiceCtaSection";
-import { ServiceHero } from "@/components/sections/services/ServiceHero";
+import { SupplyCatalogueSection } from "@/components/sections/supply/SupplyCatalogueSection";
+import { SupplyHero } from "@/components/sections/supply/SupplyHero";
 import { ServiceIntroSection } from "@/components/sections/services/ServiceIntroSection";
 import { ServiceListGridSection } from "@/components/sections/services/ServiceListGridSection";
-import type { ServicePageContent } from "@/types/content";
+import type { SupplyPageContent } from "@/types/content";
 
 interface SupplyPageViewProps {
-  content: ServicePageContent;
+  content: SupplyPageContent;
 }
 
 export function SupplyPageView({ content }: SupplyPageViewProps) {
   return (
     <>
       <MarketingMotionController />
-      <ServiceHero content={content.hero} />
+      <SupplyHero content={content.hero} />
       <ServiceIntroSection content={content.intro} />
       {content.listGrid ? (
         <ServiceListGridSection
@@ -21,7 +21,7 @@ export function SupplyPageView({ content }: SupplyPageViewProps) {
           gridClassName="service-list-grid--supply"
         />
       ) : null}
-      <ServiceCtaSection content={content.cta} />
+      <SupplyCatalogueSection content={content.catalogue} />
     </>
   );
 }

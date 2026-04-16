@@ -2,13 +2,14 @@
 
 import { useEffect, useRef } from "react";
 
-import type { HomeLogoItem } from "@/types/content";
+import { HomeIcon } from "@/components/sections/home/HomeIcon";
+import type { HomePageContent } from "@/types/content";
 
-interface HomeClientsMarqueeProps {
-  items: readonly HomeLogoItem[];
+interface HomeIndustriesMarqueeProps {
+  items: HomePageContent["industries"]["items"];
 }
 
-export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
+export function HomeIndustriesMarquee({ items }: HomeIndustriesMarqueeProps) {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const groupRef = useRef<HTMLDivElement | null>(null);
 
@@ -54,18 +55,18 @@ export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
 
     function getBaseSpeed() {
       if (window.innerWidth <= 767) {
-        return 42;
+        return 36;
       }
 
       if (window.innerWidth <= 1023) {
-        return 38;
+        return 33;
       }
 
-      return 34;
+      return 30;
     }
 
     function getMaxBoost() {
-      return window.innerWidth <= 767 ? 164 : 132;
+      return window.innerWidth <= 767 ? 140 : 118;
     }
 
     function scheduleLoopWidthUpdate() {
@@ -86,7 +87,7 @@ export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
       const deltaY = Math.abs(window.scrollY - lastScrollY);
       const scrollVelocity = (deltaY / deltaTime) * 1000;
 
-      boostTarget = Math.min(getMaxBoost(), scrollVelocity * 0.09);
+      boostTarget = Math.min(getMaxBoost(), scrollVelocity * 0.085);
       lastScrollY = window.scrollY;
       lastScrollTime = currentTime;
     }
@@ -103,10 +104,10 @@ export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
 
       const deltaSeconds = lastTimestamp ? Math.min((timestamp - lastTimestamp) / 1000, 0.08) : 1 / 60;
       lastTimestamp = timestamp;
-      const boostLerp = 1 - Math.exp(-deltaSeconds * 7.5);
+      const boostLerp = 1 - Math.exp(-deltaSeconds * 7.2);
 
       boost += (boostTarget - boost) * boostLerp;
-      boostTarget *= Math.exp(-deltaSeconds * 3.6);
+      boostTarget *= Math.exp(-deltaSeconds * 3.5);
       const speed = getBaseSpeed() + boost;
 
       offset = (offset + speed * deltaSeconds) % loopWidth;
@@ -121,9 +122,7 @@ export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
     window.addEventListener("orientationchange", scheduleLoopWidthUpdate);
     window.addEventListener("scroll", handleScroll, { passive: true });
 
-    const fontReady = document.fonts?.ready;
-
-    void fontReady?.then(() => {
+    void document.fonts?.ready?.then(() => {
       scheduleLoopWidthUpdate();
     });
 
@@ -143,21 +142,27 @@ export function HomeClientsMarquee({ items }: HomeClientsMarqueeProps) {
   }, []);
 
   return (
-    <div className="home-clients__rail" data-home-reveal="">
-      <div className="home-clients__viewport" aria-label="Client logos and associations">
-        <div className="home-clients__track" ref={trackRef}>
-          <div className="home-clients__group" ref={groupRef}>
+    <div className="home-industries__rail">
+      <div className="home-industries__viewport" aria-label="Industries RECPL supports across India">
+        <div className="home-industries__track" ref={trackRef}>
+          <div className="home-industries__group" ref={groupRef}>
             {items.map((item) => (
-              <div className="home-client-chip" key={item.label}>
-                <span>{item.label}</span>
-              </div>
+              <article className="home-industry-card home-industry-card--marquee" key={item.title}>
+                <span className="home-industry-card__icon">
+                  <HomeIcon name={item.icon} size={30} />
+                </span>
+                <h3 className="home-industry-card__title">{item.title}</h3>
+              </article>
             ))}
           </div>
-          <div aria-hidden="true" className="home-clients__group">
+          <div aria-hidden="true" className="home-industries__group">
             {items.map((item) => (
-              <div className="home-client-chip" key={`${item.label}-duplicate`}>
-                <span>{item.label}</span>
-              </div>
+              <article className="home-industry-card home-industry-card--marquee" key={`${item.title}-duplicate`}>
+                <span className="home-industry-card__icon">
+                  <HomeIcon name={item.icon} size={30} />
+                </span>
+                <h3 className="home-industry-card__title">{item.title}</h3>
+              </article>
             ))}
           </div>
         </div>

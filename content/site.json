@@ -49,9 +49,9 @@
       "description": "Advanced non-destructive testing for civil structures, equipment, and machinery items."
     },
     {
-      "label": "TPI",
+      "label": "Material Testing (Metal & Concrete)",
       "href": "/services/tpi",
-      "description": "Third party inspection and statutory certification for lifting tools, tackles, and pressure vessels."
+      "description": "View the full service scope, technical capabilities, and testing support offered by RECPL."
     }
   ],
   "footerGroups": [
@@ -67,7 +67,7 @@
           "href": "/services/ndt"
         },
         {
-          "label": "TPI",
+          "label": "Material Testing (Metal & Concrete)",
           "href": "/services/tpi"
         }
       ]
@@ -154,7 +154,7 @@
             "href": "/services/ndt"
           },
           {
-            "label": "TPI",
+            "label": "Material Testing (Metal & Concrete)",
             "href": "/services/tpi"
           },
           {

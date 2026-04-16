@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { isAdminAuthConfigured, sanitizeAdminRedirect } from "@/lib/admin-auth";
 
 export const dynamic = "force-dynamic";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
     follow: false,
     index: false,
   },
-  title: "Admin Login",
+  title: "RECPL Admin Login",
 };
 
 function getErrorCopy(error: string | string[] | undefined) {
@@ -39,7 +40,8 @@ export default async function AdminLoginPage({
     <main className="admin-auth-page">
       <section className="admin-auth-card">
         <div className="admin-auth-card__header">
-          <p className="admin-panel__eyebrow">Radiant Admin</p>
+          <BrandLogo className="admin-auth-card__logo" variant="full" />
+          <p className="admin-panel__eyebrow">RECPL Admin</p>
           <h1 className="admin-panel__title">Sign in</h1>
           <p className="admin-panel__description">
             Use your configured admin email and password to access the protected dashboard.

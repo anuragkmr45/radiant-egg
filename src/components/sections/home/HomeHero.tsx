@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeHeroParallaxController } from "@/components/sections/home/HomeHeroParallaxController";
-import { HomeHeroTrustRail } from "@/components/sections/home/HomeHeroTrustRail";
 import { PrimaryButton, SecondaryButton } from "@/components/ui/ButtonLink";
 import type { HomeCredentialItem, HomeHeroContent, HomeStat } from "@/types/content";
 
@@ -12,7 +11,7 @@ interface HomeHeroProps {
   stat: HomeStat;
 }
 
-export function HomeHero({ content, credentials, stat }: HomeHeroProps) {
+export function HomeHero({ content }: HomeHeroProps) {
   return (
     <section className="home-hero" data-home-hero="" id="home">
       <div className="home-hero__media">
@@ -47,7 +46,6 @@ export function HomeHero({ content, credentials, stat }: HomeHeroProps) {
             </div>
           </div>
         </div>
-        <HomeHeroTrustRail credentials={credentials} stat={stat} />
       </PageContainer>
 
       <div className="home-hero__fade" />

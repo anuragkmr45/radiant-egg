@@ -2,7 +2,6 @@ import { getPublicSiteUrl } from "@/config/site";
 import type {
   ContactPageContent,
   SeoFields,
-  ServicePageContent,
 } from "@/types/content";
 import type { SiteConfig, SitePath } from "@/types/site";
 
@@ -149,6 +148,11 @@ export function createContactStructuredData(
   };
 }
 
-export function getServiceSummary(content: ServicePageContent) {
+export function getServiceSummary(content: {
+  hero: {
+    description?: string;
+    summary: string;
+  };
+}) {
   return content.hero.description ?? content.hero.summary;
 }

@@ -113,7 +113,7 @@ export function ContactForm({ content }: ContactFormProps) {
           </p>
         </div>
 
-        <div className="contact-form__field">
+        <div className="contact-form__field contact-form__field--full">
           <label className="contact-form__label" htmlFor="contact-service">
             {content.serviceLabel}
           </label>
