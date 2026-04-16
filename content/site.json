@@ -50,7 +50,7 @@
     },
     {
       "label": "Material Testing (Metal & Concrete)",
-      "href": "/services/tpi",
+      "href": "/services/material-testing",
       "description": "View the full service scope, technical capabilities, and testing support offered by RECPL."
     }
   ],
@@ -68,7 +68,7 @@
         },
         {
           "label": "Material Testing (Metal & Concrete)",
-          "href": "/services/tpi"
+          "href": "/services/material-testing"
         }
       ]
     },
@@ -155,7 +155,7 @@
           },
           {
             "label": "Material Testing (Metal & Concrete)",
-            "href": "/services/tpi"
+            "href": "/services/material-testing"
           },
           {
             "label": "Supply",
@@ -223,7 +223,7 @@
       "priority": 0.8
     },
     {
-      "href": "/services/tpi",
+      "href": "/services/material-testing",
       "changeFrequency": "monthly",
       "priority": 0.8
     },

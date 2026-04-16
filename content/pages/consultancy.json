@@ -228,6 +228,148 @@
           "icon": "shield"
         }
       ]
+    },
+    {
+      "anchorId": "third-party-inspection",
+      "layout": "splitWithFullWidthCapabilities",
+      "title": "Third Party Inspection (TPI) of Lifting Tools, Tackles & Pressure Vessels",
+      "icon": "clipboard",
+      "image": {
+        "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fa07ebf93aea5b7be07d3e0293378213b11b5e22a.jpg?generation=1776077012445006&alt=media",
+        "alt": "RECPL team carrying out third party inspection and statutory verification of industrial equipment"
+      },
+      "imageSide": "left",
+      "tone": "muted",
+      "paragraphs": [
+        "Third Party Inspection (TPI) is a statutory requirement under the Factory Act 1948 to ensure that lifting equipment, pressure vessels, and factory machinery are safe for operation. RECPL operates as a Competent Person under Sections 28, 29, 31 & Rule 3A of the Factory Act 1948, authorised to inspect, test, and certify the fitness of industrial equipment.",
+        "Our TPI scope covers lifting tools and tackles, pressure vessels, boilers, and related accessories at prescribed intervals mandated by statute and industry practice. Reports issued by RECPL are structured for acceptance by State Factory Inspectorates and Boiler Inspectorates across India.",
+        "Every assignment is executed through pre-inspection review, on-site visual examination, required NDT support, functional testing, documentation, and clear recommendations where repair, replacement, derating, or further monitoring is necessary."
+      ],
+      "action": {
+        "label": "Request Inspection",
+        "href": "/contact"
+      },
+      "scopeLabel": "Inspection scope covered under third party inspection",
+      "capabilities": [
+        {
+          "label": "Overhead travelling cranes (EOT cranes), jib cranes, gantry cranes, and monorail hoists",
+          "icon": "hardhat"
+        },
+        {
+          "label": "Chain pulley blocks, lever hoists, lifting beams, spreader bars, clamps, grabs, and magnetic lifters",
+          "icon": "layers"
+        },
+        {
+          "label": "Wire ropes, chain slings, shackles, lifting hooks, and eye bolts",
+          "icon": "shield"
+        },
+        {
+          "label": "Hydraulic and mechanical jacks, fork lifts, and pallet trucks",
+          "icon": "package"
+        },
+        {
+          "label": "Air receivers, compressed air tanks, autoclaves, and reactor vessels",
+          "icon": "fuel"
+        },
+        {
+          "label": "Pressurised storage tanks, gas storage vessels, and hydraulic accumulators",
+          "icon": "flask"
+        },
+        {
+          "label": "Heat exchangers, condensers, and associated pressure-retaining accessories",
+          "icon": "droplets"
+        },
+        {
+          "label": "Boiler-related statutory inspection planning and safety accessory verification",
+          "icon": "badge"
+        }
+      ],
+      "process": {
+        "eyebrow": "Our TPI Process",
+        "title": "How RECPL Executes Inspection & Certification",
+        "description": "A structured inspection workflow that combines statutory review, field checks, testing, certification, and practical recommendations.",
+        "steps": [
+          {
+            "stepLabel": "Step 1",
+            "title": "Pre-Inspection Planning",
+            "description": "Review equipment history, previous inspection reports, manufacturer specifications, and applicable codes and standards before site work begins.",
+            "icon": "briefcase"
+          },
+          {
+            "stepLabel": "Step 2",
+            "title": "Visual Inspection",
+            "description": "Detailed examination for wear, corrosion, deformation, leaks, misuse, and mechanical damage.",
+            "icon": "search"
+          },
+          {
+            "stepLabel": "Step 3",
+            "title": "NDT Examination",
+            "description": "Non-destructive testing such as UT, MPI, and DPT is carried out wherever required to detect internal or surface defects.",
+            "icon": "clipboard"
+          },
+          {
+            "stepLabel": "Step 4",
+            "title": "Functional Testing",
+            "description": "Load testing, hydrostatic or pneumatic pressure testing, and operational checks are performed as applicable to the equipment category.",
+            "icon": "award"
+          },
+          {
+            "stepLabel": "Step 5",
+            "title": "Documentation & Certification",
+            "description": "Issue detailed inspection reports, test certificates, and statutory fitness documentation such as Form 8, Form 10, or Form 14 where applicable.",
+            "icon": "scroll"
+          },
+          {
+            "stepLabel": "Step 6",
+            "title": "Recommendations",
+            "description": "Provide actionable recommendations for repairs, replacements, derating, or other controls if safe operation cannot be confirmed as-is.",
+            "icon": "shield"
+          }
+        ]
+      },
+      "standards": {
+        "eyebrow": "Codes & Standards",
+        "title": "Compliance Framework for TPI",
+        "description": "RECPL third party inspection follows the statutory and technical references applicable to lifting equipment, pressure systems, and boiler-linked assets.",
+        "items": [
+          {
+            "code": "Factories Act 1948",
+            "description": "Sections 28, 29, 31 & Rule 3A governing inspection by a Competent Person.",
+            "icon": "scroll",
+            "featured": true
+          },
+          {
+            "code": "IBR 1950",
+            "description": "Indian Boiler Regulations relevant to boilers and associated systems.",
+            "icon": "scroll"
+          },
+          {
+            "code": "IS 3177",
+            "description": "Code of practice relevant to lifting appliances and periodic examination.",
+            "icon": "scroll"
+          },
+          {
+            "code": "IS 2825",
+            "description": "Code of practice for unfired pressure vessels and safe operation checks.",
+            "icon": "scroll"
+          },
+          {
+            "code": "IS 807",
+            "description": "Design, manufacture, erection, and testing references for cranes and hoists.",
+            "icon": "scroll"
+          },
+          {
+            "code": "ASME BPVC",
+            "description": "Boiler and Pressure Vessel Code references where industrial equipment requires it.",
+            "icon": "scroll"
+          },
+          {
+            "code": "ASNT SNT-TC-1A",
+            "description": "Personnel qualification basis for NDT support used during inspection.",
+            "icon": "scroll"
+          }
+        ]
+      }
     }
   ],
   "expertiseStrip": [

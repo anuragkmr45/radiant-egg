@@ -353,6 +353,84 @@ export interface SupplyPageContent {
   catalogue: SupplyCatalogueSectionContent;
 }
 
+export interface MaterialTestingHeroDownloadAction {
+  label: string;
+  state: "comingSoon" | "available" | "hidden";
+  href?: string;
+  statusLabel?: string;
+}
+
+export interface MaterialTestingHeroContent {
+  eyebrow: string;
+  title: string;
+  summary: string;
+  tagline: string;
+  backgroundImage: HomeImageAsset;
+  primaryAction: HomeAction;
+  downloadAction?: MaterialTestingHeroDownloadAction;
+}
+
+export interface MaterialTestingMethodCard {
+  title: string;
+  description: string;
+  standards?: readonly string[];
+  applications?: readonly string[];
+}
+
+export interface MaterialTestingListGroup {
+  title: string;
+  items: readonly string[];
+}
+
+export interface MaterialTestingAccordionGroup {
+  title: string;
+  description?: string;
+  cards?: readonly MaterialTestingMethodCard[];
+  lists?: readonly MaterialTestingListGroup[];
+}
+
+export interface MaterialTestingAccordionSectionContent {
+  anchorId?: string;
+  eyebrow: string;
+  title: string;
+  description?: string;
+  groups: readonly MaterialTestingAccordionGroup[];
+}
+
+export interface MaterialTestingStandardsGroup {
+  title: string;
+  items: readonly string[];
+}
+
+export interface MaterialTestingStandardsContent {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  groups: readonly MaterialTestingStandardsGroup[];
+}
+
+export interface MaterialTestingRelatedService {
+  title: string;
+  description: string;
+  href: SiteHref;
+  icon: HomeIconKey;
+}
+
+export interface MaterialTestingPageContent {
+  seo: SeoFields;
+  hero: MaterialTestingHeroContent;
+  intro: ServiceIntroSplitContent;
+  whyMatters: ServiceFeatureGridContent;
+  metalTesting: MaterialTestingAccordionSectionContent;
+  concreteTesting: MaterialTestingAccordionSectionContent;
+  whyChoose: ServiceFeatureGridContent;
+  industries: ServiceFeatureGridContent;
+  process: ServiceProcessContent;
+  standards: MaterialTestingStandardsContent;
+  cta: ServiceCtaContent;
+  relatedServices: readonly MaterialTestingRelatedService[];
+}
+
 export interface ConsultancyCapabilityItem {
   label: string;
   icon: HomeIconKey;
@@ -375,10 +453,13 @@ export interface ConsultancyDetailSection {
   stickyImage?: boolean;
   tone?: "default" | "muted";
   paragraphs: readonly string[];
+  action?: HomeAction;
   scopeLabel: string;
   capabilities: readonly ConsultancyCapabilityItem[];
-  projectsTitle: string;
-  projects: readonly ConsultancyProject[];
+  projectsTitle?: string;
+  projects?: readonly ConsultancyProject[];
+  process?: ServiceProcessContent;
+  standards?: ServiceStandardsContent;
 }
 
 export interface ConsultancyExpertiseItem {

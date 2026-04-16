@@ -250,6 +250,75 @@
     }),
   ];
 
+  const serviceFeatureGridFields = () => [
+    stringField("Anchor ID", "anchorId", { required: false }),
+    stringField("Eyebrow", "eyebrow"),
+    stringField("Title", "title"),
+    textField("Description", "description", { required: false }),
+    objectListField("Items", "items", featureCardFields()),
+  ];
+
+  const serviceProcessFields = () => [
+    stringField("Eyebrow", "eyebrow"),
+    stringField("Title", "title"),
+    textField("Description", "description", { required: false }),
+    objectListField("Steps", "steps", [
+      stringField("Step Label", "stepLabel"),
+      stringField("Title", "title"),
+      textField("Description", "description"),
+      iconField(),
+    ]),
+  ];
+
+  const serviceStandardsFields = () => [
+    stringField("Eyebrow", "eyebrow"),
+    stringField("Title", "title"),
+    textField("Description", "description", { required: false }),
+    objectListField("Items", "items", [
+      stringField("Code", "code"),
+      textField("Description", "description"),
+      iconField(),
+      booleanField("Featured", "featured", { required: false, default: false }),
+    ]),
+  ];
+
+  const materialTestingMethodCardFields = () => [
+    stringField("Title", "title"),
+    textField("Description", "description"),
+    listOfStringsField("Standards", "standards", { required: false }),
+    listOfStringsField("Applications", "applications", { required: false }),
+  ];
+
+  const materialTestingAccordionFields = () => [
+    stringField("Anchor ID", "anchorId", { required: false }),
+    stringField("Eyebrow", "eyebrow"),
+    stringField("Title", "title"),
+    textField("Description", "description", { required: false }),
+    objectListField("Groups", "groups", [
+      stringField("Title", "title"),
+      textField("Description", "description", { required: false }),
+      objectListField("Cards", "cards", materialTestingMethodCardFields(), {
+        required: false,
+      }),
+      objectListField("Lists", "lists", [
+        stringField("Title", "title"),
+        listOfStringsField("Items", "items"),
+      ], {
+        required: false,
+      }),
+    ]),
+  ];
+
+  const materialTestingStandardsFields = () => [
+    stringField("Eyebrow", "eyebrow"),
+    stringField("Title", "title"),
+    textField("Description", "description", { required: false }),
+    objectListField("Groups", "groups", [
+      stringField("Title", "title"),
+      listOfStringsField("Items", "items"),
+    ]),
+  ];
+
   const cmsConfig = {
     load_config_file: false,
     backend: {
@@ -535,18 +604,29 @@
                   required: false,
                 }),
                 listOfStringsField("Paragraphs", "paragraphs"),
+                objectField("Action", "action", actionFields(false), {
+                  required: false,
+                }),
                 stringField("Scope Label", "scopeLabel"),
                 objectListField("Capabilities", "capabilities", [
                   stringField("Label", "label"),
                   iconField(),
                 ]),
-                stringField("Projects Title", "projectsTitle"),
+                stringField("Projects Title", "projectsTitle", { required: false }),
                 objectListField("Projects", "projects", [
                   stringField("Title", "title"),
                   stringField("Client", "client"),
                   textField("Description", "description"),
                   iconField(),
-                ]),
+                ], {
+                  required: false,
+                }),
+                objectField("Process", "process", serviceProcessFields(), {
+                 required: false,
+                }),
+                objectField("Standards", "standards", serviceStandardsFields(), {
+                  required: false,
+                }),
               ]),
               objectListField("Expertise Strip", "expertiseStrip", [
                 stringField("Label", "label"),
@@ -595,56 +675,43 @@
             ],
           },
           {
-            label: "TPI",
-            name: "tpi",
-            file: "content/pages/tpi.json",
+            label: "Material Testing",
+            name: "materialTesting",
+            file: "content/pages/material-testing.json",
             format: "json",
             fields: [
               objectField("SEO", "seo", seoFields()),
-              objectField("Hero", "hero", serviceHeroFields({
-                includeBackground: true,
-                backgroundRequired: false,
-                includeGlow: true,
-                includeAction: false,
-              })),
-              objectField("Intro", "intro", [
-                hiddenField("variant", "centered"),
+              objectField("Hero", "hero", [
+                stringField("Eyebrow", "eyebrow"),
+                stringField("Title", "title"),
+                textField("Summary", "summary"),
+                textField("Tagline", "tagline"),
+                objectField("Background Image", "backgroundImage", imageFields()),
+                objectField("Primary Action", "primaryAction", actionFields(false)),
+                objectField("Download Action", "downloadAction", [
+                  stringField("Label", "label"),
+                  selectField("State", "state", ["comingSoon", "available", "hidden"]),
+                  stringField("Href", "href", { required: false }),
+                  stringField("Status Label", "statusLabel", { required: false }),
+                ], {
+                  required: false,
+                }),
+              ]),
+              objectField("Intro", "intro", serviceIntroSplitFields()),
+              objectField("Why Material Testing Matters", "whyMatters", serviceFeatureGridFields()),
+              objectField("Metal Testing Section", "metalTesting", materialTestingAccordionFields()),
+              objectField("Concrete Testing Section", "concreteTesting", materialTestingAccordionFields()),
+              objectField("Why Choose RECPL", "whyChoose", serviceFeatureGridFields()),
+              objectField("Industries We Serve", "industries", serviceFeatureGridFields()),
+              objectField("Process", "process", serviceProcessFields()),
+              objectField("Standards", "standards", materialTestingStandardsFields()),
+              objectField("CTA", "cta", ctaFields(true)),
+              objectListField("Related Services", "relatedServices", [
+                stringField("Title", "title"),
                 textField("Description", "description"),
+                stringField("Href", "href"),
+                iconField(),
               ]),
-              objectField("List Grid", "listGrid", [
-                stringField("Anchor ID", "anchorId", { required: false }),
-                stringField("Eyebrow", "eyebrow"),
-                stringField("Title", "title"),
-                textField("Description", "description", { required: false }),
-                objectListField("Items", "items", [
-                  stringField("Title", "title"),
-                  iconField(),
-                  listOfStringsField("Items", "items"),
-                ]),
-              ]),
-              objectField("Process", "process", [
-                stringField("Eyebrow", "eyebrow"),
-                stringField("Title", "title"),
-                textField("Description", "description", { required: false }),
-                objectListField("Steps", "steps", [
-                  stringField("Step Label", "stepLabel"),
-                  stringField("Title", "title"),
-                  textField("Description", "description"),
-                  iconField(),
-                ]),
-              ]),
-              objectField("Standards", "standards", [
-                stringField("Eyebrow", "eyebrow"),
-                stringField("Title", "title"),
-                textField("Description", "description", { required: false }),
-                objectListField("Items", "items", [
-                  stringField("Code", "code"),
-                  stringField("Description", "description"),
-                  iconField(),
-                  booleanField("Featured", "featured", { required: false, default: false }),
-                ]),
-              ]),
-              objectField("CTA", "cta", ctaFields(false)),
             ],
           },
           {

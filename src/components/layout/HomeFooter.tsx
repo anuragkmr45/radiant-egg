@@ -67,8 +67,22 @@ export function HomeFooter() {
           </section>
         </div>
 
-        <div className="home-footer__bottom" data-home-reveal="" style={revealStyle(280)}>
-          <p>&copy; {currentYear} {homeChrome.legalName}. All Rights Reserved.</p>
+        <div className="home-footer__bottom">
+          <p className="home-footer__bottom-legal">
+            &copy; {currentYear} {homeChrome.legalName}. All Rights Reserved. Made with{" "}
+            <span role="img" aria-label="heart">
+              ❤️
+            </span>{" "}
+            by{" "}
+            <a
+              className="home-footer__bottom-link"
+              href="http://hexmontechnology.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hexmon Technology
+            </a>
+          </p>
         </div>
       </PageContainer>
     </footer>

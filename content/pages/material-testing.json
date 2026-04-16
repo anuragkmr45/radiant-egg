@@ -1,0 +1,757 @@
+{
+  "seo": {
+    "title": "Material Testing Services | Metal & Concrete Testing Lab | RECPL Odisha",
+    "description": "RECPL offers comprehensive material testing services for metals, concrete, cement, aggregates, bricks, and construction materials as per IS, ASTM, and ASME standards across India.",
+    "path": "/services/material-testing"
+  },
+  "hero": {
+    "eyebrow": "Material Testing (Metal & Concrete)",
+    "title": "Material Testing (Metal & Concrete)",
+    "summary": "Precision Testing for the Materials That Build Modern India",
+    "tagline": "Physical • Mechanical • Chemical Testing of Metals, Concrete, Cement, Aggregates, Bricks & Construction Materials",
+    "backgroundImage": {
+      "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2Fa07ebf93aea5b7be07d3e0293378213b11b5e22a.jpg?generation=1776077012445006&alt=media",
+      "alt": "RECPL engineers and industrial testing professionals reviewing critical material performance at a plant site"
+    },
+    "primaryAction": {
+      "label": "Request a Test Quotation",
+      "href": "/contact"
+    },
+    "downloadAction": {
+      "label": "Download Test List (PDF)",
+      "state": "comingSoon",
+      "statusLabel": "PDF Coming Soon"
+    }
+  },
+  "intro": {
+    "variant": "split",
+    "eyebrow": "Reliable Material Testing",
+    "title": "Reliable Material Testing for Safer, Stronger Structures",
+    "paragraphs": [
+      "Every great structure - whether a high-rise building, an industrial plant, a bridge, or a boiler - is only as reliable as the materials that go into it. Radiant Engineering Consultancy Pvt. Ltd. (RECPL) offers a comprehensive suite of material testing services for both metals and concrete, enabling builders, fabricators, manufacturers, and industries to verify quality, comply with statutory codes, and make informed engineering decisions.",
+      "Our material testing division is operated by qualified engineers and technicians using calibrated, industry-standard equipment. All tests are performed in strict compliance with Indian Standards (IS), ASTM, ASME, British Standards (BS), and ISO codes.",
+      "Whether you need routine concrete cube testing for ongoing construction, mechanical characterisation of structural steel, failure analysis of a fractured component, or positive material identification of pressure vessel parts, RECPL delivers accurate results with rapid turnaround and reporting accepted across India."
+    ],
+    "image": {
+      "src": "https://storage.googleapis.com/download/storage/v1/b/prd-storytodesign.appspot.com/o/h2d-ext-asset%2F214fc4d9c6d3e6d4b128b22124c6e661e57ce8b1.jpg?generation=1776077012460906&alt=media",
+      "alt": "RECPL team coordinating engineering review and technical testing support"
+    },
+    "highlights": [
+      {
+        "label": "Calibrated equipment and repeatable results",
+        "icon": "badge"
+      },
+      {
+        "label": "Metal, concrete, cement, and construction material coverage",
+        "icon": "layers"
+      },
+      {
+        "label": "IS, ASTM, ASME, BS, and ISO aligned testing",
+        "icon": "scroll"
+      },
+      {
+        "label": "Fast reporting for site and laboratory requirements",
+        "icon": "bolt"
+      }
+    ]
+  },
+  "whyMatters": {
+    "anchorId": "why-material-testing-matters",
+    "eyebrow": "Why It Matters",
+    "title": "Why Material Testing Matters",
+    "description": "Material testing gives project teams proof that incoming materials, finished products, and in-service components meet the safety, quality, and code expectations their application demands.",
+    "items": [
+      {
+        "title": "Statutory Compliance",
+        "description": "Municipal, state, and national frameworks require periodic testing of construction materials and structural components to demonstrate code compliance.",
+        "icon": "scroll"
+      },
+      {
+        "title": "Quality Assurance",
+        "description": "Raw materials, in-process samples, and finished products can be checked against the design specification before they reach site-critical stages.",
+        "icon": "shield"
+      },
+      {
+        "title": "Safety & Durability",
+        "description": "Substandard material is detected before it reaches bridges, plants, buildings, piping systems, or pressure equipment where failure would be costly.",
+        "icon": "award"
+      },
+      {
+        "title": "Cost Optimisation",
+        "description": "Early detection of weak batches, bad welding practice, or incorrect material grade helps avoid rework, delay, and liability.",
+        "icon": "briefcase"
+      },
+      {
+        "title": "Third-Party Validation",
+        "description": "Independent reports provide impartial verification for owners, EPC teams, government agencies, auditors, and insurers.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Failure Analysis Support",
+        "description": "Material behaviour data helps determine the root cause of cracking, fracture, corrosion, or product failure during investigations.",
+        "icon": "search"
+      }
+    ]
+  },
+  "metalTesting": {
+    "anchorId": "metal-testing",
+    "eyebrow": "Part A",
+    "title": "Metal Testing Services",
+    "description": "RECPL verifies the mechanical, physical, and chemical properties of ferrous and non-ferrous metals, welds, fasteners, forgings, and castings used across fabrication, manufacturing, and infrastructure.",
+    "groups": [
+      {
+        "title": "Mechanical Testing of Metals",
+        "description": "Foundational mechanical tests used to establish strength, ductility, toughness, hardness, and load-bearing reliability of metallic samples and fabricated products.",
+        "cards": [
+          {
+            "title": "Tensile Testing (UTM)",
+            "description": "Measures ultimate tensile strength, yield strength, percentage elongation, and reduction in area using controlled loading until fracture.",
+            "standards": [
+              "IS 1608",
+              "IS 1786",
+              "ASTM A370",
+              "ASTM E8 / E8M",
+              "ISO 6892-1"
+            ],
+            "applications": [
+              "Structural steel certification",
+              "Rebar quality verification",
+              "Weld procedure qualification",
+              "Material receiving inspection"
+            ]
+          },
+          {
+            "title": "Bend & Rebend Testing",
+            "description": "Evaluates ductility by bending a specimen through a specified angle and, for rebars, verifying straightening performance without crack formation.",
+            "standards": [
+              "IS 1599",
+              "IS 1786",
+              "ASTM E290"
+            ],
+            "applications": [
+              "TMT bar testing",
+              "Weld qualification",
+              "Sheet metal evaluation",
+              "Pipe testing"
+            ]
+          },
+          {
+            "title": "Hardness Testing",
+            "description": "Performs Brinell, Rockwell, Vickers, and portable Leeb hardness testing to verify resistance to indentation in castings, forged parts, thin sections, and in-service components.",
+            "standards": [
+              "IS 1500",
+              "IS 1501",
+              "IS 1586",
+              "ASTM E10",
+              "ASTM E18",
+              "ASTM E92",
+              "ASTM A956"
+            ]
+          },
+          {
+            "title": "Impact Testing (Charpy & Izod)",
+            "description": "Measures toughness and energy absorption of notched metallic samples at room, elevated, or low temperatures for demanding service conditions.",
+            "standards": [
+              "IS 1757",
+              "IS 1598",
+              "ASTM E23",
+              "ISO 148-1"
+            ],
+            "applications": [
+              "Pressure vessel steel qualification",
+              "Low-temperature piping",
+              "Weld toughness assessment"
+            ]
+          },
+          {
+            "title": "Compression Testing",
+            "description": "Determines compressive behaviour of metallic specimens, springs, bolts, and cylindrical parts under progressively applied compressive load.",
+            "standards": [
+              "ASTM E9",
+              "IS 13780"
+            ]
+          },
+          {
+            "title": "Shear Testing",
+            "description": "Evaluates the shear strength of fasteners, rivets, pins, and bonded joints used in mechanical assemblies and structural connections.",
+            "standards": [
+              "ASTM B565",
+              "IS 5242"
+            ]
+          },
+          {
+            "title": "Load Testing",
+            "description": "Includes proof load, breaking load, wedge load, and load-vs-displacement testing for fasteners, lifting accessories, and structural integrity evaluation.",
+            "standards": [
+              "IS 1367",
+              "ASTM F606",
+              "IS 3138"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Physical & Metallurgical Testing",
+        "description": "Microscopic and section-based testing used to evaluate weld quality, material condition, structure, and fabrication fitness.",
+        "cards": [
+          {
+            "title": "Macro Examination",
+            "description": "Low-magnification examination of polished and etched sections to reveal weld penetration, HAZ profile, slag, cracks, porosity, and lack of fusion.",
+            "standards": [
+              "ASTM E340",
+              "IS 7739"
+            ],
+            "applications": [
+              "WPS / PQR support",
+              "Welder qualification",
+              "Fabrication quality control"
+            ]
+          },
+          {
+            "title": "Microstructure Analysis",
+            "description": "Uses metallurgical microscopy to study grain size, phase distribution, inclusions, decarburisation, and heat treatment effects for diagnosis and verification.",
+            "standards": [
+              "ASTM E3",
+              "ASTM E112",
+              "IS 7739"
+            ]
+          },
+          {
+            "title": "Pickling Test",
+            "description": "Removes oxides and surface contaminants from metallic surfaces so open defects and cleanliness issues can be detected before further processing.",
+            "applications": [
+              "Stainless steel fabrication",
+              "Pre-coating surface preparation"
+            ]
+          },
+          {
+            "title": "Dimensional & Visual Inspection",
+            "description": "Combines precise dimensional checks with visual inspection to identify deviations, corrosion, handling damage, and fabrication defects."
+          }
+        ]
+      },
+      {
+        "title": "Chemical & Composition Testing",
+        "description": "Composition verification services for alloy control, specification checks, and corrosion-sensitive service conditions.",
+        "cards": [
+          {
+            "title": "Positive Material Identification (PMI)",
+            "description": "Portable XRF or OES-based non-destructive verification of alloy chemistry to prevent material mix-ups in safety-critical systems.",
+            "standards": [
+              "ASTM E1476",
+              "API 578"
+            ],
+            "applications": [
+              "Refinery piping",
+              "Pressure vessel verification",
+              "Stainless steel grade confirmation"
+            ]
+          },
+          {
+            "title": "Chemical Analysis (OES / Wet Chemistry)",
+            "description": "Determines the exact percentage of carbon, manganese, silicon, sulphur, phosphorus, chromium, nickel, molybdenum, and other elements.",
+            "standards": [
+              "IS 228",
+              "ASTM E415",
+              "ASTM E1086"
+            ]
+          },
+          {
+            "title": "Intergranular Corrosion (IGC) Test",
+            "description": "Detects susceptibility of stainless steels and nickel-based alloys to intergranular attack after fabrication or thermal exposure.",
+            "standards": [
+              "ASTM A262",
+              "IS 4748"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Welding & Fabrication Quality Testing",
+        "description": "Qualification and verification support for fabrication projects, pressure parts, structural welding, and production QA.",
+        "cards": [
+          {
+            "title": "Welder Performance Qualification (WPQ)",
+            "description": "Performance qualification testing for welders and operators as per project code and client procedure requirements.",
+            "standards": [
+              "ASME Section IX",
+              "AWS D1.1",
+              "IS 817"
+            ]
+          },
+          {
+            "title": "WPS / PQR Development",
+            "description": "Supports Welding Procedure Specification development and Procedure Qualification Records for fabrication approval workflows."
+          },
+          {
+            "title": "Weld Visual & Supporting NDT",
+            "description": "Combines visual inspection with UT, RT, MPI, and DPT support wherever fabrication quality needs deeper defect detection.",
+            "standards": [
+              "AWS D1.1"
+            ]
+          },
+          {
+            "title": "Destructive Weld Coupon Testing",
+            "description": "Performs tensile, bend, macro, hardness, impact, and fillet-weld fracture tests on weld coupons used for qualification and audit evidence."
+          }
+        ]
+      },
+      {
+        "title": "Metals & Products We Test",
+        "description": "Coverage across structural steel, fabrication components, utility parts, and special alloys used in heavy industry and construction.",
+        "lists": [
+          {
+            "title": "Structural & Reinforcement Metals",
+            "items": [
+              "TMT bars, rebars, and reinforcement steel",
+              "Structural steel: angles, channels, beams, plates, tubes, and I-sections",
+              "Carbon steel, low-alloy steel, and high-strength steel",
+              "Stainless steel (300, 400, and duplex series)"
+            ]
+          },
+          {
+            "title": "Fabrication Components",
+            "items": [
+              "Welded joints and weld coupons",
+              "Bolts, nuts, fasteners, and threaded components",
+              "Wire ropes, chains, and slings",
+              "Pipes, tubes, and fittings"
+            ]
+          },
+          {
+            "title": "Cast, Forged, and Non-Ferrous Products",
+            "items": [
+              "Cast iron, malleable iron, and ductile iron components",
+              "Forgings and castings",
+              "Aluminium, copper, brass, and bronze components",
+              "Pressure vessel plates and components"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "concreteTesting": {
+    "anchorId": "concrete-testing",
+    "eyebrow": "Part B",
+    "title": "Concrete & Construction Material Testing",
+    "description": "RECPL supports routine site QC and deeper laboratory investigation for hardened concrete, fresh concrete, cement, and construction materials used in civil and infrastructure work.",
+    "groups": [
+      {
+        "title": "Hardened Concrete Testing",
+        "description": "Tests used to validate in-service or cured concrete strength, tensile behaviour, durability, and structural performance.",
+        "cards": [
+          {
+            "title": "Compressive Strength of Concrete Cubes",
+            "description": "The most widely used acceptance test for concrete in India, with cube crushing at 7, 14, and 28 days against the design grade.",
+            "standards": [
+              "IS 516",
+              "IS 456",
+              "ASTM C39"
+            ]
+          },
+          {
+            "title": "Compressive Strength of Concrete Cylinders",
+            "description": "Cylinder testing used in internationally aligned projects and for modulus of elasticity calculations.",
+            "standards": [
+              "ASTM C39",
+              "ASTM C469"
+            ]
+          },
+          {
+            "title": "Core Compressive Strength Testing",
+            "description": "Extracts and tests in-situ concrete cores where existing structure verification, disputes, or forensic review demand actual installed strength evidence.",
+            "standards": [
+              "IS 516 Part 4",
+              "ASTM C42"
+            ],
+            "applications": [
+              "Structural audits",
+              "Forensic investigation",
+              "Quality dispute resolution",
+              "Retrofitting studies"
+            ]
+          },
+          {
+            "title": "Flexural Strength (Modulus of Rupture)",
+            "description": "Determines tensile performance in bending for pavement quality concrete, slab systems, and flexural members.",
+            "standards": [
+              "IS 516",
+              "ASTM C78",
+              "ASTM C293"
+            ]
+          },
+          {
+            "title": "Split Tensile Strength",
+            "description": "Indirect tensile testing by compressing the specimen across its diameter to assess crack resistance in concrete.",
+            "standards": [
+              "IS 5816",
+              "ASTM C496"
+            ]
+          },
+          {
+            "title": "Modulus of Elasticity",
+            "description": "Measures the stress-strain response of concrete in compression for deflection, stiffness, and design calculations.",
+            "standards": [
+              "IS 516 Part 8",
+              "ASTM C469"
+            ]
+          },
+          {
+            "title": "Water Absorption & Density",
+            "description": "Checks permeable voids, absorption, and unit weight as indicators of compaction quality and durability.",
+            "standards": [
+              "IS 1199",
+              "ASTM C642"
+            ]
+          },
+          {
+            "title": "Rapid Chloride Penetration Test (RCPT)",
+            "description": "Measures concrete resistance to chloride ion ingress, especially important for marine, bridge, and exposed infrastructure.",
+            "standards": [
+              "ASTM C1202",
+              "AASHTO T277"
+            ]
+          },
+          {
+            "title": "Water Permeability Test",
+            "description": "Measures the depth of water penetration under pressure to assess density, permeability, and durability risk.",
+            "standards": [
+              "IS 3085",
+              "DIN 1048"
+            ]
+          },
+          {
+            "title": "Carbonation Depth Test",
+            "description": "Determines the depth of carbonation and loss of alkalinity, which is critical for reinforcement corrosion risk assessment.",
+            "standards": [
+              "IS 516 Part 5",
+              "RILEM CPC-18"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fresh Concrete Testing",
+        "description": "On-site tests that verify workability, temperature control, consistency, and mix behaviour before the concrete hardens.",
+        "cards": [
+          {
+            "title": "Slump Test",
+            "description": "Measures workability and consistency of fresh concrete at the point of placement.",
+            "standards": [
+              "IS 1199",
+              "ASTM C143"
+            ]
+          },
+          {
+            "title": "Compaction Factor & Vee-Bee Test",
+            "description": "Alternative workability tests suited to lower-slump and zero-slump mixes where standard slump values are less informative.",
+            "standards": [
+              "IS 1199"
+            ]
+          },
+          {
+            "title": "Temperature of Fresh Concrete",
+            "description": "Critical check for mass concrete and hot-weather concreting to control placement behaviour and curing performance."
+          },
+          {
+            "title": "Concrete Mix Design",
+            "description": "Develops optimised mix designs for normal concrete, high-performance concrete, SCC, PQC, dry lean concrete, and light-weight concrete.",
+            "standards": [
+              "IS 10262",
+              "ACI 211.1"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cement Testing",
+        "description": "Physical and chemical cement tests that support product verification, incoming quality checks, and specification compliance.",
+        "lists": [
+          {
+            "title": "Physical Tests",
+            "items": [
+              "Consistency of standard cement paste",
+              "Initial and final setting time by Vicat apparatus",
+              "Compressive strength of cement mortar at 3, 7, and 28 days",
+              "Fineness by dry sieving and Blaine air permeability",
+              "Specific gravity",
+              "Soundness by Le-Chatelier and autoclave methods"
+            ]
+          },
+          {
+            "title": "Chemical Tests",
+            "items": [
+              "Loss on ignition (LOI)",
+              "Insoluble residue",
+              "Sulphate content (SO3)",
+              "Magnesia content (MgO)",
+              "Chloride content"
+            ]
+          },
+          {
+            "title": "Reference Standards",
+            "items": [
+              "IS 4031 Parts 1-15",
+              "IS 269",
+              "IS 1489",
+              "IS 12269",
+              "ASTM C150",
+              "IS 4032"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "whyChoose": {
+    "anchorId": "why-choose-recpl",
+    "eyebrow": "Part C",
+    "title": "Why Choose RECPL for Material Testing",
+    "description": "Testing support is only useful when the lab, the team, and the reporting discipline are equally dependable. RECPL is built around that expectation.",
+    "items": [
+      {
+        "title": "Accurate, Calibrated Equipment",
+        "description": "All testing instruments are calibrated and traceable to recognised standards for repeatability and reliability of results.",
+        "icon": "badge"
+      },
+      {
+        "title": "Qualified Technical Team",
+        "description": "Testing is led by experienced engineers and researchers, with NDT personnel qualified to ASNT SNT-TC-1A Level II standards.",
+        "icon": "graduation"
+      },
+      {
+        "title": "Multi-Code Compliance",
+        "description": "RECPL performs tests as per IS, ASTM, ASME, BS, ISO, and AWS standards based on project or client requirements.",
+        "icon": "scroll"
+      },
+      {
+        "title": "Fast Turnaround",
+        "description": "Routine tests such as concrete cube compression and TMT bar tensile testing are reported quickly, with rapid-result service available on request.",
+        "icon": "bolt"
+      },
+      {
+        "title": "Comprehensive Reporting",
+        "description": "Reports include test method references, calibration details, observed values, calculated results, acceptance criteria, and engineering remarks.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Site & Laboratory Flexibility",
+        "description": "RECPL supports laboratory testing, site sampling, witness casting, and on-site test execution depending on the project requirement.",
+        "icon": "hardhat"
+      },
+      {
+        "title": "End-to-End Engineering Support",
+        "description": "Material testing sits alongside RECPL’s consultancy, NDT, TPI, and audit support so project teams can act on results quickly.",
+        "icon": "layers"
+      }
+    ]
+  },
+  "industries": {
+    "anchorId": "industries-served",
+    "eyebrow": "Part D",
+    "title": "Industries We Serve",
+    "description": "Material testing support for civil, industrial, manufacturing, infrastructure, and public-sector programs that depend on reliable input data and acceptance evidence.",
+    "items": [
+      {
+        "title": "Civil Construction & Real Estate",
+        "description": "Housing projects, commercial buildings, townships, and multi-stage construction programs.",
+        "icon": "building"
+      },
+      {
+        "title": "Infrastructure",
+        "description": "Highways, bridges, flyovers, metro works, airports, and public mobility systems.",
+        "icon": "train"
+      },
+      {
+        "title": "Power Plants",
+        "description": "Thermal, solar, hydro, and other generation assets requiring material verification and QA support.",
+        "icon": "bolt"
+      },
+      {
+        "title": "Steel & Metal Manufacturing",
+        "description": "Raw material QC, product verification, and fabrication qualification support.",
+        "icon": "factory"
+      },
+      {
+        "title": "Refineries & Petrochemical",
+        "description": "Material verification for pressure piping, vessels, and safety-critical process equipment.",
+        "icon": "fuel"
+      },
+      {
+        "title": "Cement & Building Products",
+        "description": "Testing support for cement, mortar, aggregates, bricks, and allied building materials.",
+        "icon": "flask"
+      },
+      {
+        "title": "Fabrication & Heavy Engineering",
+        "description": "Welder qualification, WPS / PQR support, and destructive and non-destructive verification.",
+        "icon": "hardhat"
+      },
+      {
+        "title": "Ports, Marine & Coastal Construction",
+        "description": "Durability checks for chloride exposure, corrosion-sensitive construction, and marine applications.",
+        "icon": "package"
+      },
+      {
+        "title": "Government & PSU Projects",
+        "description": "Independent quality-compliance support for public-sector engineering works.",
+        "icon": "badge"
+      },
+      {
+        "title": "Boiler & Pressure Vessel Manufacturers",
+        "description": "PMI, mechanical testing, and qualification support for pressure-retaining components and materials.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Part E",
+    "title": "Sample Submission & Testing Process",
+    "description": "A straightforward 5-step process designed for quick quotation, traceable sample handling, and dependable report delivery.",
+    "steps": [
+      {
+        "stepLabel": "Step 1",
+        "title": "Enquiry & Quotation",
+        "description": "Share the material type, sample quantity, required tests, and applicable standards. RECPL responds with a detailed quotation within 24 hours.",
+        "icon": "briefcase"
+      },
+      {
+        "stepLabel": "Step 2",
+        "title": "Sample Collection or Submission",
+        "description": "Samples can be submitted to the Bhubaneswar laboratory or collected from site by RECPL technicians. Each sample is tagged with a unique ID on receipt.",
+        "icon": "package"
+      },
+      {
+        "stepLabel": "Step 3",
+        "title": "Sample Preparation & Testing",
+        "description": "Specimens are prepared to the applicable standard, including machining, capping, polishing, or conditioning, before testing on calibrated equipment.",
+        "icon": "flask"
+      },
+      {
+        "stepLabel": "Step 4",
+        "title": "Analysis & Reporting",
+        "description": "Senior engineers review the results, verify calculations, and prepare a complete report with method references and engineering observations.",
+        "icon": "clipboard"
+      },
+      {
+        "stepLabel": "Step 5",
+        "title": "Report Delivery & Support",
+        "description": "Final reports are issued electronically, with hard copies on request. RECPL also supports result interpretation and corrective-action guidance.",
+        "icon": "award"
+      }
+    ]
+  },
+  "standards": {
+    "eyebrow": "Standards & Codes",
+    "title": "Testing Frameworks Followed by RECPL",
+    "description": "The applicable standard depends on the sample type, the client requirement, and the intended service condition. RECPL aligns testing to the code set that governs the job.",
+    "groups": [
+      {
+        "title": "Metal Mechanical Testing",
+        "items": [
+          "IS 1608",
+          "IS 1786",
+          "IS 1599",
+          "IS 1500 / IS 1501 / IS 1586",
+          "ASTM A370",
+          "ASTM E8 / E8M",
+          "ASTM E10 / E18 / E23 / E92",
+          "ISO 6892-1",
+          "ISO 148-1"
+        ]
+      },
+      {
+        "title": "Metallurgy, Composition & Corrosion",
+        "items": [
+          "ASTM E340",
+          "ASTM E3",
+          "ASTM E112",
+          "ASTM E1476",
+          "ASTM A262",
+          "ASTM E415",
+          "ASTM E1086",
+          "API 578",
+          "IS 7739",
+          "IS 4748",
+          "IS 228"
+        ]
+      },
+      {
+        "title": "Concrete & Construction Materials",
+        "items": [
+          "IS 456",
+          "IS 516",
+          "IS 516 Part 4",
+          "IS 516 Part 5",
+          "IS 516 Part 8",
+          "IS 5816",
+          "IS 10262",
+          "IS 1199",
+          "IS 3085",
+          "ASTM C39",
+          "ASTM C42",
+          "ASTM C469",
+          "ASTM C496",
+          "ASTM C642",
+          "ASTM C1202",
+          "AASHTO T277",
+          "DIN 1048",
+          "RILEM CPC-18"
+        ]
+      },
+      {
+        "title": "Cement, Welding & Fabrication References",
+        "items": [
+          "IS 4031 Parts 1-15",
+          "IS 4032",
+          "IS 269",
+          "IS 1489",
+          "IS 12269",
+          "ASTM C150",
+          "ASME Section IX",
+          "AWS D1.1",
+          "IS 817"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Need fast, reliable material testing support?",
+    "description": "RECPL supports site and laboratory testing for metals, concrete, cement, and critical engineering materials with dependable reporting and practical engineering interpretation.",
+    "primaryAction": {
+      "label": "Request a Test Quotation",
+      "href": "/contact"
+    },
+    "secondaryAction": {
+      "label": "Contact Our Team",
+      "href": "/contact"
+    }
+  },
+  "relatedServices": [
+    {
+      "title": "Consultancy Services",
+      "description": "Move from material results to design, review, retrofit, and engineering decision-making with RECPL consultancy support.",
+      "href": "/services/consultancy",
+      "icon": "briefcase"
+    },
+    {
+      "title": "Third Party Inspection",
+      "description": "Explore RECPL’s statutory inspection and certification scope for lifting tools, pressure vessels, and factory equipment.",
+      "href": "/services/consultancy#third-party-inspection",
+      "icon": "clipboard"
+    },
+    {
+      "title": "Non-Destructive Testing",
+      "description": "Combine destructive, mechanical, and laboratory testing with field-ready NDT support for structural and mechanical assets.",
+      "href": "/services/ndt",
+      "icon": "search"
+    },
+    {
+      "title": "Testing Equipment Supply",
+      "description": "Set up or strengthen your site and lab capability with instruments, apparatus, and field equipment from RECPL.",
+      "href": "/supply",
+      "icon": "package"
+    }
+  ]
+}

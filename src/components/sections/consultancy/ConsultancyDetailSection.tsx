@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { HomeIcon } from "@/components/sections/home/HomeIcon";
 import { ConsultancyProjectRail } from "@/components/sections/consultancy/ConsultancyProjectRail";
+import { PrimaryButton } from "@/components/ui/ButtonLink";
 import { marketingRevealStyle } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import type { ConsultancyDetailSection as ConsultancyDetailSectionContent } from "@/types/content";
@@ -16,6 +17,7 @@ export function ConsultancyDetailSection({
 }: ConsultancyDetailSectionProps) {
   const imageFirst = content.imageSide === "left";
   const usesFullWidthCapabilities = content.layout === "splitWithFullWidthCapabilities";
+  const hasProjects = Boolean(content.projects?.length && content.projectsTitle);
   const mediaClassName = cn(
     "consultancy-detail__media",
     imageFirst
@@ -90,6 +92,16 @@ export function ConsultancyDetailSection({
               ))}
             </div>
 
+            {content.action ? (
+              <PrimaryButton
+                className="consultancy-detail__action"
+                href={content.action.href}
+                size="lg"
+              >
+                {content.action.label}
+              </PrimaryButton>
+            ) : null}
+
             {!usesFullWidthCapabilities ? (
               <>
                 <h3 className="consultancy-detail__scope">{content.scopeLabel}</h3>
@@ -109,10 +121,12 @@ export function ConsultancyDetailSection({
                   ))}
                 </ul>
 
-                <ConsultancyProjectRail
-                  projects={content.projects}
-                  title={content.projectsTitle}
-                />
+                {hasProjects ? (
+                  <ConsultancyProjectRail
+                    projects={content.projects ?? []}
+                    title={content.projectsTitle ?? ""}
+                  />
+                ) : null}
               </>
             ) : null}
           </div>
@@ -144,15 +158,15 @@ export function ConsultancyDetailSection({
             </div>
           ) : null}
 
-          {usesFullWidthCapabilities ? (
+          {usesFullWidthCapabilities && hasProjects ? (
             <div
               className="consultancy-detail__full-span consultancy-detail__full-span--projects motion-sequence"
               data-marketing-reveal=""
               style={marketingRevealStyle(180)}
             >
               <ConsultancyProjectRail
-                projects={content.projects}
-                title={content.projectsTitle}
+                projects={content.projects ?? []}
+                title={content.projectsTitle ?? ""}
                 variant="grid"
               />
             </div>

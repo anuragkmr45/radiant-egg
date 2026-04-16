@@ -7,6 +7,7 @@ export type SitePath =
   | "/gallery"
   | "/supply"
   | "/services/consultancy"
+  | "/services/material-testing"
   | "/services/ndt"
   | "/services/tpi";
 
