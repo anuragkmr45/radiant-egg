@@ -1,5 +1,5 @@
 import { HomeAboutSection } from "@/components/sections/home/HomeAboutSection";
-import { HomeClientsSection } from "@/components/sections/home/HomeClientsSection";
+// import { HomeClientsSection } from "@/components/sections/home/HomeClientsSection";
 import { HomeCredentialsStrip } from "@/components/sections/home/HomeCredentialsStrip";
 import { HomeCtaBanner } from "@/components/sections/home/HomeCtaBanner";
 import { HomeHero } from "@/components/sections/home/HomeHero";
@@ -23,7 +23,7 @@ export function HomePageView({ content }: HomePageViewProps) {
       <HomeServicesSection content={content.services} />
       <HomeReasonsSection content={content.reasons} />
       <HomeIndustriesSection content={content.industries} />
-      <HomeClientsSection content={content.clients} />
+      {/* <HomeClientsSection content={content.clients} /> */}
       <HomeCtaBanner content={content.cta} />
     </>
   );
