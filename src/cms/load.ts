@@ -3,6 +3,8 @@ import "server-only";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
+import { getStoredCmsDocument } from "@/lib/cms-documents";
+
 const iconKeys = new Set([
   "award",
   "badge",
@@ -37,7 +39,7 @@ const stringEnums = {
   variant: new Set(["centered", "split"]),
 } as const;
 
-function isPlainObject(value: unknown): value is Record<string, unknown> {
+export function isPlainObject(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value);
 }
 
@@ -50,7 +52,7 @@ function isAllowedString(key: string | undefined, value: string): boolean {
   return allowedValues ? allowedValues.has(value) : true;
 }
 
-function mergeCmsValue<T>(defaultValue: T, rawValue: unknown, key?: string): T {
+export function mergeCmsValue<T>(defaultValue: T, rawValue: unknown, key?: string): T {
   if (Array.isArray(defaultValue)) {
     if (!Array.isArray(rawValue)) {
       return structuredClone(defaultValue) as T;
@@ -126,7 +128,7 @@ function mergeCmsValue<T>(defaultValue: T, rawValue: unknown, key?: string): T {
   return structuredClone(defaultValue);
 }
 
-export function loadCmsDocument<T>(relativeFilePath: string, defaults: T): T {
+export function loadCmsDocumentFromFile<T>(relativeFilePath: string, defaults: T): T {
   const absoluteFilePath = path.join(process.cwd(), "content", relativeFilePath);
 
   try {
@@ -137,4 +139,18 @@ export function loadCmsDocument<T>(relativeFilePath: string, defaults: T): T {
   } catch {
     return structuredClone(defaults);
   }
+}
+
+export async function loadCmsDocument<T>(relativeFilePath: string, defaults: T): Promise<T> {
+  try {
+    const storedDocument = await getStoredCmsDocument(relativeFilePath);
+
+    if (storedDocument) {
+      return mergeCmsValue(defaults, storedDocument);
+    }
+  } catch {
+    return loadCmsDocumentFromFile(relativeFilePath, defaults);
+  }
+
+  return loadCmsDocumentFromFile(relativeFilePath, defaults);
 }

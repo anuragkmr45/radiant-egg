@@ -11,13 +11,14 @@ import {
 } from "@/lib/structured-data";
 import { getNdtPage } from "@/content/ndt";
 
-export function generateMetadata(): Metadata {
-  return createPageMetadata(getNdtPage().seo);
+export async function generateMetadata(): Promise<Metadata> {
+  const ndtPage = await getNdtPage();
+
+  return createPageMetadata(ndtPage.seo);
 }
 
-export default function NdtPage() {
-  const siteConfig = getSiteConfig();
-  const ndtPage = getNdtPage();
+export default async function NdtPage() {
+  const [siteConfig, ndtPage] = await Promise.all([getSiteConfig(), getNdtPage()]);
 
   return (
     <>

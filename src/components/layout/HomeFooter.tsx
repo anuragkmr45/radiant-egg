@@ -6,8 +6,8 @@ import { ContextualNavLink } from "@/components/navigation/ContextualNavLink";
 import { getSiteConfig } from "@/config/site";
 import { revealStyle } from "@/lib/motion";
 
-export function HomeFooter() {
-  const siteConfig = getSiteConfig();
+export async function HomeFooter() {
+  const siteConfig = await getSiteConfig();
   const homeChrome = siteConfig.homeChrome;
   const currentYear = new Date().getFullYear();
 

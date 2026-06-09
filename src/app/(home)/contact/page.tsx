@@ -11,13 +11,14 @@ import {
   createWebPageStructuredData,
 } from "@/lib/structured-data";
 
-export function generateMetadata(): Metadata {
-  return createPageMetadata(getContactPage().seo);
+export async function generateMetadata(): Promise<Metadata> {
+  const contactPage = await getContactPage();
+
+  return createPageMetadata(contactPage.seo);
 }
 
-export default function ContactPage() {
-  const siteConfig = getSiteConfig();
-  const contactPage = getContactPage();
+export default async function ContactPage() {
+  const [siteConfig, contactPage] = await Promise.all([getSiteConfig(), getContactPage()]);
 
   return (
     <>

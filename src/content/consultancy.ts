@@ -8,6 +8,6 @@ import type { ConsultancyPageContent } from "@/types/content";
 
 const consultancyPageFile = "pages/consultancy.json";
 
-export const getConsultancyPage = cache(function getConsultancyPage(): ConsultancyPageContent {
+export const getConsultancyPage = cache(async function getConsultancyPage(): Promise<ConsultancyPageContent> {
   return loadCmsDocument(consultancyPageFile, defaultConsultancyPage);
 });

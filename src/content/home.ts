@@ -8,6 +8,6 @@ import type { HomePageContent } from "@/types/content";
 
 const homePageFile = "pages/home.json";
 
-export const getHomePage = cache(function getHomePage(): HomePageContent {
+export const getHomePage = cache(async function getHomePage(): Promise<HomePageContent> {
   return loadCmsDocument(homePageFile, defaultHomePage);
 });

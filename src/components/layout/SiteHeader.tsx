@@ -8,8 +8,8 @@ import { PrimaryButton } from "@/components/ui/ButtonLink";
 import { getSiteConfig } from "@/config/site";
 import { themeTokens } from "@/theme/tokens";
 
-export function SiteHeader() {
-  const siteConfig = getSiteConfig();
+export async function SiteHeader() {
+  const siteConfig = await getSiteConfig();
 
   return (
     <header

@@ -21,7 +21,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const siteConfig = getSiteConfig();
+  const siteConfig = await getSiteConfig();
   const siteOrigin = await resolveSiteOrigin(siteConfig);
 
   return {
@@ -77,12 +77,12 @@ export const viewport: Viewport = {
   themeColor: "#091d34",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const siteConfig = getSiteConfig();
+  const siteConfig = await getSiteConfig();
 
   return (
     <html

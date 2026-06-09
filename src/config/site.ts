@@ -36,8 +36,8 @@ export function getPublicSiteUrl(siteConfigOrUrl: Pick<SiteConfig, "siteUrl"> | 
   }
 }
 
-export const getSiteConfig = cache(function getSiteConfig(): SiteConfig {
-  const cmsSiteConfig = loadCmsDocument(siteConfigFile, defaultSiteConfig);
+export const getSiteConfig = cache(async function getSiteConfig(): Promise<SiteConfig> {
+  const cmsSiteConfig = await loadCmsDocument(siteConfigFile, defaultSiteConfig);
 
   return {
     ...cmsSiteConfig,

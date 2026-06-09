@@ -11,14 +11,18 @@ import {
   createWebPageStructuredData,
 } from "@/lib/structured-data";
 
-export function generateMetadata(): Metadata {
-  return createPageMetadata(getAboutPage().seo);
+export async function generateMetadata(): Promise<Metadata> {
+  const aboutPage = await getAboutPage();
+
+  return createPageMetadata(aboutPage.seo);
 }
 
-export default function AboutPage() {
-  const siteConfig = getSiteConfig();
-  const aboutPage = getAboutPage();
-  const galleryPage = getGalleryPage();
+export default async function AboutPage() {
+  const [siteConfig, aboutPage, galleryPage] = await Promise.all([
+    getSiteConfig(),
+    getAboutPage(),
+    getGalleryPage(),
+  ]);
 
   return (
     <>

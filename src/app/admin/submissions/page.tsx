@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default async function AdminSubmissionsPage() {
   await requireAdminAuth("/admin/submissions");
 
-  const contactPage = getContactPage();
+  const contactPage = await getContactPage();
   let submissionCount: number | null = null;
   let submissionsError: string | null = null;
   let submissions: ContactSubmissionRecord[] = [];

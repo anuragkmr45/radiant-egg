@@ -5,12 +5,12 @@ import { HomeHeader } from "@/components/layout/HomeHeader";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { getSiteConfig } from "@/config/site";
 
-export default function HomeLayout({
+export default async function HomeLayout({
   children,
 }: {
   children: ReactNode;
 }) {
-  const siteConfig = getSiteConfig();
+  const siteConfig = await getSiteConfig();
 
   return (
     <>

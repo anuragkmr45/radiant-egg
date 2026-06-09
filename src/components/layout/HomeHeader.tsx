@@ -8,8 +8,8 @@ import { MobileNavDrawer } from "@/components/navigation/MobileNavDrawer";
 import { PrimaryButton } from "@/components/ui/ButtonLink";
 import { getSiteConfig } from "@/config/site";
 
-export function HomeHeader() {
-  const siteConfig = getSiteConfig();
+export async function HomeHeader() {
+  const siteConfig = await getSiteConfig();
   const homeChrome = siteConfig.homeChrome;
 
   return (

@@ -7,13 +7,14 @@ import { getHomePage } from "@/content/home";
 import { createPageMetadata } from "@/lib/metadata";
 import { createWebPageStructuredData } from "@/lib/structured-data";
 
-export function generateMetadata(): Metadata {
-  return createPageMetadata(getHomePage().seo);
+export async function generateMetadata(): Promise<Metadata> {
+  const homePage = await getHomePage();
+
+  return createPageMetadata(homePage.seo);
 }
 
-export default function HomePage() {
-  const siteConfig = getSiteConfig();
-  const homePage = getHomePage();
+export default async function HomePage() {
+  const [siteConfig, homePage] = await Promise.all([getSiteConfig(), getHomePage()]);
 
   return (
     <>

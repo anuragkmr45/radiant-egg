@@ -11,13 +11,14 @@ import {
   getServiceSummary,
 } from "@/lib/structured-data";
 
-export function generateMetadata(): Metadata {
-  return createPageMetadata(getSupplyPage().seo);
+export async function generateMetadata(): Promise<Metadata> {
+  const supplyPage = await getSupplyPage();
+
+  return createPageMetadata(supplyPage.seo);
 }
 
-export default function SupplyPage() {
-  const siteConfig = getSiteConfig();
-  const supplyPage = getSupplyPage();
+export default async function SupplyPage() {
+  const [siteConfig, supplyPage] = await Promise.all([getSiteConfig(), getSupplyPage()]);
 
   return (
     <>

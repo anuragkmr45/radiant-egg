@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { getSiteConfig } from "@/config/site";
 import type { SeoFields } from "@/types/content";
 
-export function createPageMetadata(input: SeoFields): Metadata {
-  const siteConfig = getSiteConfig();
+export async function createPageMetadata(input: SeoFields): Promise<Metadata> {
+  const siteConfig = await getSiteConfig();
 
   return {
     title: input.title,

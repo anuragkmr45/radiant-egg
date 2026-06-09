@@ -8,6 +8,6 @@ import type { ContactPageContent } from "@/types/content";
 
 const contactPageFile = "pages/contact.json";
 
-export const getContactPage = cache(function getContactPage(): ContactPageContent {
+export const getContactPage = cache(async function getContactPage(): Promise<ContactPageContent> {
   return loadCmsDocument(contactPageFile, defaultContactPage);
 });

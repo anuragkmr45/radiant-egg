@@ -7,8 +7,8 @@ import { SecondaryButton } from "@/components/ui/ButtonLink";
 import { getSiteConfig } from "@/config/site";
 import { revealStyle } from "@/lib/motion";
 
-export function SiteFooter() {
-  const siteConfig = getSiteConfig();
+export async function SiteFooter() {
+  const siteConfig = await getSiteConfig();
   const footerLinks = siteConfig.footerGroups ?? [];
   const currentYear = new Date().getFullYear();
   const legalName = siteConfig.homeChrome.legalName;

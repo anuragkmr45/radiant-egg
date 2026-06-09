@@ -14,8 +14,8 @@ interface PlaceholderPageProps {
   content: MarketingPageContent;
 }
 
-export function PlaceholderPage({ content }: PlaceholderPageProps) {
-  const siteConfig = getSiteConfig();
+export async function PlaceholderPage({ content }: PlaceholderPageProps) {
+  const siteConfig = await getSiteConfig();
   const plannedSections = content.plannedSections ?? [];
   const notes = content.notes ?? [];
   const phase0Checks = content.phase0Checks ?? [];

@@ -4,7 +4,7 @@ import { getSiteConfig } from "@/config/site";
 import { resolveSiteOrigin } from "@/lib/site-url";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteConfig = getSiteConfig();
+  const siteConfig = await getSiteConfig();
   const siteOrigin = await resolveSiteOrigin(siteConfig);
 
   return siteConfig.routes.map((route) => ({

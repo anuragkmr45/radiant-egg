@@ -8,6 +8,6 @@ import type { MaterialTestingPageContent } from "@/types/content";
 
 const materialTestingPageFile = "pages/material-testing.json";
 
-export const getMaterialTestingPage = cache(function getMaterialTestingPage(): MaterialTestingPageContent {
+export const getMaterialTestingPage = cache(async function getMaterialTestingPage(): Promise<MaterialTestingPageContent> {
   return loadCmsDocument(materialTestingPageFile, defaultMaterialTestingPage);
 });

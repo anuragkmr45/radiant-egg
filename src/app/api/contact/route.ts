@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const contactPage = getContactPage();
+  const contactPage = await getContactPage();
   const submission = normalizeContactSubmission(body);
   const errors = validateContactSubmission(submission, contactPage.form.serviceOptions);
 

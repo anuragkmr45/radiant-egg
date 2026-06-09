@@ -1,4 +1,4 @@
-import { bigserial, index, pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { bigserial, index, jsonb, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
 export const contactSubmissions = pgTable(
   "contact_submissions",
@@ -24,3 +24,15 @@ export const contactSubmissions = pgTable(
     submittedAtIndex: index("contact_submissions_submitted_at_idx").on(table.submittedAt),
   }),
 );
+
+export const cmsDocuments = pgTable("cms_documents", {
+  path: text("path").primaryKey(),
+  content: jsonb("content").$type<Record<string, unknown>>().notNull(),
+  updatedAt: timestamp("updated_at", {
+    mode: "string",
+    withTimezone: true,
+  })
+    .defaultNow()
+    .notNull(),
+  updatedBy: text("updated_by"),
+});

@@ -8,6 +8,6 @@ import type { GalleryPageContent } from "@/types/content";
 
 const galleryPageFile = "gallery.json";
 
-export const getGalleryPage = cache(function getGalleryPage(): GalleryPageContent {
+export const getGalleryPage = cache(async function getGalleryPage(): Promise<GalleryPageContent> {
   return loadCmsDocument(galleryPageFile, defaultGalleryPage);
 });

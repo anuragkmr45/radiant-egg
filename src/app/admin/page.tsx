@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default async function AdminPage() {
   await requireAdminAuth("/admin");
 
-  const contactPage = getContactPage();
+  const contactPage = await getContactPage();
   const isDatabaseReady = canStoreContactSubmissions();
   let submissionCount: number | null = null;
 
@@ -79,19 +79,14 @@ export default async function AdminPage() {
 
             <article className="admin-dashboard__card">
               <p className="admin-dashboard__label">Content Editor</p>
-              <h2 className="admin-dashboard__title">Migration Needed</h2>
+              <h2 className="admin-dashboard__title">Ready</h2>
               <p className="admin-dashboard__copy">
-                Public site content is still loaded from repo JSON files, so the old Decap editor remains a
-                local-only workflow. Production content editing needs a separate data migration before it can
-                work cleanly on Vercel.
+                Update the current site content from the protected admin panel. Saved edits are stored in
+                PostgreSQL while the checked-in JSON remains the fallback.
               </p>
-              {process.env.NODE_ENV === "development" ? (
-                <a className="admin-panel__link" href="/admin/index.html">
-                  Open local Decap CMS
-                </a>
-              ) : (
-                <span className="admin-dashboard__hint">Hidden on production deployments</span>
-              )}
+              <a className="admin-panel__link" href="/admin/content">
+                Open content editor
+              </a>
             </article>
 
             <article className="admin-dashboard__card">

@@ -8,6 +8,6 @@ import type { NdtPageContent } from "@/types/content";
 
 const ndtPageFile = "pages/ndt.json";
 
-export const getNdtPage = cache(function getNdtPage(): NdtPageContent {
+export const getNdtPage = cache(async function getNdtPage(): Promise<NdtPageContent> {
   return loadCmsDocument(ndtPageFile, defaultNdtPage);
 });

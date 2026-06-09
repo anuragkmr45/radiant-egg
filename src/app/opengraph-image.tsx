@@ -14,7 +14,7 @@ export const contentType = "image/png";
 export const runtime = "nodejs";
 
 export default async function OpenGraphImage() {
-  const siteConfig = getSiteConfig();
+  const siteConfig = await getSiteConfig();
   const logoBuffer = await readFile(path.join(process.cwd(), "public/brand/recpl-logo-compact.png"));
   const logoSrc = `data:image/png;base64,${logoBuffer.toString("base64")}`;
 

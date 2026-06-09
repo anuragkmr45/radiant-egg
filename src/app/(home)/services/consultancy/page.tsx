@@ -10,13 +10,14 @@ import {
   createServiceStructuredData,
 } from "@/lib/structured-data";
 
-export function generateMetadata(): Metadata {
-  return createPageMetadata(getConsultancyPage().seo);
+export async function generateMetadata(): Promise<Metadata> {
+  const consultancyPage = await getConsultancyPage();
+
+  return createPageMetadata(consultancyPage.seo);
 }
 
-export default function ConsultancyPage() {
-  const siteConfig = getSiteConfig();
-  const consultancyPage = getConsultancyPage();
+export default async function ConsultancyPage() {
+  const [siteConfig, consultancyPage] = await Promise.all([getSiteConfig(), getConsultancyPage()]);
 
   return (
     <>

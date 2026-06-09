@@ -8,6 +8,6 @@ import type { SupplyPageContent } from "@/types/content";
 
 const supplyPageFile = "pages/supply.json";
 
-export const getSupplyPage = cache(function getSupplyPage(): SupplyPageContent {
+export const getSupplyPage = cache(async function getSupplyPage(): Promise<SupplyPageContent> {
   return loadCmsDocument(supplyPageFile, defaultSupplyPage);
 });
