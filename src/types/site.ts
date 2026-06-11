@@ -8,8 +8,7 @@ export type SitePath =
   | "/supply"
   | "/services/consultancy"
   | "/services/material-testing"
-  | "/services/ndt"
-  | "/services/tpi";
+  | "/services/ndt";
 
 export type SiteSectionHref = `/#${string}` | `${SitePath}#${string}`;
 export type SiteHref = SitePath | SiteSectionHref;

@@ -7,6 +7,7 @@ import {
   canStoreContactSubmissions,
   getContactSubmissionsCount,
 } from "@/lib/contact-submissions";
+import { getContactRateLimitSettings } from "@/lib/contact-rate-limit";
 import { requireAdminAuth } from "@/lib/require-admin-auth";
 
 export const dynamic = "force-dynamic";
@@ -24,6 +25,7 @@ export default async function AdminPage() {
 
   const contactPage = await getContactPage();
   const isDatabaseReady = canStoreContactSubmissions();
+  const rateLimitSettings = getContactRateLimitSettings();
   let submissionCount: number | null = null;
 
   if (isDatabaseReady) {
@@ -99,6 +101,18 @@ export default async function AdminPage() {
               <span className="admin-dashboard__hint">
                 DATABASE_URL {isDatabaseReady ? "configured" : "not configured"}
               </span>
+            </article>
+
+            <article className="admin-dashboard__card">
+              <p className="admin-dashboard__label">Rate Limit and Media</p>
+              <h2 className="admin-dashboard__title">{rateLimitSettings.limit} attempts</h2>
+              <p className="admin-dashboard__copy">
+                Review contact form throttling and upload compressed images to generate reusable website
+                image URLs.
+              </p>
+              <a className="admin-panel__link" href="/admin/tools">
+                Open tools
+              </a>
             </article>
           </div>
         </section>

@@ -12,15 +12,53 @@ interface GalleryFilterGridProps {
 }
 
 const ALL_CATEGORY = "All";
+const ALL_CATEGORY_KEY = "__all__";
+
+function formatGalleryCategory(category: string) {
+  return category.trim().replace(/\s+/g, " ");
+}
+
+function getGalleryCategoryKey(category: string) {
+  return formatGalleryCategory(category)
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function getGalleryCategories({
+  categories,
+  items,
+}: {
+  categories: readonly string[];
+  items: readonly GalleryItem[];
+}) {
+  const categoryMap = new Map<string, string>();
+
+  for (const category of [...categories, ...items.map((item) => item.category)]) {
+    const label = formatGalleryCategory(category);
+    const key = getGalleryCategoryKey(label);
+
+    if (!label || !key || key === "all" || categoryMap.has(key)) {
+      continue;
+    }
+
+    categoryMap.set(key, label);
+  }
+
+  return Array.from(categoryMap, ([key, label]) => ({
+    key,
+    label,
+  }));
+}
 
 export function GalleryFilterGrid({
   categories,
   items,
 }: GalleryFilterGridProps) {
-  const [activeCategory, setActiveCategory] = useState(ALL_CATEGORY);
-  const galleryCategories = Array.from(
-    new Set([...categories, ...items.map((item) => item.category)]),
-  );
+  const [activeCategoryKey, setActiveCategoryKey] = useState(ALL_CATEGORY_KEY);
+  const galleryCategories = getGalleryCategories({ categories, items });
 
   if (items.length === 0) {
     return (
@@ -31,8 +69,8 @@ export function GalleryFilterGrid({
         </p>
         <div className="gallery-empty__categories" role="list">
           {galleryCategories.map((category) => (
-            <BadgePill key={category} role="listitem" tone="outline">
-              {category}
+            <BadgePill key={category.key} role="listitem" tone="outline">
+              {category.label}
             </BadgePill>
           ))}
         </div>
@@ -48,18 +86,18 @@ export function GalleryFilterGrid({
           className="gallery-filter__chips"
           role="toolbar"
         >
-          {[ALL_CATEGORY, ...galleryCategories].map((category) => {
-            const active = category === activeCategory;
+          {[{ key: ALL_CATEGORY_KEY, label: ALL_CATEGORY }, ...galleryCategories].map((category) => {
+            const active = category.key === activeCategoryKey;
 
             return (
               <button
                 aria-pressed={active}
                 className={active ? "gallery-filter__chip gallery-filter__chip--active" : "gallery-filter__chip"}
-                key={category}
-                onClick={() => setActiveCategory(category)}
+                key={category.key}
+                onClick={() => setActiveCategoryKey(category.key)}
                 type="button"
               >
-                {category}
+                {category.label}
               </button>
             );
           })}
@@ -68,7 +106,8 @@ export function GalleryFilterGrid({
 
       <div className="gallery-grid gallery-grid--page">
         {items.map((item, index) => {
-          const hidden = activeCategory !== ALL_CATEGORY && item.category !== activeCategory;
+          const hidden =
+            activeCategoryKey !== ALL_CATEGORY_KEY && getGalleryCategoryKey(item.category) !== activeCategoryKey;
 
           return (
             <GalleryImageCard
@@ -76,6 +115,7 @@ export function GalleryFilterGrid({
               index={index}
               item={item}
               key={`${item.category}-${item.title}-${index}`}
+              priority={activeCategoryKey === ALL_CATEGORY_KEY ? index < 2 : !hidden}
             />
           );
         })}

@@ -14,9 +14,6 @@
 | NDT Services | NDT Testing Services | [https://radiantconsultant.com/services/ndt](https://radiantconsultant.com/services/ndt) |
 | Material Testing | Material Testing Services | [https://radiantconsultant.com/services/material-testing](https://radiantconsultant.com/services/material-testing) |
 | Supply | Material Testing Equipment & Instrument Supply | [https://radiantconsultant.com/supply](https://radiantconsultant.com/supply) |
-| TPI Services | Third Party Inspection Services | [https://radiantconsultant.com/services/tpi](https://radiantconsultant.com/services/tpi) |
-
-**Note:** The TPI Services page currently redirects visitors to the Material Testing page.
 
 ## Admin Access
 

@@ -1,6 +1,6 @@
 import type { NavItem, SiteHref } from "@/types/site";
 
-const servicesPathPattern = /^\/services\/(?:consultancy|ndt|tpi)$/;
+const servicesPathPattern = /^\/services\/(?:consultancy|ndt|material-testing)$/;
 
 export function resolveContextualHref(href: SiteHref, pathname?: string | null): string {
   if (href !== "/#industries") {

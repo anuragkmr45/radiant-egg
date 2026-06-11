@@ -7,7 +7,6 @@ import { materialTestingPage } from "@/cms/defaults/material-testing";
 import { ndtPage } from "@/cms/defaults/ndt";
 import { siteConfig } from "@/cms/defaults/site";
 import { supplyPage } from "@/cms/defaults/supply";
-import { tpiPage } from "@/cms/defaults/tpi";
 
 export interface CmsDocumentDefinition {
   path: string;
@@ -80,13 +79,6 @@ export const cmsDocumentDefinitions = [
     description: "Gallery hero, categories, image cards, captions, and filter labels.",
     publicPath: "/gallery",
     defaultContent: galleryPage,
-  },
-  {
-    path: "pages/tpi.json",
-    label: "TPI Services",
-    description: "Legacy TPI service content retained in the repository.",
-    publicPath: "/services/tpi",
-    defaultContent: tpiPage,
   },
 ] satisfies readonly CmsDocumentDefinition[];
 

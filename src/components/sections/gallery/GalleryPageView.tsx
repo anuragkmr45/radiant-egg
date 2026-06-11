@@ -1,6 +1,7 @@
 import { MarketingMotionController } from "@/components/motion/MarketingMotionController";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { GalleryFilterGrid } from "@/components/sections/gallery/GalleryFilterGrid";
+import { MarketingTextHero } from "@/components/sections/shared/MarketingTextHero";
 import type { GalleryPageContent } from "@/types/content";
 
 interface GalleryPageViewProps {
@@ -12,15 +13,16 @@ export function GalleryPageView({ content }: GalleryPageViewProps) {
     <>
       <MarketingMotionController />
 
-      <section className="gallery-hero">
-        <PageContainer>
-          <div className="gallery-hero__copy motion-sequence" data-marketing-reveal="">
-            <p className="gallery-hero__eyebrow">{content.hero.eyebrow}</p>
-            <h1 className="gallery-hero__title">{content.hero.title}</h1>
-            <p className="gallery-hero__description">{content.hero.description}</p>
-          </div>
-        </PageContainer>
-      </section>
+      <MarketingTextHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Gallery" },
+        ]}
+        className="about-hero--gallery"
+        description={content.hero.description}
+        eyebrow={content.hero.eyebrow}
+        title={content.hero.title}
+      />
 
       <section className="gallery-page">
         <PageContainer>

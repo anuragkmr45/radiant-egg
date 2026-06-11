@@ -22,6 +22,10 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 The contact form now stores enquiries in PostgreSQL through `POST /api/contact`, using Drizzle ORM for the Next.js database connection and inserts.
 
+Submissions are rate limited on the server. By default, a visitor can make 5 contact submission attempts every 900 seconds. Override this with `CONTACT_RATE_LIMIT_MAX_ATTEMPTS` and `CONTACT_RATE_LIMIT_WINDOW_SECONDS` in the deployment environment.
+
+The admin tools page at `/admin/tools` includes a browser image compressor/uploader. Uploaded images are stored in PostgreSQL and shown as complete absolute URLs ending in `/uploads/...`, which can be pasted into content editor image fields.
+
 1. Copy `.env.example` to `.env.local`
 2. Point `DATABASE_URL` at your local PostgreSQL instance
 3. Push the Drizzle schema to your database:
